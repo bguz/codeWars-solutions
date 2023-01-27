@@ -648,3 +648,95 @@
 //     return x.split('').map(digit => digit < 5 ? digit = 0 : digit = 1).join('');
 // }
 // console.log(fakeBin('45385593107843568'));
+
+
+
+
+// // DNA to RNA Conversion
+// function DNAtoRNA(dna) {
+//     return dna.split('').map(n => n === 'T' ? n = 'U' : n = n).join('');
+// }
+// console.log(DNAtoRNA('GCAT'));
+
+
+
+
+// // Calculate Average
+// function findAverage(array) {
+//     return array.length === 0 ? 0 : array.reduce((sum, current) => sum + current, 0) / array.length;
+// }
+// console.log(findAverage([1,2,3,4]));
+
+
+
+
+// // Opposites Attract
+// function lovefunc(flower1, flower2){
+//     return flower1 % 2 !== flower2 % 2 ? true : false;
+// }
+// console.log(lovefunc(1,4));
+
+
+
+
+// // Reversed Sequence
+// const reverseSeq = n => {
+//     const result = [];
+//     for (let i = n; i > 0; i--) {
+//       result.push(i);
+//     }
+//     return result;
+// };
+// console.log(reverseSeq(5));
+
+
+
+
+// // Is The String Uppercase?
+// String.prototype.isUpperCase = function() {
+//     return this.toString() === this.toUpperCase();
+// }
+// console.log('hello I am DONALD!'.isUpperCase());
+
+
+
+
+// // Remove Exclamation Marks
+// function removeExclamationMarks(s) {
+//     return s.split('').filter(letter => letter !== '!').join('');
+// }
+// console.log(removeExclamationMarks('Hello World!!!'));
+
+
+
+
+// // Double Char
+// function doubleChar(str) {
+//     return str.split('').map(letter => letter += letter).join('');
+// }
+// console.log(doubleChar('abcd'));
+
+
+
+
+// // Color Ghost
+// var Ghost = function() {
+//     let colors = ['white', 'yellow', 'purple', 'red'];
+//     let random = Math.floor(Math.random() * 4);
+//     // your code goes here
+//     this.color = colors[random];
+// };
+// const ghost = new Ghost();
+// console.log(ghost.color);
+
+
+
+
+// Swap Values
+function swapValues(args) {
+    var temp = args[0];
+    args[0] = args[1];
+    args[1] = temp;
+    return args;
+}
+console.log(swapValues([2,3]));
