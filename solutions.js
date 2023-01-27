@@ -259,8 +259,369 @@
 
 
 
-// Convert Number to Reversed Array of Digits
-function digitize(n) {
-    return n.toString().split('').reverse().map(num => Number(num));
-}
-console.log(digitize(10));
+// // Convert Number to Reversed Array of Digits
+// function digitize(n) {
+//     return n.toString().split('').reverse().map(num => Number(num));
+// }
+// console.log(digitize(10));
+
+
+
+
+// // Beginner - Lost Without a Map
+// function maps(x){
+//     return x.map(num => num * 2);
+// }
+// console.log(maps([1, 2, 3]));
+
+
+
+
+// // Abbreviate a Two Word Name
+// function abbrevName(name){
+//     return name.split(' ').map(name => name[0].toUpperCase()).join('.');
+// }
+// console.log(abbrevName('Beto Guzman'));
+
+
+
+
+// // MakeUpperCase
+// function makeUpperCase(str) {
+//     return str.toUpperCase();
+// }
+// console.log(makeUpperCase('Some String'));
+
+
+
+
+// // Beginner Series #1 School Paperwork
+// function paperwork(n, m) {
+//     if (n < 0 || m < 0) return 0;
+//     return n * m;
+// }
+// console.log(paperwork(5, 5));
+
+
+
+
+// // Sum Arrays
+// function sum (numbers) {
+//     "use strict";
+//     return numbers.reduce((sum, current) => sum + current, 0);
+// }
+// console.log(sum([1, 5.2, 4, 0, -1]));
+
+
+
+
+
+// // Invert Values
+// function invert(array) {
+//     return array.map(num => {
+//       return num >= 0 ? -Math.abs(num) : Math.abs(num);
+//     });
+// }
+// console.log(invert([-23, 3, 45, -1]));
+
+
+
+
+// // You Only Need One - Beginner
+// function check(a, x) {
+//     // your code here
+//     return a.includes(x) ? true : false;
+// }
+// console.log(check([101, 45, 75, 105, 99, 107], 107));
+
+
+
+
+// // Find Maximum and Minimum Values of a List
+// var min = function(list){
+//     return Math.min(...list);
+// }
+
+// var max = function(list){
+//     return Math.max(...list);
+// }
+// console.log(min([42, 54, 65, 87, 0]));
+// console.log(max([4,6,2,1,9,63,-134,566]));
+
+
+
+
+// // Simple Multiplication
+// function simpleMultiplication(number) {
+//     return number % 2 === 0 ? number * 8 : number * 9;
+// }
+// console.log(simpleMultiplication(8));
+
+
+
+
+// // Is He Gonna Survive?
+// function hero(bullets, dragons){
+//     return (bullets / 2) >= dragons ? true : false;
+// }
+// console.log(hero(8, 6));
+
+
+
+
+// // Will You Make It?
+// const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+//     return distanceToPump / mpg <= fuelLeft
+// };
+// console.log(zeroFuel(100, 50, 1));
+
+
+
+
+// // Beginner - Reduce But Gro
+// function grow(x){
+//     return x.reduce((mult, current) => mult * current);
+// }
+// console.log(grow([4, 1, 1, 1, 4]));
+
+
+
+
+// // Convert String to Array
+// function stringToArray(string){
+//     return string.split(' ');
+// }
+// console.log(stringToArray('I love arrays they are my favorite'));
+
+
+
+
+// // Sentence Smash
+// function smash(words) {
+//     return words.join(' ');
+// };
+// console.log(smash(["hello", "amazing", "world"]));
+
+
+
+// // Count by X
+// function countBy(x, n) {
+//     let z = [];
+//     for (let i = x; i <= x * n; i += x) {
+//       z.push(i);
+//     }
+//     return z;
+// }
+// console.log(countBy(2,10));
+
+
+
+
+// // Total Amount of Points
+// function points(games) {
+//     return games.reduce((sum, [s1, ,s2]) => {
+//       if (s1 > s2) {
+//         return sum += 3;
+//       } else if (s1 === s2) {
+//         return sum += 1;
+//       } else {
+//           return sum += 0;
+//       }
+//     }, 0);
+// }
+// console.log(points(["1:0","2:0","3:0","4:0","2:1","3:1","4:1","3:2","4:2","4:3"]));
+
+
+
+
+// // Count the Monkeys!
+// function monkeyCount(n) {
+//     const monkeys = [];
+//     for (let i = 1; i <= n; i++) {
+//         monkeys.push(i);
+//     }
+//     return monkeys;
+// }
+// console.log((monkeyCount(10)));
+
+
+
+
+// // Removing Elements
+// function removeEveryOther(arr){
+//     const final = [];
+//     for (let i = 0; i < arr.length; i++) {
+//       if (i % 2 === 0) final.push(arr[i]);
+//     }
+//     return final;
+// }
+// console.log(removeEveryOther(['Hello', 'Goodbye', 'Hello Again']));
+
+
+
+
+// // Array Plus Array
+// function arrayPlusArray(arr1, arr2) {
+//     return arr1.reduce((sum, current) => sum + current, 0) + arr2.reduce((sum, current) => sum + current, 0);
+// }
+// console.log(arrayPlusArray([1,2,3], [1,2,3]));
+
+
+
+
+// // I Love You, A Little, A Lot, Passionately ... Not At All
+// function howMuchILoveYou(nbPetals) {
+//     const phrase = ['I love you', 'a little', 'a lot', 'passionately', 'madly', 'not at all'];
+//     let phraseCurrent = 0;
+//     let result = '';
+//     for (let i = 0; i < nbPetals; i++) {
+//       if (phraseCurrent >= phrase.length) {
+//         phraseCurrent = 0;
+//       } 
+//       result = phrase[phraseCurrent];
+//       phraseCurrent++;
+//     }
+//     return result;
+// }
+// console.log(howMuchILoveYou(8));
+
+
+
+
+// // Sort and Star
+// function twoSort(s) {
+//     return s.sort()[0].split('').join('***');
+// }
+// console.log(twoSort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]));
+
+
+
+
+// // Filter Out The Geese
+// function gooseFilter (birds) {
+//     var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+//     // return an array containing all of the strings in the input array except those that match strings in geese
+//     return birds.filter(word => !(geese.includes(word)));
+// }
+// console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]));
+
+
+
+
+// // If You Can't Sleep, Just Count Sheep!
+// var countSheep = function (num){
+//     let count = '';
+//     for (let i = 1; i <= num; i++) {
+//       count += `${i} sheep...`;
+//     }
+//     return count;
+// }
+// console.log(countSheep(3));
+
+
+
+
+// // Calculate BMI
+// function bmi(weight, height) {
+//     const bmiCalculation = weight / Math.pow(height, 2);
+    
+//     if (bmiCalculation <= 18.5) {
+//       return 'Underweight'; 
+//     } else if (bmiCalculation <= 25.0) {
+//       return 'Normal';
+//     } else if (bmiCalculation <= 30.0) {
+//       return 'Overweight';
+//     } else {
+//       return 'Obese';
+//     }
+// }
+// console.log(bmi(80, 1.80));
+
+
+
+
+// // Find Multiples of a Number
+// function findMultiples(integer, limit) {
+//     //your code here
+//     const result = [];
+//     for (let i = integer; i <= limit; i += integer) {
+//       result.push(i);
+//     }
+//     return result;
+// }
+// console.log(findMultiples(5, 25));
+
+
+
+
+// // Well of Ideas - Easy Version
+// function well(x){
+//     const counts = x.filter(idea => idea === 'good');
+//     if (counts.length === 0) {
+//       return 'Fail!';
+//     } if (counts.length <= 2) {
+//       return 'Publish!';
+//     } else if (counts.length >= 2) {
+//       return "I smell a series!";
+//     }
+// }
+// console.log(well(['good', 'bad', 'bad', 'bad', 'bad']));
+
+
+
+
+// // Remove Duplicates From List
+// function distinct(a) {
+//     const result = [];
+//     for (let i = 0; i < a.length; i++) {
+//       !result.includes(a[i]) ? result.push(a[i]) : '';
+//     }
+//     return result;
+// }
+// console.log(distinct([1,1,2]));
+
+
+
+
+// // Rock Paper Scissors
+// const rps = (p1, p2) => {
+//     if ((p1 === 'scissors' && p2 === 'paper') || (p1 === 'paper' && p2 === 'rock') || (p1 === 'rock' && p2 === 'scissors')) {
+//       return 'Player 1 won!';
+//     } else if (p1 === p2) {
+//       return 'Draw!';
+//     } else {
+//       return 'Player 2 won!';
+//     }
+// };
+// console.log(rps('rock', 'scissors'));
+
+
+
+
+// // Merge Two Sorted Arrays Into One
+// function mergeArrays(arr1, arr2) {
+//     const result = [];
+//     arr1.concat(arr2).map(num => {
+//       if (!result.includes(num)) result.push(num);
+//     });
+//     return result.sort((a, b) => a - b);
+// }
+// console.log(mergeArrays([1,3,5,7,9,11,12], [1,2,3,4,5,10,12]));
+
+
+
+
+// // Printing Array Elements with Comma Delimeters
+// function printArray(array){
+//     return array.join(',');
+// }
+// console.log(printArray(["h","o","l","a"]));
+
+
+
+
+// // A Needle in the Haystack
+// function findNeedle(haystack) {
+//     return `found the needle at position ${haystack.indexOf('needle')}`;
+// }
+// console.log(findNeedle(['3', '123124234', undefined, 'needle', 'world', 'hay', 2, '3', true, false]));
