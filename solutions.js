@@ -625,3 +625,26 @@
 //     return `found the needle at position ${haystack.indexOf('needle')}`;
 // }
 // console.log(findNeedle(['3', '123124234', undefined, 'needle', 'world', 'hay', 2, '3', true, false]));
+
+
+
+
+// // Count of Positives / Sum of Negatives
+// function countPositivesSumNegatives(input) {
+//     let positive = 0;
+//     let negative = 0;
+    
+//     if (input === null || input.length === 0) return [];
+//     input.forEach(num => num > 0 ? positive += 1 : negative += num);
+//     return [positive, negative];
+//   }
+//   console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]));
+
+
+
+
+// // Fake Binary
+// function fakeBin(x){
+//     return x.split('').map(digit => digit < 5 ? digit = 0 : digit = 1).join('');
+// }
+// console.log(fakeBin('45385593107843568'));
