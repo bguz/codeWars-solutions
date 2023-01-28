@@ -732,11 +732,125 @@
 
 
 
-// Swap Values
-function swapValues(args) {
-    var temp = args[0];
-    args[0] = args[1];
-    args[1] = temp;
-    return args;
-}
-console.log(swapValues([2,3]));
+// // Swap Values
+// function swapValues(args) {
+//     var temp = args[0];
+//     args[0] = args[1];
+//     args[1] = temp;
+//     return args;
+// }
+// console.log(swapValues([2,3]));
+
+
+
+
+// // Transportation on Vacation
+// function rentalCarCost(d) {
+//     // Your solution here
+//     let calc = d * 40;
+    
+//     if (d >= 7) {
+//       return calc -= 50;
+//     } else if (d >= 3) {
+//       return calc -= 20;
+//     } else {
+//       return calc;
+//     }
+// }
+// console.log(rentalCarCost(3));
+
+
+
+// // Area or Perimeter
+// const areaOrPerimeter = function(l , w) {
+//     // Return your answer
+//     return l === w ? l * w : (l + w) * 2;
+// };
+// console.log(areaOrPerimeter(3, 3));
+
+
+
+
+// // Grasshopper - Personalized Message
+// function greet(name, owner) {
+//     return name === owner ? 'Hello boss' : 'Hello guest';
+// }
+// console.log(greet('Greg', 'Danie'));
+
+
+
+
+// // All Star Code Challenge #18
+// function strCount(str, letter){  
+//     let count = 0;
+//     str.split('').forEach(l => {
+//       if (l === letter) count++;
+//     });
+//     return count;
+// }
+// console.log(strCount('Hello', 'l'));
+
+
+
+
+// // Name Shuffler
+// function nameShuffler(str){
+//     return str.split(' ').reverse().join(' ');
+// }
+// console.log(nameShuffler('john McClane'));
+
+
+
+
+// // The Feast of Many Beasts
+// function feast(beast, dish) {
+//     return beast[0] === dish[0] && beast[beast.length - 1] === dish[dish.length - 1] ? true : false;
+// }
+// console.log(feast('great blue heron', 'garlic naan'));
+
+
+
+
+// // Correct the Mistakes of the Character Recognition Software
+// function correct(string) {
+//     return string.split('').map(letter => {
+//       if (letter === '5') {
+//         return letter = 'S';
+//       } else if (letter === '0') {
+//         return letter = 'O';
+//       } else if (letter === '1') {
+//         return letter = 'I';
+//       } else {
+//         return letter;
+//       }
+//     }).join('');
+// }
+// console.log(correct('L0ND0N'));
+
+
+
+
+// // Vowel Remover
+// function shortcut(string) {
+//     const vowels = ['a', 'e', 'i', 'o', 'u'];
+//     return string.split('').filter(letter => !vowels.includes(letter)).join('');
+// }
+// console.log(shortcut('how are you today?'));
+
+
+
+
+// // The Wide-Mouthed Frog!
+// function mouthSize(animal) {
+//     return animal.toLowerCase() === 'alligator' ? 'small' : 'wide';
+// }
+// console.log(mouthSize('toucan'));
+
+
+
+
+// // Reversing Words in a String
+// function reverse(string){
+//     return string.split(' ').reverse().join(' ');
+// }
+// console.log(reverse('I am an expert at this'));
