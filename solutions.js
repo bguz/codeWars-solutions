@@ -854,3 +854,119 @@
 //     return string.split(' ').reverse().join(' ');
 // }
 // console.log(reverse('I am an expert at this'));
+
+
+
+
+// // String Cleaning
+// function stringClean(s){
+//     return s.replace(/[0-9]/g, '');
+// }
+// console.log(stringClean('This looks5 great8!'));
+
+
+
+
+// // Exclamation Marks Series #1: Remove an Exclamation Mark From the End of String
+// function remove(string) {
+//     return string.endsWith('!') ? string.slice(0, string.length - 1) : string;
+// }
+// console.log(remove('Hello!'));
+
+
+
+
+// // Welcome to the City
+// function sayHello( name, city, state ) {
+//     return `Hello, ${name.join(' ')}! Welcome to ${city}, ${state}!`;
+// }
+// console.log(sayHello(['John', 'Smit'], 'Phoenix', 'Arizona'));
+
+
+
+
+// // Grasshopper - Array Mean
+// var findAverage = function (nums) {
+//     return nums.reduce((sum, current) => sum + current, 0) / nums.length;
+// }
+// console.log(findAverage([1, 3, 5, 7]));
+
+
+
+
+// // Simple Comparison
+// function add(a, b){
+//   return a == b ? true : false;
+// }
+// console.log(add('11', 11));
+
+
+
+
+// // ES6 String Addition
+// function joinStrings(string1, string2){
+//    return `${string1} ${string2}`;
+// }
+// console.log(joinStrings('testing', 'testing'));
+
+
+
+
+// // Remove First and Last Character Part Two
+// function array(arr){
+//     if (arr === '') return null;
+//     const convert = arr.split(',');
+//     convert.pop();
+//     convert.shift();
+//     return convert.join(' ') === '' ? null : convert.join(' ');
+// }
+// console.log(array('1,2,3,4,5'));
+
+
+
+
+// // Define a Card Suit
+// function defineSuit(card) {
+//     if (card.endsWith('\u2663')) {
+//       return 'clubs';
+//     } else if (card.endsWith("\u2660")) {
+//       return 'spades';
+//     } else if (card.endsWith("\u2665")) {
+//       return 'hearts';
+//     } else if (card.endsWith("\u2666")) {
+//       return 'diamonds';
+//     }
+// }
+// console.log(defineSuit('Q♠'));
+
+
+
+
+// // Is There a Vowel in There?
+// function isVow(a){
+//     return a.map(digit => {
+//       if (digit === 97) {
+//         return digit = 'a';
+//       } else if (digit === 101) {
+//         return digit = 'e';
+//       } else if (digit === 105) {
+//         return digit = 'i';
+//       } else if (digit === 111) {
+//         return digit = 'o';
+//       } else if (digit === 117) {
+//         return digit = 'u';
+//       } else {
+//         return digit;
+//       }
+//     })
+// }
+// console.log(isVow([118,117,120,121,117,98,122,97,120,106,104,116,113,114,113,120,106]));
+
+
+
+
+// // Template Strings
+// var TempleStrings = function(obj, feature) {
+//     return `${obj} are ${feature}`
+// }
+// console.log(TempleStrings('Animals', 'Good'));
