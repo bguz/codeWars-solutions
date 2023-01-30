@@ -970,3 +970,238 @@
 //     return `${obj} are ${feature}`
 // }
 // console.log(TempleStrings('Animals', 'Good'));
+
+
+
+
+// // Name On Billboard
+// function billboard(name, price = 30){
+//     let cost = 0;
+//     for (let i = 0; i < name.length; i++) {
+//       cost += price;
+//     }
+//     return cost;
+// }
+// console.log(billboard('Warner Vigi', 15)); 
+
+
+
+
+
+// // UEFA EURO 2016
+// function uefaEuro2016(teams, scores){
+//     return scores[0] === scores[1] ? 
+//       `At match ${teams[0]} - ${teams[1]}, teams played draw.` : 
+//       `At match ${teams[0]} - ${teams[1]}, ${scores[0] > scores[1] ? teams[0] : teams[1]} won!`;
+// }
+// console.log(uefaEuro2016(['Germany', 'Ukraine'], [2, 0]));
+
+
+
+
+// // Pick a Set of First Elements
+// function first(arr, n = 1) {
+//     return arr.slice(0, n);
+// }
+// console.log(first(['a', 'b', 'c', 'd', 'e'], 2));
+
+
+
+
+// // Quarter of the Year
+// const quarterOf = (month) => {
+//     // Your code here
+//     if (month >= 1 && month <= 3) {
+//       return 1;
+//     } else if (month >= 4 && month <= 6) {
+//       return 2;
+//     } else if (month >= 7 && month <= 9) {
+//       return 3;
+//     } else {
+//       return 4;
+//     }
+// }
+// console.log(quarterOf(3));
+
+
+
+
+// // 'this' a Problem
+// function NameMe(first, last) {
+//     this.firstName = first;
+//     this.lastName = last;
+//     this.name = this.firstName + ' ' + this.lastName; 
+// }
+// const n = new NameMe('John', 'Doe');
+// console.log(n.name);
+
+
+
+
+
+
+
+
+
+/* =====================================
+
+                7 Kyu
+
+======================================== */
+
+// // Vowel Count
+// function getCount(str) {
+//     let result = 0;
+//     for (let i = 0; i < str.length; i++) {
+//       str[i] === 'a' || str[i] === 'e' || str[i] === 'i' || str[i] === 'o' || str[i] === 'u' ?
+//         result += 1 : result += 0;
+//     } 
+//     return result;
+// }
+// console.log(getCount('abracadabra'));
+
+
+
+
+// // Ones and Zeros
+// const binaryArrayToNumber = arr => {
+//     return parseInt(arr.join(''), 2);
+// };
+// console.log(binaryArrayToNumber([0,1,1,0]));
+
+
+
+
+// // Digit*Digit
+// function squareDigits(num){
+//     return Number(Array.from(String(num)).map(item => Number(item) ** 2).join(''));
+// }
+// console.log(squareDigits(2112));
+
+
+
+
+// // Highest and Lowest
+// function highAndLow(numbers){
+//     const convertToNumbers = numbers.split(' ').map(num => Number(num));
+//     return `${Math.max(...convertToNumbers)} ${Math.min(...convertToNumbers)}`;
+// }
+// console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
+
+
+
+
+// // Shortest Word
+// function findShort(s){
+//     return convertToArray = s.split(' ').sort((a, b) => a.length - b.length)[0].length;
+// }
+// console.log(findShort('bitcoin take over the world maybe who knows perahps'));
+
+
+
+
+// // Get the Middle Character
+// function getMiddle(s) {
+//   let position = 0;
+//   if (s.length % 2 === 1) {
+//     position = Math.floor(s.length / 2);
+//     return s.slice(position, position + (s.length % 2));
+//   } else {
+//     position = s.length / 2;
+//     return s.slice(position - 1, position + 1)
+//   }
+// }
+// console.log(getMiddle('testing'));
+
+
+
+
+// // Descending Order
+// function descendingOrder(n){
+//     return Number(String(n).split('').sort((a, b) => b - a).join(''));
+// }
+// console.log(descendingOrder(123456789));
+
+
+
+
+// // List Filtering
+// function filter_list(l) {
+//     return l.filter(num => typeof num === 'number');
+// }
+// console.log(filter_list([1, 'a', 'b', 0, 15]));
+
+
+
+
+// // Isograms
+// function isIsogram(str){
+//     const lower = str.toLowerCase();
+//     let flag = true;
+    
+//     for (let i = 0; i < lower.length; i++) {
+//       if (lower.slice(i + 1).includes(lower[i])) {
+//         flag = false;
+//         break;
+//       }
+//     }
+//     return flag;
+// }
+// console.log(isIsogram('Dermatoglyphics'));
+
+
+
+
+// // Exes and Ohs
+// function XO(str) {
+//     //code here
+//     const objLetters = str.toLowerCase().split('').reduce((obj, curr) => {
+//       obj[curr] = (obj[curr] || 0) + 1; 
+//       return obj;
+//     }, {});
+  
+//     return objLetters['x'] === objLetters['o'] ? true : false;
+// }
+// console.log(XO('xxOo'));
+
+
+
+
+// // Jaden Casing Strings
+// String.prototype.toJadenCase = function () {
+//     return this.split(' ').map(word => word[0].toUpperCase() + word.substring(1)).join(' ');
+// };
+// console.log('How can mirrors be real if our eyes aren\'t real'.toJadenCase());
+
+
+
+
+// // Complementary DNA
+// function DNAStrand(dna){
+//     return dna.split('').map(digit => {
+//         switch(digit) {
+//             case 'A':
+//                 return 'T';
+//                 break;
+//             case 'T':
+//                 return 'A';
+//                 break;
+//             case 'G':
+//                 return 'C';
+//                 break;
+//             case 'C':
+//                 return 'G';
+//                 break;
+//         }
+//     }).join('');
+// }
+// console.log(DNAStrand('ATTGC'));
+
+
+
+
+// // Mumbling
+// function accum(s) {
+//     return s.toLowerCase().split('').map((letter, index) => letter.repeat(index + 1)).map(word => word[0].toUpperCase() + word.substr(1)).join('-');
+// }
+// console.log(accum('ZpglnRxqenU'));
