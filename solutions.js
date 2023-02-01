@@ -1209,10 +1209,22 @@
 
 
 
-// Sum of Two Lowest Positive Integers
-function sumTwoSmallestNumbers(numbers) {
-    const sorted = numbers.sort((a, b) => a - b);
-    return sorted[0] + sorted[1];
-}
+// // Sum of Two Lowest Positive Integers
+// function sumTwoSmallestNumbers(numbers) {
+//     const sorted = numbers.sort((a, b) => a - b);
+//     return sorted[0] + sorted[1];
+// }
 
-console.log(sumTwoSmallestNumbers([15, 28, 4, 2, 43]));
+// console.log(sumTwoSmallestNumbers([15, 28, 4, 2, 43]));
+
+
+
+
+// Credit Card Mask
+function maskify(cc) {
+    const masked = cc.slice(0, cc.length - 4).replace(/\w/g, '#');
+    const lastDigits = cc.slice(-4).split('').filter(digit => digit !== '#').join('');
+    return lastDigits.length === 3 ? lastDigits : masked + lastDigits;
+}
+console.log(maskify('4556364607935616'));
+console.log(maskify('##39i'));
