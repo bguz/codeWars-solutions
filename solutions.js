@@ -1205,3 +1205,14 @@
 //     return s.toLowerCase().split('').map((letter, index) => letter.repeat(index + 1)).map(word => word[0].toUpperCase() + word.substr(1)).join('-');
 // }
 // console.log(accum('ZpglnRxqenU'));
+
+
+
+
+// Sum of Two Lowest Positive Integers
+function sumTwoSmallestNumbers(numbers) {
+    const sorted = numbers.sort((a, b) => a - b);
+    return sorted[0] + sorted[1];
+}
+
+console.log(sumTwoSmallestNumbers([15, 28, 4, 2, 43]));
