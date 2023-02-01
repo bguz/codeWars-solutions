@@ -1220,11 +1220,42 @@
 
 
 
-// Credit Card Mask
-function maskify(cc) {
-    const masked = cc.slice(0, cc.length - 4).replace(/\w/g, '#');
-    const lastDigits = cc.slice(-4).split('').filter(digit => digit !== '#').join('');
-    return lastDigits.length === 3 ? lastDigits : masked + lastDigits;
+// // Credit Card Mask
+// function maskify(cc) {
+//     const masked = cc.slice(0, cc.length - 4).replace(/\w/g, '#');
+//     const lastDigits = cc.slice(-4).split('').filter(digit => digit !== '#').join('');
+//     return lastDigits.length === 3 ? lastDigits : masked + lastDigits;
+// }
+// console.log(maskify('4556364607935616'));
+// console.log(maskify('##39i'));
+
+
+
+
+// // Friend or Foe
+// function friend(friends) {
+//     return friends.filter(friend => friend.length === 4);
+// }
+// console.log(friend(["Ryan", "Jimmy", "123", "4", "Cool Man"]));
+
+
+
+// // Growth of a Population
+// function nbYear(p0, percent, aug, p) {
+//     let years = 0;
+//     while (p0 < p) {
+//         p0 = Math.floor((1 + percent / 100) * p0 + aug);
+//         years++;
+//     }
+//     return years;
+// }
+// console.log(nbYear(1500000, 2.5, 10000, 2000000));
+
+
+
+
+// Sum of Odd Numbers
+function rowSumOddNumbers(n) {
+    return n * n * n;
 }
-console.log(maskify('4556364607935616'));
-console.log(maskify('##39i'));
+console.log(rowSumOddNumbers(169));
