@@ -1103,11 +1103,27 @@
 
 
 
-// Count Words
-function countWords(str) {
-    return str.replace(/\s/g, ' ').split(' ').filter(item => item !== '').length;
-}
-console.log(countWords('Hello﻿World '));
+// // Count Words
+// function countWords(str) {
+//     return str.replace(/\s/g, ' ').split(' ').filter(item => item !== '').length;
+// }
+// console.log(countWords('Hello﻿World '));
+
+
+
+
+// // Crash Override (Refactor)
+// var firstName = {A: 'Alpha', B: 'Beta', C: 'Cache', M: 'Malware'};
+// var surname = {A: 'Analogue', B: 'Bomb', C: 'Catalyst', S: 'Spy'};
+
+// function aliasGen(first, last){
+//     const regEx = /^[a-zA-Z]/;
+//     if (regEx.test(first) === false || regEx.test(last) === false) {
+//         return 'Your name must start with a letter from A - Z.';
+//     }
+//     return firstName[`${first[0].toUpperCase()}`] + ' ' + surname[`${last[0].toUpperCase()}`];
+// }
+// console.log(aliasGen('Malware', 'Spy'));
 
 
 
