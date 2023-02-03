@@ -1383,12 +1383,42 @@
 
 
 
-// Anagram Detection (USED SORT)
-var isAnagram = function(test, original) {
-    return test.toLowerCase().split('').sort().join('') === original.toLowerCase().split('').sort().join('');
+// // Anagram Detection (USED SORT)
+// var isAnagram = function(test, original) {
+//     return test.toLowerCase().split('').sort().join('') === original.toLowerCase().split('').sort().join('');
+// }
+// console.log(isAnagram('foefet', 'toffee'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+
+                6 Kyu
+
+======================================== */
+
+// Who Likes It?
+function likes(names) {
+    if (names.length === 0) {
+        return `no one likes this`;
+    } else if (names.length === 1) {
+        return `${names[0]} likes this`;
+    } else if (names.length === 2) {
+        return `${names[0]} and ${names[1]} likes this`;
+    } else if (names.length === 3) {
+        return `${names[0]}, ${names[1]} and ${names[2]} like this`;
+    } else {
+        return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`;
+    }
 }
-console.log(isAnagram('foefet', 'toffee'));
-console.log(isAnagram('ound', 'round'));
-console.log(isAnagram('YMKxNAvwLJWzZtv', 'zWMtwNYKAvxtJLZ'));
-console.log(isAnagram("apple", "pale"));
-console.log(isAnagram('dumble', 'bumble'))
