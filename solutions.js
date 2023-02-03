@@ -1038,6 +1038,82 @@
 
 
 
+// // Reverse Words
+// function reverseWords(str) {
+//     return str.split(' ').reverse().join(' ');
+// }
+// console.log(reverseWords('hello world!'));
+
+
+
+
+
+// // Do I Get a Bonus?
+// function bonusTime(salary, bonus) {
+//    return bonus ? `\u00A3${salary * 10}` : `\u00A3${salary}`;
+// }
+// console.log(bonusTime(10000, true));
+
+
+
+
+// // Short Long Short
+// function solution(a, b) {
+//     return a.length > b.length ? `${b}${a}${b}` : `${a}${b}${a}`;
+// }
+// console.log(solution('13', '200'));
+
+
+
+
+// // Capitalization and Mutability
+// function capitalizeWord(word) {
+//     return word[0].toUpperCase() + word.substring(1);
+// }
+// console.log(capitalizeWord('word'));
+
+
+
+
+// // Stringy Strings (NEEDS REFACTORING)
+// function stringy(size) {
+//     if (typeof size !== 'number' || size < 0) return;
+//     let finalStringy = '';
+//     for (let i = 1; i <= size; i++) {
+//         if (i % 2 === 0) {
+//             finalStringy += '0';
+//         } else {
+//             finalStringy += '1';
+//         }
+//     }  
+//     return finalStringy;
+// }
+// console.log(stringy(6))
+
+
+
+
+
+// // Dollars and Cents
+// function formatMoney(amount){
+//     return `$${amount.toFixed(2)}`;
+// }
+// console.log(formatMoney(39.99));
+
+
+
+
+// Count Words
+function countWords(str) {
+    return str.replace(/\s/g, ' ').split(' ').filter(item => item !== '').length;
+}
+console.log(countWords('Hello﻿World '));
+
+
+
+
+
+
 
 
 
@@ -1254,8 +1330,13 @@
 
 
 
-// Sum of Odd Numbers
-function rowSumOddNumbers(n) {
-    return n * n * n;
-}
-console.log(rowSumOddNumbers(169));
+// // Sum of Odd Numbers
+// function rowSumOddNumbers(n) {
+//     return n * n * n;
+// }
+// console.log(rowSumOddNumbers(169));
+
+
+
+
+// 
