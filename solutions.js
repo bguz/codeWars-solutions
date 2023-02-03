@@ -1355,4 +1355,40 @@
 
 
 
-// 
+// // Disemvowel Trolls
+// function disemvowel(str) {
+//     const vowels = ['a', 'e', 'i', 'o', 'u'];
+//     return str.split('').filter(letter => !vowels.includes(letter.toLowerCase())).join('');
+// }
+// console.log(disemvowel('This website is for losers LOL'));
+
+
+
+
+// // String Ends With?
+// function solution(str, ending) {
+//     return str.endsWith(ending);
+// }
+// console.log(solution('abcde', 'cde'));
+
+
+
+
+// // Reverse Words
+// function reverseWords(str) {
+//     return str.split(' ').map(word => word.split('').reverse().join('')).join(' ');
+// }
+// console.log(reverseWords('The quick brown fox jumps over the lazy dog.'));
+
+
+
+
+// Anagram Detection (USED SORT)
+var isAnagram = function(test, original) {
+    return test.toLowerCase().split('').sort().join('') === original.toLowerCase().split('').sort().join('');
+}
+console.log(isAnagram('foefet', 'toffee'));
+console.log(isAnagram('ound', 'round'));
+console.log(isAnagram('YMKxNAvwLJWzZtv', 'zWMtwNYKAvxtJLZ'));
+console.log(isAnagram("apple", "pale"));
+console.log(isAnagram('dumble', 'bumble'))
