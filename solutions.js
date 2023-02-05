@@ -1402,16 +1402,26 @@
 
 
 
-// Find the Capitals (REFACTOR)
-var capitals = function (word) {
-	return word.split('').map((letter, index) => {
-        if (letter.charCodeAt(0) >= 65 && letter.charCodeAt(0) <= 90) {
-            return index;
-        }
-    }).filter(value => value !== undefined);
-};
-console.log(capitals('CodEWaRs'));
+// // Find the Capitals (REFACTOR)
+// var capitals = function (word) {
+// 	return word.split('').map((letter, index) => {
+//         if (letter.charCodeAt(0) >= 65 && letter.charCodeAt(0) <= 90) {
+//             return index;
+//         }
+//     }).filter(value => value !== undefined);
+// };
+// console.log(capitals('CodEWaRs'));
 
+
+
+
+
+// // The Coupon Code
+// function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
+//     return enteredCode !== correctCode || Date.parse(currentDate) > Date.parse(expirationDate) ? false : true; 
+// }
+// console.log(checkCoupon('123','123','September 5, 2014','October 1, 2014'));
+// console.log(checkCoupon('123a','123','July 5, 2014','October 1, 2014'));
 
 
 
