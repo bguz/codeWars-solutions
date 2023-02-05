@@ -1427,6 +1427,23 @@
 
 
 
+// Alternate Capitalization
+function capitalize(s){
+    return [
+        s.split('').map((letter, index) => {
+            return index % 2 === 0 ? letter.toUpperCase() : letter;
+        }).join(''),
+        s.split('').map((letter, index) => {
+            return index % 2 !== 0 ? letter.toUpperCase() : letter;
+        }).join('')
+    ];
+};
+console.log(capitalize('abcdef'));
+
+
+
+
+
 
 
 
