@@ -1392,6 +1392,27 @@
 
 
 
+// // Remove Anchor From URL
+// function removeUrlAnchor(url){
+//     return url.includes('#') ? url.substring(0,url.indexOf('#')) : url;
+// }
+// console.log(removeUrlAnchor('www.codewars.com/katas/'));
+// console.log(removeUrlAnchor('www.codewars.com#about'));
+
+
+
+
+// Find the Capitals (REFACTOR)
+var capitals = function (word) {
+	return word.split('').map((letter, index) => {
+        if (letter.charCodeAt(0) >= 65 && letter.charCodeAt(0) <= 90) {
+            return index;
+        }
+    }).filter(value => value !== undefined);
+};
+console.log(capitals('CodEWaRs'));
+
+
 
 
 
@@ -1426,8 +1447,8 @@
 
 
 
-// Create Phone Number (REFACTOR)
-function createPhoneNumber(numbers){
-    return `(${numbers.slice(0,3).join('')}) ${numbers.slice(3,6).join('')}-${numbers.slice(6,10).join('')}`;
-}
-console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
+// // Create Phone Number (REFACTOR)
+// function createPhoneNumber(numbers){
+//     return `(${numbers.slice(0,3).join('')}) ${numbers.slice(3,6).join('')}-${numbers.slice(6,10).join('')}`;
+// }
+// console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
