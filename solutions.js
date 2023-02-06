@@ -1530,6 +1530,46 @@
 
 
 
+// // Most Digits (REFACTOR)
+// function findLongest(array){
+//     let num = '';
+//     for (let i = 0; i < array.length; i++) {
+//         if (String(array[i]).length > num.length) {
+//             num = String(array[i]);
+//         }
+//     }
+//     return Number(num);
+// }
+// console.log(findLongest([1, 10, 100, 456563, 785633]));
+
+
+
+
+// // Coding Meetup #1 - Higher-Order Functions Series - Count the Number of JS Devs Coming From Europe
+// const list1 = [
+//     { firstName: 'Noah', lastName: 'M.', country: 'Switzerland', continent: 'Europe', age: 19, language: 'JavaScript' },
+//     { firstName: 'Maia', lastName: 'S.', country: 'Tahiti', continent: 'Oceania', age: 28, language: 'JavaScript' },
+//     { firstName: 'Shufen', lastName: 'L.', country: 'Taiwan', continent: 'Asia', age: 35, language: 'HTML' },
+//     { firstName: 'Sumayah', lastName: 'M.', country: 'Tajikistan', continent: 'Asia', age: 30, language: 'CSS' }
+// ];
+
+// function countDevelopers(list) {
+//     return list.filter(obj => obj.continent === 'Europe' && obj.language === 'JavaScript').length;
+// }
+
+// console.log(countDevelopers(list1));
+
+
+
+
+// // Filter The Number
+// var filterString = function(value) {
+//     return Number(value.split('').filter(item => !isNaN(item)).join(''));
+// }
+// console.log(filterString('db8d1b5149a0371b2b603095d969c1ac'));
+
+
+
 
 
 
