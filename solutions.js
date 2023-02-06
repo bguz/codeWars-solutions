@@ -1415,7 +1415,6 @@
 
 
 
-
 // // The Coupon Code
 // function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
 //     return enteredCode !== correctCode || Date.parse(currentDate) > Date.parse(expirationDate) ? false : true; 
@@ -1426,19 +1425,110 @@
 
 
 
+// // Alternate Capitalization
+// function capitalize(s){
+//     return [
+//         s.split('').map((letter, index) => {
+//             return index % 2 === 0 ? letter.toUpperCase() : letter;
+//         }).join(''),
+//         s.split('').map((letter, index) => {
+//             return index % 2 !== 0 ? letter.toUpperCase() : letter;
+//         }).join('')
+//     ];
+// };
+// console.log(capitalize('abcdef'));
 
-// Alternate Capitalization
-function capitalize(s){
-    return [
-        s.split('').map((letter, index) => {
-            return index % 2 === 0 ? letter.toUpperCase() : letter;
-        }).join(''),
-        s.split('').map((letter, index) => {
-            return index % 2 !== 0 ? letter.toUpperCase() : letter;
-        }).join('')
-    ];
-};
-console.log(capitalize('abcdef'));
+
+
+
+// // Number of Decimal Digits
+// function digits(n) {
+//     return n.toString().length;
+// }
+// console.log(digits(9876543210));
+
+
+
+
+// // Remove Duplicate Words (REFACTOR WITH A SET?)
+// function removeDuplicateWords (s) {
+//     const unique = [];
+//     s.split(' ').filter(word => {
+//         if (!unique.includes(word)) unique.push(word);
+//     });
+//     return unique.join(' ');
+// }
+// console.log(removeDuplicateWords('alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta'));
+
+
+
+
+// // Greet Me
+// var greet = function(name) {
+//     return `Hello ${name[0].toUpperCase() + name.slice(1).toLowerCase()}!`;
+// };
+// console.log(greet('riley'));
+
+
+
+
+// // Sort the Gift Code
+// function sortGiftCode(code){
+//     return code.split('').sort().join('');
+// }
+// console.log(sortGiftCode('abcdef'));
+
+
+
+
+// // Bumps in the Road
+// function bump(x){
+//     return x.split('').filter(letter => letter === 'n').length > 15 ? 'Car Dead' : 'Woohoo!';
+// }
+// console.log(bump("__nn_nnnn__n_n___n____nn__nnn"));
+
+
+
+
+// // Digits Explosion
+// function explode(s) {
+//     return s.split('').map(num => num.repeat(num)).join('');
+// }
+// console.log(explode('312'));
+
+
+
+
+// // Switcheroo
+// function switcheroo(x) {
+//     return x.split('').map(letter => {
+//         if (letter === 'a') return letter = 'b';
+//         else if (letter === 'b') return letter = 'a';
+//         else return letter;
+//     }).join('');
+// }
+// console.log(switcheroo('aaabcccbaaa'));
+
+
+
+
+// // Alphabet War
+// function alphabetWar(fight) {
+//     let leftCount = fight.split('').map(letter => ['s', 'b', 'p', 'w'].indexOf(letter) + 1).reduce((sum, val) => sum + val, 0);
+//     let rightCount = fight.split('').map(letter => ['z', 'd', 'q', 'm'].indexOf(letter) + 1).reduce((sum, val) => sum + val, 0);
+
+//     if (leftCount === rightCount) {
+//         return `Let's fight again!`;
+//     } else if (leftCount > rightCount) {
+//         return `Left side wins!`;
+//     } else {
+//         return `Right side wins!`;
+//     }
+// }
+// console.log(alphabetWar('wpbszz'));
+
+
+
 
 
 
