@@ -13,7 +13,6 @@
 
 
 
-
 // // Convert a Boolean to a String
 // function booleanToString(b){
 //     return b.toString();
@@ -1571,11 +1570,11 @@
 
 
 
-// Stop gninnipS My sdroW!
-function spinWords(string){
-    return string.split(' ').map(word => word.length >= 5 ? word.split('').reverse().join('') : word).join(' ');
-}
-console.log(spinWords('Hey fellow warriors'));
+// // Stop gninnipS My sdroW!
+// function spinWords(string){
+//     return string.split(' ').map(word => word.length >= 5 ? word.split('').reverse().join('') : word).join(' ');
+// }
+// console.log(spinWords('Hey fellow warriors'));
 
 
 
