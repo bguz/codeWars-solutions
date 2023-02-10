@@ -1588,6 +1588,14 @@
 
 
 
+// The Highest Profit Wins!
+function minMax(arr){
+    return [Math.min(...arr), Math.max(...arr)]; // fix me!
+}
+console.log(minMax([2334454, 5]));
+
+
+
 
 
 
