@@ -1579,6 +1579,14 @@
 
 
 
+// // Odd or Even?
+// function oddOrEven(array) {
+//     return array.reduce((sum, current) => sum + current, 0) % 2 === 0 ? 'even' : 'odd';
+// }
+// console.log(oddOrEven([0, 1, 5]));
+
+
+
 
 
 
@@ -1620,8 +1628,18 @@
 
 
 
-// Array.diff
-function arrayDiff(a, b) {
-    return a.filter(num => !b.includes(num));
-}
-console.log(arrayDiff([1,2,3], [1,2]));
+// // Array.diff
+// function arrayDiff(a, b) {
+//     return a.filter(num => !b.includes(num));
+// }
+// console.log(arrayDiff([1,2,3], [1,2]));
+
+
+
+
+// // Duplicate Encoder
+// function duplicateEncode(word){
+//     return word.toLowerCase().split('').map(letter => word.indexOf(letter) === word.lastIndexOf(letter) ? '(' : ')').join('')
+// }
+
+
