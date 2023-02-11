@@ -1588,12 +1588,48 @@
 
 
 
-// The Highest Profit Wins!
-function minMax(arr){
-    return [Math.min(...arr), Math.max(...arr)]; // fix me!
-}
-console.log(minMax([2334454, 5]));
+// // The Highest Profit Wins!
+// function minMax(arr){
+//     return [Math.min(...arr), Math.max(...arr)]; // fix me!
+// }
+// console.log(minMax([2334454, 5]));
 
+
+
+
+// // Bulding Strings From a Hash
+// function solution(pairs) {
+//     return Object.keys(pairs).map(key => `${key} = ${pairs[key]}`).join(',');
+// }
+// console.log(solution({a: 1, b: '2'}))
+
+
+
+
+// // Two to One
+// function longest(s1, s2) {
+//     const unique = new Set([...s1, ...s2]);
+//     return Array.from(unique).sort().join('');
+// }
+// console.log(longest("aretheyhere", "yestheyarehere"));
+
+
+
+
+// Nickname Generator
+function nicknameGenerator(name){
+    const vowel = ['a', 'e', 'i', 'o', 'u'];
+    if (name.length <= 3) {
+        return `Error: Name too short`;
+    } else if (vowel.includes(name[2])) {
+        return name.slice(0,4);
+    } else {
+        return name.slice(0,3);
+    }
+}
+console.log(nicknameGenerator('Jimmy'));
+console.log(nicknameGenerator('Sam'));
+console.log(nicknameGenerator('Jeannie'));
 
 
 
