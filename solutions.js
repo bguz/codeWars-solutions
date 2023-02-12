@@ -1166,12 +1166,20 @@
 
 
 
-// N-th Power
-function index(array, n){
-    return array.length > n ? array[n] ** n : -1;
-}
-console.log(index([1, 3, 10, 100],3));
+// // N-th Power
+// function index(array, n){
+//     return array.length > n ? array[n] ** n : -1;
+// }
+// console.log(index([1, 3, 10, 100],3));
 
+
+
+
+// Find Numbers Which Are Divisible by Given Number
+function divisibleBy(numbers, divisor){
+    return numbers.filter(num => num % divisor === 0);
+}
+console.log(divisibleBy([1,2,3,4,5,6], 2));
 
 
 
