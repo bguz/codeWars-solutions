@@ -1713,6 +1713,20 @@
 
 
 
+// Don't Give Me Five!
+function dontGiveMeFive(start, end) {
+    const finalArr = [];
+    for (let i = start; i <= end; i++) {
+        if (!String(i).includes(5)) finalArr.push(i);
+    }
+    return finalArr;
+}
+console.log(dontGiveMeFive(1, 9));
+console.log(dontGiveMeFive(4, 17));
+
+
+
+
 
 
 
