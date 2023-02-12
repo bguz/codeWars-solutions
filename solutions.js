@@ -1701,6 +1701,17 @@
 
 
 
+// // Remove the Minimum
+// function removeSmallest(numbers) {
+//     const clone = [...numbers];
+//     const index = clone.indexOf(Math.min(...clone));
+//     clone.splice(index, 1);
+//     return clone;
+// }
+// console.log(removeSmallest([5, 3, 2, 1, 4]));
+
+
+
 
 
 
