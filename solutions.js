@@ -1175,11 +1175,11 @@
 
 
 
-// Find Numbers Which Are Divisible by Given Number
-function divisibleBy(numbers, divisor){
-    return numbers.filter(num => num % divisor === 0);
-}
-console.log(divisibleBy([1,2,3,4,5,6], 2));
+// // Find Numbers Which Are Divisible by Given Number
+// function divisibleBy(numbers, divisor){
+//     return numbers.filter(num => num % divisor === 0);
+// }
+// console.log(divisibleBy([1,2,3,4,5,6], 2));
 
 
 
@@ -1691,6 +1691,15 @@ console.log(divisibleBy([1,2,3,4,5,6], 2));
 
 
 
+// // Testing 1-2-3
+// var number = function(array){
+//     if (array.length === 0) return [];
+//     return array.map((digit, i) => `${i+1}: ${digit}`);
+// }
+// console.log(number(["a", "b", "c"]));
+
+
+
 
 
 
@@ -1747,5 +1756,144 @@ console.log(divisibleBy([1,2,3,4,5,6], 2));
 // function duplicateEncode(word){
 //     return word.toLowerCase().split('').map(letter => word.indexOf(letter) === word.lastIndexOf(letter) ? '(' : ')').join('')
 // }
+
+
+
+
+// // Take a Ten Minute Walk
+// function isValidWalk(walk) {
+//     let startingVert = 0;
+//     let startingHori = 0;
+//     for (let i = 0; i < walk.length; i++) {
+//         if (walk[i] === 'n') startingVert += 1;
+//         else if (walk[i] === 's') startingVert -= 1;
+//         else if (walk[i] === 'w') startingHori += 1;
+//         else if (walk[i] === 'e') startingHori -= 1;
+//     }
+//     return walk.length === 10 && startingVert === 0 && startingHori === 0;
+// }
+// console.log(isValidWalk(['n', 's']))
+
+
+
+
+// // Find the Unique Number (REFACTOR - MAKE IT FASTER?)
+// function findUniq(arr) {
+//     return +arr.filter(num => arr.indexOf(num) === arr.lastIndexOf(num));
+// }
+// console.log(findUniq([ 1,0,0 ]));
+
+
+
+
+// // Sort the Odd (REFACTOR)
+// function sortArray(array) {
+//     let oddNums = array.filter(num => num % 2 !== 0).sort((a, b) => a - b);
+//     let finalArr = [];
+//     let i = 0;
+
+//     array.forEach(num => {
+//         if (num % 2 === 0) {
+//             finalArr.push(num);
+//         } else {
+//             finalArr.push(oddNums[i]);
+//             i++;
+//         }
+//     })
+//     return finalArr;
+// }
+// console.log(sortArray([ 1, 11, 2, 8, 3, 4, 5 ]));
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+
+                5 Kyu
+
+======================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+
+                4 Kyu
+
+======================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+
+                3 Kyu
+
+======================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+
+                2 Kyu
+
+======================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+
+                1 Kyu
+
+======================================== */
 
 
