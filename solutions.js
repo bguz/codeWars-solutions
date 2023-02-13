@@ -1736,12 +1736,29 @@
 
 
 
-// Small Enough?
-function smallEnough(a, limit){
-    return Math.max(...a) > limit;
-}
-console.log(smallEnough([66, 101], 200));
+// // Small Enough?
+// function smallEnough(a, limit){
+//     return Math.max(...a) > limit;
+// }
+// console.log(smallEnough([66, 101], 200));
 
+
+
+
+// // Two Oldest Ages
+// function twoOldestAges(ages) {
+//     return ages.sort((a, b) => a - b).slice(-2);
+// }
+// console.log(twoOldestAges([6,5,83,5,3,18]));
+
+
+
+
+// No Oddities Here
+function noOdds(values){
+    return values.filter(num => num % 2 === 0);
+}
+console.log(noOdds([0,1,2,3]));
 
 
 
