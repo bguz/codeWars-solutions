@@ -1754,11 +1754,20 @@
 
 
 
-// No Oddities Here
-function noOdds(values){
-    return values.filter(num => num % 2 === 0);
+// // No Oddities Here
+// function noOdds(values){
+//     return values.filter(num => num % 2 === 0);
+// }
+// console.log(noOdds([0,1,2,3]));
+
+
+
+
+// Odd-Even String Sort
+function sortMyString(s) {
+    return `${[...s].filter((l, i) => i % 2 === 0).join('')} ${[...s].filter((l, i) => i % 2 !== 0).join('')}`;
 }
-console.log(noOdds([0,1,2,3]));
+console.log(sortMyString('CodeWars'));
 
 
 
