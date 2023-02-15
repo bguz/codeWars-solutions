@@ -1763,11 +1763,21 @@
 
 
 
-// Odd-Even String Sort
-function sortMyString(s) {
-    return `${[...s].filter((l, i) => i % 2 === 0).join('')} ${[...s].filter((l, i) => i % 2 !== 0).join('')}`;
+// // Odd-Even String Sort
+// function sortMyString(s) {
+//     return `${[...s].filter((l, i) => i % 2 === 0).join('')} ${[...s].filter((l, i) => i % 2 !== 0).join('')}`;
+// }
+// console.log(sortMyString('CodeWars'));
+
+
+
+
+// Find the Middle Element
+function gimme (triplet) {
+    let middleValue = [...triplet].sort((a,b) => a - b)[1];
+    return triplet.indexOf(middleValue);
 }
-console.log(sortMyString('CodeWars'));
+console.log(gimme([2, 3, 1]));
 
 
 
