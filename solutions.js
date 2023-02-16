@@ -1772,13 +1772,32 @@
 
 
 
-// Find the Middle Element
-function gimme (triplet) {
-    let middleValue = [...triplet].sort((a,b) => a - b)[1];
-    return triplet.indexOf(middleValue);
-}
-console.log(gimme([2, 3, 1]));
+// // Find the Middle Element
+// function gimme (triplet) {
+//     let middleValue = [...triplet].sort((a,b) => a - b)[1];
+//     return triplet.indexOf(middleValue);
+// }
+// console.log(gimme([2, 3, 1]));
 
+
+
+
+// Check the Exam
+function checkExam(array1, array2) {
+    let score = array1.map((g, i) => {
+        if (array2[i] === '') {
+            return 0;
+        } else if (g === array2[i]) {
+            return 4;
+        } else {
+            return -1;
+        }
+    }).reduce((sum, curr) => sum + curr, 0);
+    return score < 0 ? 0 : score;
+}
+console.log(checkExam(["a", "a", "b", "b"], ["a", "c", "b", "d"]));
+console.log(checkExam(["a", "a", "c", "b"], ["a", "a", "b",  ""]));
+console.log(checkExam(["a", "a", "b", "c"], ["a", "a", "b", "c"]))
 
 
 
