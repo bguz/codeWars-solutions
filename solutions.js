@@ -1782,22 +1782,44 @@
 
 
 
-// Check the Exam
-function checkExam(array1, array2) {
-    let score = array1.map((g, i) => {
-        if (array2[i] === '') {
-            return 0;
-        } else if (g === array2[i]) {
-            return 4;
+// // Check the Exam
+// function checkExam(array1, array2) {
+//     let score = array1.map((g, i) => {
+//         if (array2[i] === '') {
+//             return 0;
+//         } else if (g === array2[i]) {
+//             return 4;
+//         } else {
+//             return -1;
+//         }
+//     }).reduce((sum, curr) => sum + curr, 0);
+//     return score < 0 ? 0 : score;
+// }
+// console.log(checkExam(["a", "a", "b", "b"], ["a", "c", "b", "d"]));
+// console.log(checkExam(["a", "a", "c", "b"], ["a", "a", "b",  ""]));
+// console.log(checkExam(["a", "a", "b", "c"], ["a", "a", "b", "c"]))
+
+
+
+
+// Fizz Buzz
+function fizzbuzz(n) {
+    const finalArr = [];
+    for (let i = 1; i <= n; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            finalArr.push('FizzBuzz');
+        } else if (i % 3 === 0) {
+            finalArr.push('Fizz');
+        } else if (i % 5 === 0) {
+            finalArr.push('Buzz');
         } else {
-            return -1;
+            finalArr.push(i);
         }
-    }).reduce((sum, curr) => sum + curr, 0);
-    return score < 0 ? 0 : score;
+    }
+    return finalArr;
 }
-console.log(checkExam(["a", "a", "b", "b"], ["a", "c", "b", "d"]));
-console.log(checkExam(["a", "a", "c", "b"], ["a", "a", "b",  ""]));
-console.log(checkExam(["a", "a", "b", "c"], ["a", "a", "b", "c"]))
+console.log(fizzbuzz(10));
+
 
 
 
