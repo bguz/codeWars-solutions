@@ -1184,6 +1184,15 @@
 
 
 
+// // Who is Going to Pay for the Wall?
+// function whoIsPaying(name){
+//     return name.length <= 2 ? [name] : [name, name.slice(0,2)];
+// }
+// console.log(whoIsPaying('Mexico'));
+
+
+
+
 
 
 
@@ -1802,23 +1811,64 @@
 
 
 
-// Fizz Buzz
-function fizzbuzz(n) {
-    const finalArr = [];
-    for (let i = 1; i <= n; i++) {
-        if (i % 3 === 0 && i % 5 === 0) {
-            finalArr.push('FizzBuzz');
-        } else if (i % 3 === 0) {
-            finalArr.push('Fizz');
-        } else if (i % 5 === 0) {
-            finalArr.push('Buzz');
-        } else {
-            finalArr.push(i);
-        }
-    }
-    return finalArr;
-}
-console.log(fizzbuzz(10));
+// // Fizz Buzz
+// function fizzbuzz(n) {
+//     const finalArr = [];
+//     for (let i = 1; i <= n; i++) {
+//         if (i % 3 === 0 && i % 5 === 0) {
+//             finalArr.push('FizzBuzz');
+//         } else if (i % 3 === 0) {
+//             finalArr.push('Fizz');
+//         } else if (i % 5 === 0) {
+//             finalArr.push('Buzz');
+//         } else {
+//             finalArr.push(i);
+//         }
+//     }
+//     return finalArr;
+// }
+// console.log(fizzbuzz(10));
+
+
+
+
+// Binary Addition
+// function addBinary(a,b) {
+//     return (a + b).toString(2);
+// }
+// console.log(addBinary(5,9));
+
+
+
+
+// // JavaScript Array Filter
+// function getEvenNumbers(numbersArray){
+//     return numbersArray.filter(num => num % 2 === 0);
+// }
+// console.log(getEvenNumbers([2,4,5,6]));
+
+
+
+
+// // Flatten and Sort an Array
+// "use strict";
+
+// function flattenAndSort(array) {
+//   return array.flat().sort((a,b) => a - b);
+// }
+// console.log(flattenAndSort([[3, 2, 1], [7, 9, 8], [6, 4, 5]]));
+
+
+
+
+// // All Unique (REFACTOR WITH SET)
+// function hasUniqueChars(str){
+//     return [...str].map(letter => str.indexOf(letter) === str.lastIndexOf(letter)).includes(false) ? false : true;
+// }
+// console.log(hasUniqueChars('abcdef'));
+// console.log(hasUniqueChars("  nAa"));
+
+
 
 
 
@@ -1923,6 +1973,39 @@ console.log(fizzbuzz(10));
 //     return finalArr;
 // }
 // console.log(sortArray([ 1, 11, 2, 8, 3, 4, 5 ]));
+
+
+
+
+// // Which Are In?
+// function inArray(array1,array2){
+//     return array1.filter(word => {
+//         if (array2.join(' ').includes(word)) {
+//             return word;
+//         }
+//     }).sort();
+// }
+// console.log(inArray(["live", "strong", "arp"], ["lively", "alive", "harp", "sharp", "armstrong"]));
+
+
+
+
+// // Mexican Wave
+// function wave(str){
+//     let waveArr = [];
+    
+//     for (let i = 0; i < str.length; i++) {
+//         let letter = str[i];
+//         if (letter === ' ') {
+//             continue;
+//         } else {
+//             waveArr.push(str.slice(0, i) + letter.toUpperCase() + str.slice(i + 1));
+//         }
+//     }
+//     return waveArr;
+// }
+// console.log(wave('hello'))
+
 
 
 
