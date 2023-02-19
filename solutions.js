@@ -1241,12 +1241,12 @@
 
 
 
-// Contamination #1 - String
-function contamination(text, char){
-    return text.length === 0 ? '' : [...text].map(letter => letter = char).join('');
-}
-console.log(contamination('abc', ''));
-console.log(contamination('', 'z'));
+// // Contamination #1 - String
+// function contamination(text, char){
+//     return text.length === 0 ? '' : [...text].map(letter => letter = char).join('');
+// }
+// console.log(contamination('abc', ''));
+// console.log(contamination('', 'z'));
 
 
 
@@ -1920,6 +1920,15 @@ console.log(contamination('', 'z'));
 // }
 // console.log(hasUniqueChars('abcdef'));
 // console.log(hasUniqueChars("  nAa"));
+
+
+
+
+// Sum of Minimums!
+function sumOfMinimums(arr) {
+    return arr.map(numArr => Math.min(...numArr)).reduce((sum, curr) => sum + curr, 0);
+}
+console.log(sumOfMinimums([[7, 9, 8, 6, 2], [6, 3, 5, 4, 3], [5, 8, 7, 4, 5]]));
 
 
 
