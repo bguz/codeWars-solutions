@@ -1193,7 +1193,60 @@
 
 
 
+// // Alan Partridge II - Apple Turnover
+// function apple(x) {
+//     return x ** 2 >= 1000 ? `It's hotter than the sun!!` : `Help yourself to a honeycomb Yorkie for the glovebox.`;
+// }
+// console.log(apple('50'));
 
+
+
+
+// // Safe User Input Part 1 - htmlspecialchars
+// function htmlspecialchars(formData) {
+//     return formData.replace(/&/g, "&amp;")
+//                 .replace(/"/g, "&quot;")
+//                 .replace(/</g, "&lt;")
+//                 .replace(/>/g, "&gt;");    
+// }
+// console.log(htmlspecialchars('<h2>Hello World</h2>'))
+
+
+
+
+// // Take an Arrow to the Knee, Functionally
+// var ArrowFunc = function(arr) {
+//     return arr.map(num => String.fromCharCode(num)).join(''); //Complete this function
+// }
+// console.log(ArrowFunc([70,85,83,32,82,79,72,32,68,65,72]));
+
+
+
+
+// // Get Number From String
+// function getNumberFromString(s) {
+//     const result = [];
+//     for (let i = 0; i < s.length; i++) {
+//         if (s[i] === ' ') {
+//             continue;
+//         } else if (Number(s[i]) >= 0) {
+//             result.push(s[i]);
+//         }
+//     }
+//     return Number(result.join(''));
+// }
+// console.log(getNumberFromString('this is number: 7'));
+// console.log(getNumberFromString('$100 000 000'));
+
+
+
+
+// Contamination #1 - String
+function contamination(text, char){
+    return text.length === 0 ? '' : [...text].map(letter => letter = char).join('');
+}
+console.log(contamination('abc', ''));
+console.log(contamination('', 'z'));
 
 
 
