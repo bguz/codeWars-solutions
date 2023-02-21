@@ -1933,15 +1933,32 @@
 
 
 
-// Row Weights
-function rowWeights(array){
-    return [
-        array.filter((num, index) => index % 2 === 0).reduce((sum, curr) => sum + curr, 0),
-        array.filter((num, index) => index % 2 !== 0).reduce((sum, curr) => sum + curr, 0)
-    ]
-}
-console.log(rowWeights([100,50]));
+// // Row Weights
+// function rowWeights(array){
+//     return [
+//         array.filter((num, index) => index % 2 === 0).reduce((sum, curr) => sum + curr, 0),
+//         array.filter((num, index) => index % 2 !== 0).reduce((sum, curr) => sum + curr, 0)
+//     ]
+// }
+// console.log(rowWeights([100,50]));
 
+
+
+
+// Sorted? Yes? No? How?
+function isSortedAndHow(array) {
+    if (JSON.stringify([...array].sort((a,b) => a - b)) === JSON.stringify(array)) {
+        return 'yes, ascending';
+    } else if (JSON.stringify([...array].sort((a,b) => b - a)) === JSON.stringify(array)) {
+        return 'yes, descending';
+    } else {
+        return 'no';
+    }
+}
+
+console.log(isSortedAndHow([1, 2]));
+console.log(isSortedAndHow([15, 7, 3, -8]));
+console.log(isSortedAndHow([4, 2, 30]));
 
 
 
