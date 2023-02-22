@@ -1945,20 +1945,29 @@
 
 
 
-// Sorted? Yes? No? How?
-function isSortedAndHow(array) {
-    if (JSON.stringify([...array].sort((a,b) => a - b)) === JSON.stringify(array)) {
-        return 'yes, ascending';
-    } else if (JSON.stringify([...array].sort((a,b) => b - a)) === JSON.stringify(array)) {
-        return 'yes, descending';
-    } else {
-        return 'no';
-    }
-}
+// // Sorted? Yes? No? How?
+// function isSortedAndHow(array) {
+//     if (JSON.stringify([...array].sort((a,b) => a - b)) === JSON.stringify(array)) {
+//         return 'yes, ascending';
+//     } else if (JSON.stringify([...array].sort((a,b) => b - a)) === JSON.stringify(array)) {
+//         return 'yes, descending';
+//     } else {
+//         return 'no';
+//     }
+// }
 
-console.log(isSortedAndHow([1, 2]));
-console.log(isSortedAndHow([15, 7, 3, -8]));
-console.log(isSortedAndHow([4, 2, 30]));
+// console.log(isSortedAndHow([1, 2]));
+// console.log(isSortedAndHow([15, 7, 3, -8]));
+// console.log(isSortedAndHow([4, 2, 30]));
+
+
+
+
+// Sort Arrays - 1
+sortme = function(names){
+    return names.sort();
+}
+console.log(sortme(['one', 'two', 'three']));
 
 
 
