@@ -1963,12 +1963,36 @@
 
 
 
-// Sort Arrays - 1
-sortme = function(names){
-    return names.sort();
-}
-console.log(sortme(['one', 'two', 'three']));
+// // Sort Arrays - 1
+// sortme = function(names){
+//     return names.sort();
+// }
+// console.log(sortme(['one', 'two', 'three']));
 
+
+
+
+// Head, Tail, Init and Last
+function head(arr) {
+    return [...arr][0];  
+}
+  
+function last(arr) {
+    return [...arr][arr.length - 1];
+}
+  
+function tail(arr) {
+    return [...arr].slice(1);
+}
+  
+function init(arr) {
+    return [...arr].slice(0, arr.length - 1);
+}
+
+console.log(head([5,1]));
+console.log(last([7,2]));
+console.log(tail([1]));
+console.log(init([1,4,7,9]));
 
 
 
