@@ -1972,27 +1972,37 @@
 
 
 
-// Head, Tail, Init and Last
-function head(arr) {
-    return [...arr][0];  
-}
+// // Head, Tail, Init and Last
+// function head(arr) {
+//     return [...arr][0];  
+// }
   
-function last(arr) {
-    return [...arr][arr.length - 1];
-}
+// function last(arr) {
+//     return [...arr][arr.length - 1];
+// }
   
-function tail(arr) {
-    return [...arr].slice(1);
-}
+// function tail(arr) {
+//     return [...arr].slice(1);
+// }
   
-function init(arr) {
-    return [...arr].slice(0, arr.length - 1);
-}
+// function init(arr) {
+//     return [...arr].slice(0, arr.length - 1);
+// }
 
-console.log(head([5,1]));
-console.log(last([7,2]));
-console.log(tail([1]));
-console.log(init([1,4,7,9]));
+// console.log(head([5,1]));
+// console.log(last([7,2]));
+// console.log(tail([1]));
+// console.log(init([1,4,7,9]));
+
+
+
+
+// Even Number in an Array (NEEDS REFACTORING)
+function evenNumbers(array, number) {
+    return array.filter(num => num % 2 === 0).splice(-number);
+}
+console.log(evenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
+
 
 
 
