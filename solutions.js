@@ -1997,12 +1997,23 @@
 
 
 
-// Even Number in an Array (NEEDS REFACTORING)
-function evenNumbers(array, number) {
-    return array.filter(num => num % 2 === 0).splice(-number);
-}
-console.log(evenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
+// // Even Number in an Array (NEEDS REFACTORING)
+// function evenNumbers(array, number) {
+//     return array.filter(num => num % 2 === 0).splice(-number);
+// }
+// console.log(evenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
 
+
+
+
+// Shorter Concat (Reverse Longer)
+function shorter_reverse_longer(a,b){
+    return a.length === b.length || a.length > b.length ?
+        `${b}${a.split('').reverse().join('')}${b}` :
+        `${a}${b.split('').reverse().join('')}${a}`;
+}
+console.log(shorter_reverse_longer('hello', 'bau'));
+console.log(shorter_reverse_longer('first', 'abcde'));
 
 
 
