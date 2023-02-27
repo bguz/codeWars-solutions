@@ -2006,15 +2006,23 @@
 
 
 
-// Shorter Concat (Reverse Longer)
-function shorter_reverse_longer(a,b){
-    return a.length === b.length || a.length > b.length ?
-        `${b}${a.split('').reverse().join('')}${b}` :
-        `${a}${b.split('').reverse().join('')}${a}`;
-}
-console.log(shorter_reverse_longer('hello', 'bau'));
-console.log(shorter_reverse_longer('first', 'abcde'));
+// // Shorter Concat (Reverse Longer)
+// function shorter_reverse_longer(a,b){
+//     return a.length === b.length || a.length > b.length ?
+//         `${b}${a.split('').reverse().join('')}${b}` :
+//         `${a}${b.split('').reverse().join('')}${a}`;
+// }
+// console.log(shorter_reverse_longer('hello', 'bau'));
+// console.log(shorter_reverse_longer('first', 'abcde'));
 
+
+
+
+// Substituting Variables Into Strings: Padded Numbers
+function solution(value){
+    return `Value is ${'0'.repeat(5 - String(value).length) + value}`;
+}
+console.log(solution(1204));
 
 
 
