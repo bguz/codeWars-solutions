@@ -2018,13 +2018,7 @@
 
 
 
-<<<<<<< HEAD
-// Substituting Variables Into Strings: Padded Numbers
-function solution(value){
-    return `Value is ${'0'.repeat(5 - String(value).length) + value}`;
-}
-console.log(solution(1204));
-=======
+
 // // Substituting Variables Into Strings: Padded Numbers
 // function solution(value){
 //     return `Value is ${'0'.repeat(5 - String(value).length) + value}`;
@@ -2034,8 +2028,12 @@ console.log(solution(1204));
 
 
 
->>>>>>> ccfbb6d (fix)
+// Flatten
+var flatten = function (array){
+    return array.flat();
+}
 
+console.log(flatten([[1,2,3],["a","b","c"],[1,2,3]]));
 
 
 
