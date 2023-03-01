@@ -2028,14 +2028,41 @@
 
 
 
-// Flatten
-var flatten = function (array){
-    return array.flat();
+// // Flatten
+// var flatten = function (array){
+//     return array.flat();
+// }
+
+// console.log(flatten([[1,2,3],["a","b","c"],[1,2,3]]));
+
+
+
+
+// // Parts of a List (REFACTOR BEFORE COMMITING)
+// function partlist(arr) {
+//     const finalArr = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         if (i === arr.length - 1) {
+//             finalArr.push();
+//             break;
+//         } else {
+//             let rest = arr.slice(i+1);
+//             let bef = arr.slice(0, i+1);
+//             finalArr.push([bef.join(' '), rest.join(' ')]);
+//         }
+//     }
+//     return finalArr;
+// }
+// console.log(partlist(["I", "wish", "I", "hadn't", "come"]));
+
+
+
+
+// Convert an Array of Strings to Array of Numbers
+function toNumberArray(stringarray){
+    return stringarray.map(str => Number(str));
 }
-
-console.log(flatten([[1,2,3],["a","b","c"],[1,2,3]]));
-
-
+console.log(toNumberArray(["1.1", "2.2", "3.3"]));
 
 
 
