@@ -2058,11 +2058,20 @@
 
 
 
-// Convert an Array of Strings to Array of Numbers
-function toNumberArray(stringarray){
-    return stringarray.map(str => Number(str));
+// // Convert an Array of Strings to Array of Numbers
+// function toNumberArray(stringarray){
+//     return stringarray.map(str => Number(str));
+// }
+// console.log(toNumberArray(["1.1", "2.2", "3.3"]));
+
+
+
+
+// Spacify
+function spacify(str) {
+    return str.split('').join(' ');
 }
-console.log(toNumberArray(["1.1", "2.2", "3.3"]));
+console.log(spacify('hello world'));
 
 
 
