@@ -2067,11 +2067,11 @@
 
 
 
-// Spacify
-function spacify(str) {
-    return str.split('').join(' ');
-}
-console.log(spacify('hello world'));
+// // Spacify
+// function spacify(str) {
+//     return str.split('').join(' ');
+// }
+// console.log(spacify('hello world'));
 
 
 
@@ -2155,7 +2155,7 @@ console.log(spacify('hello world'));
 
 
 
-// // Sort the Odd (REFACTOR)
+// // Sort the Odd
 // function sortArray(array) {
 //     let oddNums = array.filter(num => num % 2 !== 0).sort((a, b) => a - b);
 //     let finalArr = [];
@@ -2204,6 +2204,18 @@ console.log(spacify('hello world'));
 //     return waveArr;
 // }
 // console.log(wave('hello'))
+
+
+
+
+// Counting Duplicates (REFACTOR FOR NEXT DAY)
+function duplicateCount(text){
+    return Object.entries(text.toLowerCase().split('').reduce((obj, curr) => {
+        obj[curr] = obj[curr] + 1 || 1;
+        return obj;
+    }, {})).filter(([key, value]) => value > 1).length;
+}
+console.log(duplicateCount('aabbcde'));
 
 
 
