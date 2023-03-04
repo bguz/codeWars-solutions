@@ -2208,14 +2208,29 @@
 
 
 
-// Counting Duplicates (REFACTOR FOR NEXT DAY)
-function duplicateCount(text){
-    return Object.entries(text.toLowerCase().split('').reduce((obj, curr) => {
-        obj[curr] = obj[curr] + 1 || 1;
-        return obj;
-    }, {})).filter(([key, value]) => value > 1).length;
+// // Counting Duplicates (REFACTOR FOR NEXT DAY)
+// function duplicateCount(text){
+//     return Object.entries(text.toLowerCase().split('').reduce((obj, curr) => {
+//         obj[curr] = obj[curr] + 1 || 1;
+//         return obj;
+//     }, {})).filter(([key, value]) => value > 1).length;
+// }
+// console.log(duplicateCount('aabbcde'));
+
+
+
+
+// Data Reverse
+function dataReverse(data) {
+    const newArr = [];
+    const copy = [...data];
+    for (let i = 0; i < copy.length / 8; i++) {
+        newArr.push(data.splice(0, 8));
+    }
+
+    return newArr.reverse().flat();
 }
-console.log(duplicateCount('aabbcde'));
+console.log(dataReverse([1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,0,1,0,1,0]));
 
 
 
