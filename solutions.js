@@ -2220,17 +2220,45 @@
 
 
 
-// Data Reverse
-function dataReverse(data) {
-    const newArr = [];
-    const copy = [...data];
-    for (let i = 0; i < copy.length / 8; i++) {
-        newArr.push(data.splice(0, 8));
-    }
+// // Data Reverse
+// function dataReverse(data) {
+//     const newArr = [];
+//     const copy = [...data];
+//     for (let i = 0; i < copy.length / 8; i++) {
+//         newArr.push(data.splice(0, 8));
+//     }
 
-    return newArr.reverse().flat();
+//     return newArr.reverse().flat();
+// }
+// console.log(dataReverse([1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,0,1,0,1,0]));
+
+
+
+
+// Array Helpers
+Array.prototype.square = function() {
+    return this.map(num => num ** 2);
 }
-console.log(dataReverse([1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,0,1,0,1,0]));
+
+Array.prototype.cube = function() {
+    return this.map(num => num ** 3);
+}
+
+Array.prototype.average = function() {
+    return this.reduce((sum, curr) => sum + curr, 0) / this.length;
+}
+
+Array.prototype.sum = function() {
+    return this.reduce((sum, curr) => sum + curr, 0);
+}
+
+Array.prototype.even = function() {
+    return this.filter(num => num % 2 === 0);
+}
+
+Array.prototype.odd = function() {
+    return this.filter(num => num % 2 !== 0);
+}
 
 
 
