@@ -2235,30 +2235,43 @@
 
 
 
-// Array Helpers
-Array.prototype.square = function() {
-    return this.map(num => num ** 2);
-}
+// // Array Helpers
+// Array.prototype.square = function() {
+//     return this.map(num => num ** 2);
+// }
 
-Array.prototype.cube = function() {
-    return this.map(num => num ** 3);
-}
+// Array.prototype.cube = function() {
+//     return this.map(num => num ** 3);
+// }
 
-Array.prototype.average = function() {
-    return this.reduce((sum, curr) => sum + curr, 0) / this.length;
-}
+// Array.prototype.average = function() {
+//     return this.reduce((sum, curr) => sum + curr, 0) / this.length;
+// }
 
-Array.prototype.sum = function() {
-    return this.reduce((sum, curr) => sum + curr, 0);
-}
+// Array.prototype.sum = function() {
+//     return this.reduce((sum, curr) => sum + curr, 0);
+// }
 
-Array.prototype.even = function() {
-    return this.filter(num => num % 2 === 0);
-}
+// Array.prototype.even = function() {
+//     return this.filter(num => num % 2 === 0);
+// }
 
-Array.prototype.odd = function() {
-    return this.filter(num => num % 2 !== 0);
+// Array.prototype.odd = function() {
+//     return this.filter(num => num % 2 !== 0);
+// }
+
+
+
+
+// Highest Rank Number in an Array
+function highestRank(arr) {
+    const reducedAndSorted = Object.entries(arr.reduce((obj, curr) => {
+        obj[curr] = obj[curr] + 1 || 1;
+        return obj;
+    }, {})).sort(([,a], [,b]) => a - b);
+    return +reducedAndSorted[reducedAndSorted.length - 1][0];
 }
+console.log(highestRank([12,10,8,12,7,6,4,10,12,10]));
 
 
 
