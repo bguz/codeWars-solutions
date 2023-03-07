@@ -2263,15 +2263,32 @@
 
 
 
-// Highest Rank Number in an Array
-function highestRank(arr) {
-    const reducedAndSorted = Object.entries(arr.reduce((obj, curr) => {
-        obj[curr] = obj[curr] + 1 || 1;
-        return obj;
-    }, {})).sort(([,a], [,b]) => a - b);
-    return +reducedAndSorted[reducedAndSorted.length - 1][0];
+// // Highest Rank Number in an Array
+// function highestRank(arr) {
+//     const reducedAndSorted = Object.entries(arr.reduce((obj, curr) => {
+//         obj[curr] = obj[curr] + 1 || 1;
+//         return obj;
+//     }, {})).sort(([,a], [,b]) => a - b);
+//     return +reducedAndSorted[reducedAndSorted.length - 1][0];
+// }
+// console.log(highestRank([12,10,8,12,7,6,4,10,12,10]));
+
+
+
+
+// The Vowel Code
+const vowels = ['a', 'e', 'i', 'o', 'u'];
+
+function encode(string) {
+    return string.split('').map(letter => vowels.includes(letter) ? vowels.indexOf(letter) + 1 : letter).join('');
 }
-console.log(highestRank([12,10,8,12,7,6,4,10,12,10]));
+  
+function decode(string) {
+    return string.split('').map(letter => isNaN(letter) ? letter : vowels[+letter - 1]).join('');
+}
+
+console.log(encode('hello'));
+console.log(decode('h2ll4'));
 
 
 
