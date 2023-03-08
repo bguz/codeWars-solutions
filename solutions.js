@@ -2276,19 +2276,30 @@
 
 
 
-// The Vowel Code
-const vowels = ['a', 'e', 'i', 'o', 'u'];
+// // The Vowel Code
+// const vowels = ['a', 'e', 'i', 'o', 'u'];
 
-function encode(string) {
-    return string.split('').map(letter => vowels.includes(letter) ? vowels.indexOf(letter) + 1 : letter).join('');
-}
+// function encode(string) {
+//     return string.split('').map(letter => vowels.includes(letter) ? vowels.indexOf(letter) + 1 : letter).join('');
+// }
   
-function decode(string) {
-    return string.split('').map(letter => isNaN(letter) ? letter : vowels[+letter - 1]).join('');
+// function decode(string) {
+//     return string.split('').map(letter => isNaN(letter) ? letter : vowels[+letter - 1]).join('');
+// }
+
+// console.log(encode('hello'));
+// console.log(decode('h2ll4'));
+
+
+
+
+// CamelCase Method
+String.prototype.camelCase=function(){
+    if (this.length === 0) return '';
+    return this.split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join('');
 }
 
-console.log(encode('hello'));
-console.log(decode('h2ll4'));
+console.log(''.camelCase());
 
 
 
