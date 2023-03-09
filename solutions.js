@@ -2079,6 +2079,11 @@
 
 
 
+
+
+
+
+
 /* =====================================
 
                 6 Kyu
@@ -2293,13 +2298,42 @@
 
 
 
-// CamelCase Method
-String.prototype.camelCase=function(){
-    if (this.length === 0) return '';
-    return this.split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join('');
-}
+// // CamelCase Method
+// String.prototype.camelCase=function(){
+//     if (this.length === 0) return '';
+//     return this.split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join('');
+// }
 
-console.log(''.camelCase());
+// console.log(''.camelCase());
+
+
+
+
+// // Pair of Glovez
+// function numberOfPairs(gloves) {
+//     return Object.values(gloves.reduce((obj, curr) => {
+//         obj[curr] = obj[curr] + 1 || 1;
+//         return obj;
+//     }, {})).map(val => val % 2 !== 0 ? val - (val % 2) : val).reduce((sum, curr) => sum + curr, 0) / 2;
+// }
+// console.log(numberOfPairs([
+//     'Silver',  'Blue',    'Green',   'Olive',   'Maroon',  'Silver',
+//     'Lime',    'Gray',    'White',   'White',   'Lime',    'Silver',
+//     'White',   'Purple',  'Fuchsia', 'Fuchsia', 'Navy',    'Green',
+//     'Yellow',  'Aqua',    'Teal',    'Navy',    'White',   'Blue',
+//     'Purple',  'Yellow',  'White',   'Navy',    'Blue',    'Fuchsia',
+//     'Gray',    'Black',   'Lime',    'Green',   'Gray',    'Gray',
+//     'Maroon',  'Gray',    'Navy',    'Navy',    'Maroon',  'Aqua',
+//     'Black',   'Yellow',  'Silver',  'Green',   'Silver',  'Purple',
+//     'Fuchsia', 'Teal',    'Teal',    'Yellow',  'Fuchsia', 'Aqua',
+//     'Silver',  'Aqua',    'Green',   'Olive',   'Silver',  'Red',
+//     'Olive',   'Fuchsia', 'Maroon',  'Gray',    'Gray',    'Lime',
+//     'Aqua',    'Maroon',  'Yellow',  'Red',     'Silver',  'Fuchsia',
+//     'Gray',    'White',   'Fuchsia', 'Black',   'Green',   'Fuchsia',
+//     'Teal',    'Green',   'Fuchsia', 'Yellow',  'White',   'Yellow',
+//     'Lime',    'Aqua',    'Red',     'Green',   'Purple',  'White',
+//     'Yellow',  'Black',   'White',   'Lime',    'Lime'
+//   ]));
 
 
 
