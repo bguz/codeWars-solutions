@@ -2338,6 +2338,22 @@
 
 
 
+// // Prefill an Array
+// function prefill(n, v) {
+//     if (parseInt(n) !== Math.abs(n)) {
+//         throw new TypeError(`${n} is invalid`);
+//     }
+
+//     return Number(n) ? Array(n).fill(v) : [];
+// }
+
+// console.log(prefill(3,1));
+// console.log(prefill(2, 'abc'));
+// console.log(prefill(3, prefill(2, '2d')));
+// // console.log(prefill('xyz', 1));
+// console.log(prefill(Infinity, 1));
+
+
 
 
 
