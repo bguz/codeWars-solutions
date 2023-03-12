@@ -2356,26 +2356,38 @@
 
 
 
-// Run-Length Encoding
-let runLengthEncoding = function(str) {
-    if (str.length === 0) return [];
+// // Run-Length Encoding
+// let runLengthEncoding = function(str) {
+//     if (str.length === 0) return [];
 
-    let finalArr = [];
-    let count = 0;
+//     let finalArr = [];
+//     let count = 0;
 
-    for (let i = 0; i < str.length; i++) {
-        if (str[i] === str[i + 1]) {
-            count++;
-        } else {
-            count++;
-            finalArr.push([count, str[i]]);
-            count = 0;
-        }
-    }
-    return finalArr;
+//     for (let i = 0; i < str.length; i++) {
+//         if (str[i] === str[i + 1]) {
+//             count++;
+//         } else {
+//             count++;
+//             finalArr.push([count, str[i]]);
+//             count = 0;
+//         }
+//     }
+//     return finalArr;
+// }
+// console.log(runLengthEncoding('WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWBWWWWWWWWWWWWWW'));
+
+
+
+
+// Replace With Alphabet Position
+function alphabetPosition(text) {
+    const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+ 
+    return text.toLowerCase().split('').map(letter => {
+        return alphabet.indexOf(letter) + 1;
+    }).join(' ');
 }
-console.log(runLengthEncoding('WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWBWWWWWWWWWWWWWW'));
-
+console.log(alphabetPosition('The sunset sets at twelve o\' clock'));
 
 
 
