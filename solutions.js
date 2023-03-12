@@ -2383,9 +2383,11 @@
 function alphabetPosition(text) {
     const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
  
-    return text.toLowerCase().split('').map(letter => {
-        return alphabet.indexOf(letter) + 1;
-    }).join(' ');
+    return text
+        .toLowerCase()
+        .split('')
+        .filter(letter => alphabet.includes(letter))
+        .map(letter => alphabet.indexOf(letter) + 1).join(' ');
 }
 console.log(alphabetPosition('The sunset sets at twelve o\' clock'));
 
