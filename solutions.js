@@ -2394,10 +2394,20 @@
 
 
 
+// Is Integer Array?
+function isIntArray(arr) {
+    if (!Array.isArray(arr)) return false;
 
-
-
-
+    for (let i = 0; i < arr.length; i++) {
+        if (!Number.isInteger(arr[i])) {
+            return false;
+        }
+    }
+    return true;
+}
+console.log(isIntArray([]));
+console.log(isIntArray([1, 2, 3, 4]));
+console.log(isIntArray([null]));
 
 
 
