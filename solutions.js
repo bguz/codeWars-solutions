@@ -2076,6 +2076,23 @@
 
 
 
+// Coding Meetup #6 - Higher-Order Functions Series
+// Can They Code in the Same Language?
+var list1 = [
+    { firstName: 'Daniel', lastName: 'J.', country: 'Aruba', continent: 'Americas', age: 42, language: 'JavaScript' },
+    { firstName: 'Kseniya', lastName: 'T.', country: 'Belarus', continent: 'Europe', age: 22, language: 'JavaScript' },
+    { firstName: 'Hanna', lastName: 'L.', country: 'Hungary', continent: 'Europe', age: 65, language: 'JavaScript' },
+];
+
+function isSameLanguage(list) {
+    let firstVal = list[0].language;
+    return list.every(person => person.language === firstVal);
+}
+console.log(isSameLanguage(list1));
+
+
+
+
 
 
 
@@ -2413,20 +2430,20 @@
 
 
 
-// Give me a Diamond!
-function diamond(n){
-    if (n <= 0 || n % 2 === 0) return null;
-    let str = '';
+// // Give me a Diamond!
+// function diamond(n){
+//     if (n <= 0 || n % 2 === 0) return null;
+//     let str = '';
 
-    for (let i = 0; i < n; i++) {
-        let len = Math.abs((n - 2 * i - 1) / 2);
-        str += ' '.repeat(len);
-        str += '*'.repeat(n - 2 * len);
-        str += '\n';
-    }
-    return str;
-}
-console.log(diamond(3))
+//     for (let i = 0; i < n; i++) {
+//         let len = Math.abs((n - 2 * i - 1) / 2);
+//         str += ' '.repeat(len);
+//         str += '*'.repeat(n - 2 * len);
+//         str += '\n';
+//     }
+//     return str;
+// }
+// console.log(diamond(3))
 
 
 
