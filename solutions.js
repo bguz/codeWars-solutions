@@ -2394,21 +2394,39 @@
 
 
 
-// Is Integer Array?
-function isIntArray(arr) {
-    if (!Array.isArray(arr)) return false;
+// // Is Integer Array?
+// function isIntArray(arr) {
+//     if (!Array.isArray(arr)) return false;
 
-    for (let i = 0; i < arr.length; i++) {
-        if (Math.floor(arr[i]) !== arr[i]) {
-            return false;
-        }
+//     for (let i = 0; i < arr.length; i++) {
+//         if (Math.floor(arr[i]) !== arr[i]) {
+//             return false;
+//         }
+//     }
+
+//     return true;
+// }
+// console.log(isIntArray([]));
+// console.log(isIntArray([1, 2, 3, 4]));
+// console.log(isIntArray([null]));
+
+
+
+
+// Give me a Diamond!
+function diamond(n){
+    if (n <= 0 || n % 2 === 0) return null;
+    let str = '';
+
+    for (let i = 0; i < n; i++) {
+        let len = Math.abs((n - 2 * i - 1) / 2);
+        str += ' '.repeat(len);
+        str += '*'.repeat(n - 2 * len);
+        str += '\n';
     }
-
-    return true;
+    return str;
 }
-console.log(isIntArray([]));
-console.log(isIntArray([1, 2, 3, 4]));
-console.log(isIntArray([null]));
+console.log(diamond(3))
 
 
 
