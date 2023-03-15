@@ -2093,19 +2093,40 @@
 
 
 
-// Coding Meetup #4 - Higher-Order Functions Series
-// Find the first Python Developer
-var list1 = [
-    { firstName: 'Mark', lastName: 'G.', country: 'Scotland', continent: 'Europe', age: 22, language: 'JavaScript' },
-    { firstName: 'Victoria', lastName: 'T.', country: 'Puerto Rico', continent: 'Americas', age: 30, language: 'Python' },
-    { firstName: 'Emma', lastName: 'B.', country: 'Norway', continent: 'Europe', age: 19, language: 'Clojure' }
-];
+// // Coding Meetup #4 - Higher-Order Functions Series
+// // Find the first Python Developer
+// var list1 = [
+//     { firstName: 'Mark', lastName: 'G.', country: 'Scotland', continent: 'Europe', age: 22, language: 'JavaScript' },
+//     { firstName: 'Victoria', lastName: 'T.', country: 'Puerto Rico', continent: 'Americas', age: 30, language: 'Python' },
+//     { firstName: 'Emma', lastName: 'B.', country: 'Norway', continent: 'Europe', age: 19, language: 'Clojure' }
+// ];
 
-function getFirstPython(list) {
-    const pythonDev = list.find(person => person.language === 'Python');
-    return pythonDev ? `${pythonDev.firstName}, ${pythonDev.country}` : `There will be no Python developers`;  
+// function getFirstPython(list) {
+//     const pythonDev = list.find(person => person.language === 'Python');
+//     return pythonDev ? `${pythonDev.firstName}, ${pythonDev.country}` : `There will be no Python developers`;  
+// }
+// console.log(getFirstPython(list1));
+
+
+
+
+// Add Property to Every Object in Array
+var questions = [{
+    question: "What's the currency of the USA?",
+    choices: ["US dollar", "Ruble", "Horses", "Gold"],
+    corAnswer: 0
+}, {
+    question: "Where was the American Declaration of Independence signed?",
+    choices: ["Philadelphia", "At the bottom", "Frankie's Pub", "China"],
+    corAnswer: 0
+}];
+
+function addProperty(arr) {
+    arr.forEach(obj => obj.usersAnswer = null);
+    return arr;
 }
-console.log(getFirstPython(list1));
+
+console.log(addProperty(questions));
 
 
 
