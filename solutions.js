@@ -2110,23 +2110,40 @@
 
 
 
-// Add Property to Every Object in Array
-var questions = [{
-    question: "What's the currency of the USA?",
-    choices: ["US dollar", "Ruble", "Horses", "Gold"],
-    corAnswer: 0
-}, {
-    question: "Where was the American Declaration of Independence signed?",
-    choices: ["Philadelphia", "At the bottom", "Frankie's Pub", "China"],
-    corAnswer: 0
-}];
+// // Add Property to Every Object in Array
+// var questions = [{
+//     question: "What's the currency of the USA?",
+//     choices: ["US dollar", "Ruble", "Horses", "Gold"],
+//     corAnswer: 0
+// }, {
+//     question: "Where was the American Declaration of Independence signed?",
+//     choices: ["Philadelphia", "At the bottom", "Frankie's Pub", "China"],
+//     corAnswer: 0
+// }];
 
-function addProperty(arr) {
-    arr.forEach(obj => obj.usersAnswer = null);
+// function addProperty(arr) {
+//     arr.forEach(obj => obj.usersAnswer = null);
+//     return arr;
+// }
+
+// console.log(addProperty(questions));
+
+
+
+
+// Find The Duplicated Number in a Consecutive Unsorted List
+function findDup(arr) {
+    arr.sort();
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === arr[i + 1]) {
+            return arr[i];
+        } else {
+            continue;
+        }
+    }
     return arr;
 }
-
-console.log(addProperty(questions));
+console.log(findDup([1,3,2,5,4,5,7,6]));
 
 
 
