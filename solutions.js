@@ -2131,19 +2131,29 @@
 
 
 
-// Find The Duplicated Number in a Consecutive Unsorted List
-function findDup(arr) {
-    arr.sort();
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] === arr[i + 1]) {
-            return arr[i];
-        } else {
-            continue;
-        }
-    }
-    return arr;
+// // Find The Duplicated Number in a Consecutive Unsorted List
+// function findDup(arr) {
+//     arr.sort();
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] === arr[i + 1]) {
+//             return arr[i];
+//         } else {
+//             continue;
+//         }
+//     }
+//     return arr;
+// }
+// console.log(findDup([1,3,2,5,4,5,7,6]));
+
+
+
+
+// vowelOne
+function vowelOne(s) {
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+    return s.toLowerCase().split('').map(letter => !vowels.includes(letter) ? 0 : 1).join('');
 }
-console.log(findDup([1,3,2,5,4,5,7,6]));
+console.log(vowelOne('vowelOne'));
 
 
 
