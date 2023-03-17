@@ -2148,12 +2148,33 @@
 
 
 
-// vowelOne
-function vowelOne(s) {
-    const vowels = ['a', 'e', 'i', 'o', 'u'];
-    return s.toLowerCase().split('').map(letter => !vowels.includes(letter) ? 0 : 1).join('');
+// // vowelOne
+// function vowelOne(s) {
+//     const vowels = ['a', 'e', 'i', 'o', 'u'];
+//     return s.toLowerCase().split('').map(letter => !vowels.includes(letter) ? 0 : 1).join('');
+// }
+// console.log(vowelOne('vowelOne'));
+
+
+
+
+// Caffeine Script
+function caffeineBuzz(n) {
+    let result = 'mocha_missing!';
+
+    if (n % 3 === 0) {
+        if (n % 4 === 0) {
+            result = 'Coffee';
+        } else {
+            result = 'Java';
+        }
+    }
+    if (n % 2 === 0) {
+        result += 'Script';
+    }
+    return result;
 }
-console.log(vowelOne('vowelOne'));
+console.log(caffeineBuzz(12));
 
 
 
