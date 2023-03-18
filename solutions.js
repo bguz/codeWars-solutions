@@ -2179,11 +2179,21 @@
 
 
 
-// Name Array Capping
-function capMe(names) {
-    return names.map(name => name.slice(0,1).toUpperCase() + name.slice(1).toLowerCase());
+// // Name Array Capping
+// function capMe(names) {
+//     return names.map(name => name.slice(0,1).toUpperCase() + name.slice(1).toLowerCase());
+// }
+// console.log(capMe(['jo', 'KARLY', 'jurie']));
+
+
+
+
+// Smallest Value of an Array
+function min(arr, toReturn) {
+    return toReturn === 'value' ? Math.min(...arr) : arr.indexOf(Math.min(...arr));
 }
-console.log(capMe(['jo', 'KARLY', 'jurie']));
+console.log(min([1,2,3,4,5], 'value'));
+console.log(min([1,2,3,4,5], 'index'));
 
 
 
