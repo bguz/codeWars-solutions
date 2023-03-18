@@ -2158,24 +2158,32 @@
 
 
 
-// Caffeine Script
-function caffeineBuzz(n) {
-    let result = 'mocha_missing!';
+// // Caffeine Script
+// function caffeineBuzz(n) {
+//     let result = 'mocha_missing!';
 
-    if (n % 3 === 0) {
-        if (n % 4 === 0) {
-            result = 'Coffee';
-        } else {
-            result = 'Java';
-        }
-    }
-    if (n % 2 === 0) {
-        result += 'Script';
-    }
-    return result;
+//     if (n % 3 === 0) {
+//         if (n % 4 === 0) {
+//             result = 'Coffee';
+//         } else {
+//             result = 'Java';
+//         }
+//     }
+//     if (n % 2 === 0) {
+//         result += 'Script';
+//     }
+//     return result;
+// }
+// console.log(caffeineBuzz(12));
+
+
+
+
+// Name Array Capping
+function capMe(names) {
+    return names.map(name => name.slice(0,1).toUpperCase() + name.slice(1).toLowerCase());
 }
-console.log(caffeineBuzz(12));
-
+console.log(capMe(['jo', 'KARLY', 'jurie']));
 
 
 
