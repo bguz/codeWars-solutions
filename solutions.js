@@ -2188,12 +2188,25 @@
 
 
 
-// Smallest Value of an Array
-function min(arr, toReturn) {
-    return toReturn === 'value' ? Math.min(...arr) : arr.indexOf(Math.min(...arr));
+// // Smallest Value of an Array
+// function min(arr, toReturn) {
+//     return toReturn === 'value' ? Math.min(...arr) : arr.indexOf(Math.min(...arr));
+// }
+// console.log(min([1,2,3,4,5], 'value'));
+// console.log(min([1,2,3,4,5], 'index'));
+
+
+
+
+// Last Survivor
+function lastSurvivor(letters, coords) {
+    let str = [...letters];
+    for (let i = 0; i < coords.length; i++) {
+        str.splice(coords[i], 1);
+    }
+    return str.join('');
 }
-console.log(min([1,2,3,4,5], 'value'));
-console.log(min([1,2,3,4,5], 'index'));
+console.log(lastSurvivor('kbc', [0,1]));
 
 
 
