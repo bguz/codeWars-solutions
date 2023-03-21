@@ -2211,13 +2211,18 @@
 
 
 
-// Sum of Odd Cubed Numbers
-function cubeOdd(arr) { 
-    const result = arr.filter(num => num % 2 !== 0).map(num => num ** 3).reduce((sum, curr) => sum + curr, 0);
-    return isNaN(result) ? undefined : result;
-}
-console.log(cubeOdd(['a', 12, 9, 'z', 42]));
-console.log(cubeOdd([1,2,3,4]));
+// // Sum of Odd Cubed Numbers
+// function cubeOdd(arr) { 
+//     const result = arr.filter(num => num % 2 !== 0).map(num => num ** 3).reduce((sum, curr) => sum + curr, 0);
+//     return isNaN(result) ? undefined : result;
+// }
+// console.log(cubeOdd(['a', 12, 9, 'z', 42]));
+// console.log(cubeOdd([1,2,3,4]));
+
+
+
+
+
 
 
 
