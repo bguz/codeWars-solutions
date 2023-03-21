@@ -2222,7 +2222,21 @@
 
 
 
-
+// Coding Meetup #5 - Higher-Order Functions Series
+// Prepare the Count of Languages
+var list1 = [
+    { firstName: 'Noah', lastName: 'M.', country: 'Switzerland', continent: 'Europe', age: 19, language: 'C' },
+    { firstName: 'Anna', lastName: 'R.', country: 'Liechtenstein', continent: 'Europe', age: 52, language: 'JavaScript' },
+    { firstName: 'Ramon', lastName: 'R.', country: 'Paraguay', continent: 'Americas', age: 29, language: 'Ruby' },
+    { firstName: 'George', lastName: 'B.', country: 'England', continent: 'Europe', age: 81, language: 'C' },
+];
+function countLanguages(list) {
+    return list.map(person => person.language).reduce((obj, curr) => {
+        obj[curr] = obj[curr] + 1 || 1;
+        return obj;
+    }, {});
+}
+console.log(countLanguages(list1));
 
 
 
