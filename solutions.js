@@ -2222,21 +2222,41 @@
 
 
 
-// Coding Meetup #5 - Higher-Order Functions Series
-// Prepare the Count of Languages
-var list1 = [
-    { firstName: 'Noah', lastName: 'M.', country: 'Switzerland', continent: 'Europe', age: 19, language: 'C' },
-    { firstName: 'Anna', lastName: 'R.', country: 'Liechtenstein', continent: 'Europe', age: 52, language: 'JavaScript' },
-    { firstName: 'Ramon', lastName: 'R.', country: 'Paraguay', continent: 'Americas', age: 29, language: 'Ruby' },
-    { firstName: 'George', lastName: 'B.', country: 'England', continent: 'Europe', age: 81, language: 'C' },
-];
-function countLanguages(list) {
-    return list.map(person => person.language).reduce((obj, curr) => {
-        obj[curr] = obj[curr] + 1 || 1;
-        return obj;
-    }, {});
+// // Coding Meetup #5 - Higher-Order Functions Series
+// // Prepare the Count of Languages
+// var list1 = [
+//     { firstName: 'Noah', lastName: 'M.', country: 'Switzerland', continent: 'Europe', age: 19, language: 'C' },
+//     { firstName: 'Anna', lastName: 'R.', country: 'Liechtenstein', continent: 'Europe', age: 52, language: 'JavaScript' },
+//     { firstName: 'Ramon', lastName: 'R.', country: 'Paraguay', continent: 'Americas', age: 29, language: 'Ruby' },
+//     { firstName: 'George', lastName: 'B.', country: 'England', continent: 'Europe', age: 81, language: 'C' },
+// ];
+// function countLanguages(list) {
+//     return list.map(person => person.language).reduce((obj, curr) => {
+//         obj[curr] = obj[curr] + 1 || 1;
+//         return obj;
+//     }, {});
+// }
+// console.log(countLanguages(list1));
+
+
+
+
+// Char Code Calculation (REFACTOR)
+function calc(x) {
+    let total1 = '';
+    let total2 = '';
+
+    for (let i = 0; i < x.length; i++) {
+        total1 += x.charCodeAt(i);
+    }
+
+    for (let i = 0; i < total1.length; i++) {
+        total2 += total1[i] === '7' ? '1' : total1[i];
+    }
+
+    return total1.split('').reduce((sum, curr) => sum + +curr, 0) - total2.split('').reduce((sum, curr) => sum + +curr, 0);
 }
-console.log(countLanguages(list1));
+console.log(calc('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'));
 
 
 
