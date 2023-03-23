@@ -2241,22 +2241,46 @@
 
 
 
-// Char Code Calculation (REFACTOR)
-function calc(x) {
-    let total1 = '';
-    let total2 = '';
+// // Char Code Calculation (REFACTOR)
+// function calc(x) {
+//     let total1 = '';
+//     let total2 = '';
 
-    for (let i = 0; i < x.length; i++) {
-        total1 += x.charCodeAt(i);
-    }
+//     for (let i = 0; i < x.length; i++) {
+//         total1 += x.charCodeAt(i);
+//     }
 
-    for (let i = 0; i < total1.length; i++) {
-        total2 += total1[i] === '7' ? '1' : total1[i];
-    }
+//     for (let i = 0; i < total1.length; i++) {
+//         total2 += total1[i] === '7' ? '1' : total1[i];
+//     }
 
-    return total1.split('').reduce((sum, curr) => sum + +curr, 0) - total2.split('').reduce((sum, curr) => sum + +curr, 0);
+//     return total1.split('').reduce((sum, curr) => sum + +curr, 0) - total2.split('').reduce((sum, curr) => sum + +curr, 0);
+// }
+// console.log(calc('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'));
+
+
+
+
+// // Drone Fly-By
+// function flyBy(lamps, drone) {
+//     const num = lamps.length - drone.length;
+//     return num > 0 ?
+//         'o'.repeat(drone.length) + 'x'.repeat(num) :
+//         'o'.repeat(lamps.length);
+// }
+// console.log(flyBy('xxxxxx', '====T'));
+
+
+
+
+// Count Consonants (NO REGEX)
+function consonantCount(str) {
+    const consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'];
+    return str.toLowerCase().split('').filter(letter => consonants.includes(letter)).length;
 }
-console.log(calc('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'));
+console.log(consonantCount('abc'));
+
+
 
 
 
