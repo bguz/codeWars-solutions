@@ -2273,12 +2273,12 @@
 
 
 
-// Count Consonants (NO REGEX)
-function consonantCount(str) {
-    const consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'];
-    return str.toLowerCase().split('').filter(letter => consonants.includes(letter)).length;
-}
-console.log(consonantCount('abc'));
+// // Count Consonants (NO REGEX)
+// function consonantCount(str) {
+//     const consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'];
+//     return str.toLowerCase().split('').filter(letter => consonants.includes(letter)).length;
+// }
+// console.log(consonantCount('abc'));
 
 
 
