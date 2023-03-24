@@ -2283,6 +2283,18 @@
 
 
 
+// Return a String's Even Characters
+function evenChars(string) {
+    return string.length < 2 || string.length > 100 ?
+        'invalid string' :
+        string.split('').filter((letter, index) => {
+            if ((index + 1) % 2 === 0) return letter;
+        });
+}
+console.log(evenChars("abcdefghijklm"));
+
+
+
 
 
 
