@@ -2283,15 +2283,26 @@
 
 
 
-// Return a String's Even Characters
-function evenChars(string) {
-    return string.length < 2 || string.length > 100 ?
-        'invalid string' :
-        string.split('').filter((letter, index) => {
-            if ((index + 1) % 2 === 0) return letter;
-        });
+// // Return a String's Even Characters
+// function evenChars(string) {
+//     return string.length < 2 || string.length > 100 ?
+//         'invalid string' :
+//         string.split('').filter((letter, index) => {
+//             if ((index + 1) % 2 === 0) return letter;
+//         });
+// }
+// console.log(evenChars("abcdefghijklm"));
+
+
+
+
+// Divide and Conquer
+function divCon(x) {
+    const num1 = x.filter(num => typeof num === 'number').reduce((sum, curr) => sum + curr, 0);
+    const num2 = x.filter(num => typeof num === 'string').reduce((sum, curr) => sum + +curr, 0);
+    return num1 - num2;
 }
-console.log(evenChars("abcdefghijklm"));
+console.log(divCon([9, 3, '7', '3']));
 
 
 
