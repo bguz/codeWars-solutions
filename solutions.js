@@ -2296,13 +2296,32 @@
 
 
 
-// Divide and Conquer
-function divCon(x) {
-    const num1 = x.filter(num => typeof num === 'number').reduce((sum, curr) => sum + curr, 0);
-    const num2 = x.filter(num => typeof num === 'string').reduce((sum, curr) => sum + +curr, 0);
-    return num1 - num2;
+// // Divide and Conquer
+// function divCon(x) {
+//     const num1 = x.filter(num => typeof num === 'number').reduce((sum, curr) => sum + curr, 0);
+//     const num2 = x.filter(num => typeof num === 'string').reduce((sum, curr) => sum + +curr, 0);
+//     return num1 - num2;
+// }
+// console.log(divCon([9, 3, '7', '3']));
+
+
+
+
+// Coding Meetup #2 - Higher-Order Functions Series
+// Greet Developers
+var list1 = [
+    { firstName: 'Sofia', lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
+    { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: 'Python' },
+    { firstName: 'Madison', lastName: 'U.', country: 'United States', continent: 'Americas', age: 32, language: 'Ruby' } 
+];
+
+function greetDevelopers(list) {
+    for (let person of list) {
+        person.greeting = `Hi ${person.firstName}, what do you like the most about ${person.language}?`;
+    }
+    return list;
 }
-console.log(divCon([9, 3, '7', '3']));
+console.log(greetDevelopers(list1));
 
 
 
