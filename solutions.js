@@ -2307,21 +2307,30 @@
 
 
 
-// Coding Meetup #2 - Higher-Order Functions Series
-// Greet Developers
-var list1 = [
-    { firstName: 'Sofia', lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
-    { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: 'Python' },
-    { firstName: 'Madison', lastName: 'U.', country: 'United States', continent: 'Americas', age: 32, language: 'Ruby' } 
-];
+// // Coding Meetup #2 - Higher-Order Functions Series
+// // Greet Developers
+// var list1 = [
+//     { firstName: 'Sofia', lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
+//     { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: 'Python' },
+//     { firstName: 'Madison', lastName: 'U.', country: 'United States', continent: 'Americas', age: 32, language: 'Ruby' } 
+// ];
 
-function greetDevelopers(list) {
-    for (let person of list) {
-        person.greeting = `Hi ${person.firstName}, what do you like the most about ${person.language}?`;
-    }
-    return list;
+// function greetDevelopers(list) {
+//     for (let person of list) {
+//         person.greeting = `Hi ${person.firstName}, what do you like the most about ${person.language}?`;
+//     }
+//     return list;
+// }
+// console.log(greetDevelopers(list1));
+
+
+
+
+// Largest Element
+function largest(n, array) {
+    return n === 0 ? [] : array.sort((a, b) => a - b).slice(-n);
 }
-console.log(greetDevelopers(list1));
+console.log(largest(2, [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]));
 
 
 
