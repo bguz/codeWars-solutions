@@ -2326,11 +2326,23 @@
 
 
 
-// Largest Element
-function largest(n, array) {
-    return n === 0 ? [] : array.sort((a, b) => a - b).slice(-n);
-}
-console.log(largest(2, [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]));
+// // Largest Element
+// function largest(n, array) {
+//     return n === 0 ? [] : array.sort((a, b) => a - b).slice(-n);
+// }
+// console.log(largest(2, [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]));
+
+
+
+
+// Number of Occurrences
+Object.defineProperty(Array.prototype, 'numberOfOccurrences',{ 
+    value : function numberOfOccurrences(element) {
+        return this.filter(num => num === element).length;
+    }
+});
+var arr = [0, 1, 2, 2, 3];
+console.log(arr.numberOfOccurrences(2))
 
 
 
