@@ -2335,14 +2335,23 @@
 
 
 
-// Number of Occurrences
-Object.defineProperty(Array.prototype, 'numberOfOccurrences',{ 
-    value : function numberOfOccurrences(element) {
-        return this.filter(num => num === element).length;
-    }
-});
-var arr = [0, 1, 2, 2, 3];
-console.log(arr.numberOfOccurrences(2))
+// // Number of Occurrences
+// Object.defineProperty(Array.prototype, 'numberOfOccurrences',{ 
+//     value : function numberOfOccurrences(element) {
+//         return this.filter(num => num === element).length;
+//     }
+// });
+// var arr = [0, 1, 2, 2, 3];
+// console.log(arr.numberOfOccurrences(2))
+
+
+
+
+// Sort by Last Char
+function last(x) {
+    return x.split(' ').sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1));
+}
+console.log(last('man i need a taxi up to ubud'));
 
 
 
