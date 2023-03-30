@@ -2347,11 +2347,24 @@
 
 
 
-// Sort by Last Char
-function last(x) {
-    return x.split(' ').sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1));
+// // Sort by Last Char
+// function last(x) {
+//     return x.split(' ').sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1));
+// }
+// console.log(last('man i need a taxi up to ubud'));
+
+
+
+
+// Maximum Triplet Sum (Array Series #7)
+function maxTriSum(numbers) {
+    const unique = [...new Set(numbers)];
+    return unique.sort((a,b) => a - b).splice(unique.length - 3).reduce((sum, curr) => sum + curr, 0);
 }
-console.log(last('man i need a taxi up to ubud'));
+console.log(maxTriSum([ 3, 2, 6, 8, 2, 3 ]));
+
+
+
 
 
 
