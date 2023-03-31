@@ -2356,12 +2356,29 @@
 
 
 
-// Maximum Triplet Sum (Array Series #7)
-function maxTriSum(numbers) {
-    const unique = [...new Set(numbers)];
-    return unique.sort((a,b) => a - b).splice(unique.length - 3).reduce((sum, curr) => sum + curr, 0);
+// // Maximum Triplet Sum (Array Series #7)
+// function maxTriSum(numbers) {
+//     const unique = [...new Set(numbers)];
+//     return unique.sort((a,b) => a - b).splice(unique.length - 3).reduce((sum, curr) => sum + curr, 0);
+// }
+// console.log(maxTriSum([ 3, 2, 6, 8, 2, 3 ]));
+
+
+
+
+// Coding Meetup #3 - Higher-Order Functions Series
+// Is Ruby Coming?
+var list1 = [
+    { firstName: 'Emma', lastName: 'Z.', country: 'Netherlands', continent: 'Europe', age: 29, language: 'Ruby' },
+    { firstName: 'Piotr', lastName: 'B.', country: 'Poland', continent: 'Europe', age: 128, language: 'Javascript' },
+    { firstName: 'Jayden', lastName: 'P.', country: 'Jamaica', continent: 'Americas', age: 42, language: 'JavaScript' }
+];
+
+function isRubyComing(list) {
+    return list.filter(person => person.language === 'Ruby').length > 0 ? true : false;
 }
-console.log(maxTriSum([ 3, 2, 6, 8, 2, 3 ]));
+console.log(isRubyComing(list1));
+
 
 
 
