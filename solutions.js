@@ -2366,18 +2366,35 @@
 
 
 
-// Coding Meetup #3 - Higher-Order Functions Series
-// Is Ruby Coming?
-var list1 = [
-    { firstName: 'Emma', lastName: 'Z.', country: 'Netherlands', continent: 'Europe', age: 29, language: 'Ruby' },
-    { firstName: 'Piotr', lastName: 'B.', country: 'Poland', continent: 'Europe', age: 128, language: 'Javascript' },
-    { firstName: 'Jayden', lastName: 'P.', country: 'Jamaica', continent: 'Americas', age: 42, language: 'JavaScript' }
-];
+// // Coding Meetup #3 - Higher-Order Functions Series
+// // Is Ruby Coming?
+// var list1 = [
+//     { firstName: 'Emma', lastName: 'Z.', country: 'Netherlands', continent: 'Europe', age: 29, language: 'Ruby' },
+//     { firstName: 'Piotr', lastName: 'B.', country: 'Poland', continent: 'Europe', age: 128, language: 'Javascript' },
+//     { firstName: 'Jayden', lastName: 'P.', country: 'Jamaica', continent: 'Americas', age: 42, language: 'JavaScript' }
+// ];
 
-function isRubyComing(list) {
-    return list.filter(person => person.language === 'Ruby').length > 0 ? true : false;
+// function isRubyComing(list) {
+//     return list.filter(person => person.language === 'Ruby').length > 0 ? true : false;
+// }
+// console.log(isRubyComing(list1));
+
+
+
+
+// Minimize Sum of Array (Array Series #1)
+function minSum(arr) {
+    const sortedMin = arr.sort((a,b) => a - b).splice(0, arr.length / 2);
+    const sortedMax = arr.sort((a,b) => b - a);
+    let result = 0;
+
+    for (let i = 0; i < sortedMin.length; i++) {
+        result += sortedMax[i] * sortedMin[i];
+    }
+
+    return result;
 }
-console.log(isRubyComing(list1));
+console.log(minSum([12,6,10,26,3,24]));
 
 
 
