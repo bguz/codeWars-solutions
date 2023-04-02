@@ -2382,19 +2382,28 @@
 
 
 
-// Minimize Sum of Array (Array Series #1)
-function minSum(arr) {
-    const sortedMin = arr.sort((a,b) => a - b).splice(0, arr.length / 2);
-    const sortedMax = arr.sort((a,b) => b - a);
-    let result = 0;
+// // Minimize Sum of Array (Array Series #1)
+// function minSum(arr) {
+//     const sortedMin = arr.sort((a,b) => a - b).splice(0, arr.length / 2);
+//     const sortedMax = arr.sort((a,b) => b - a);
+//     let result = 0;
 
-    for (let i = 0; i < sortedMin.length; i++) {
-        result += sortedMax[i] * sortedMin[i];
-    }
+//     for (let i = 0; i < sortedMin.length; i++) {
+//         result += sortedMax[i] * sortedMin[i];
+//     }
 
-    return result;
+//     return result;
+// }
+// console.log(minSum([12,6,10,26,3,24]));
+
+
+
+
+// Product of Maximums of Array (Array Series #2)
+function maxProduct(numbers, size) {
+    return numbers.sort((a,b) => b - a).splice(0, size).reduce((sum, curr) => sum * curr, 1);
 }
-console.log(minSum([12,6,10,26,3,24]));
+console.log(maxProduct([10,2,3,8,1,10,4], 5));
 
 
 
