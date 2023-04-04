@@ -2408,14 +2408,46 @@
 
 
 
-// The Office 1 - Outed
-function outed(meet, boss) {
-    const scores = Object.entries(meet).map(emp => {
-        return boss === emp[0] ? emp[1] * 2 : emp[1];
-    });
-    return scores.reduce((sum, curr) => sum + curr, 0) / scores.length <= 5 ? 'Get Out Now!' : 'Nice Work Champ!';
+// // The Office 1 - Outed
+// function outed(meet, boss) {
+//     const scores = Object.entries(meet).map(emp => {
+//         return boss === emp[0] ? emp[1] * 2 : emp[1];
+//     });
+//     return scores.reduce((sum, curr) => sum + curr, 0) / scores.length <= 5 ? 'Get Out Now!' : 'Nice Work Champ!';
+// }
+// console.log(outed({"tim":0,"jim":5,"randy":3,"sandy":9,"andy":5,"katie":6,"laura":4,"saajid":9,"alex":3,"john":6,"mr":7}, 'tim'));
+
+
+
+
+// The Office 2 - Boredom Score
+function boredom(staff) {
+    const scores = {
+        accounts: 1,
+        finance: 2,
+        canteen: 10,
+        regulation: 3,
+        trading: 6,
+        change: 6,
+        IS: 8,
+        retail: 5,
+        cleaning: 4,
+        'pissing about': 25,
+    }
+    const collectiveScore = Object.entries(staff).map(person => scores[person[1]]).reduce((sum, curr) => sum + curr, 0);
+
+    if (collectiveScore <= 80) {
+        return 'kill me now';
+    } else if (collectiveScore < 100 && collectiveScore > 80) {
+        return 'i can handle this';
+    } else {
+        return 'party time!!';
+    }
 }
-console.log(outed({"tim":0,"jim":5,"randy":3,"sandy":9,"andy":5,"katie":6,"laura":4,"saajid":9,"alex":3,"john":6,"mr":7}, 'tim'));
+console.log(boredom({tim: 'change', jim: 'accounts',
+randy: 'canteen', sandy: 'change', andy: 'change', katie: 'IS',
+laura: 'change', saajid: 'IS', alex: 'trading', john: 'accounts',
+mr: 'finance' }));
 
 
 
