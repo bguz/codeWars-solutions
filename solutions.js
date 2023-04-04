@@ -2399,12 +2399,23 @@
 
 
 
-// Product of Maximums of Array (Array Series #2)
-function maxProduct(numbers, size) {
-    return numbers.sort((a,b) => b - a).splice(0, size).reduce((sum, curr) => sum * curr, 1);
-}
-console.log(maxProduct([10,2,3,8,1,10,4], 5));
+// // Product of Maximums of Array (Array Series #2)
+// function maxProduct(numbers, size) {
+//     return numbers.sort((a,b) => b - a).splice(0, size).reduce((sum, curr) => sum * curr, 1);
+// }
+// console.log(maxProduct([10,2,3,8,1,10,4], 5));
 
+
+
+
+// The Office 1 - Outed
+function outed(meet, boss) {
+    const scores = Object.entries(meet).map(emp => {
+        return boss === emp[0] ? emp[1] * 2 : emp[1];
+    });
+    return scores.reduce((sum, curr) => sum + curr, 0) / scores.length <= 5 ? 'Get Out Now!' : 'Nice Work Champ!';
+}
+console.log(outed({"tim":0,"jim":5,"randy":3,"sandy":9,"andy":5,"katie":6,"laura":4,"saajid":9,"alex":3,"john":6,"mr":7}, 'tim'));
 
 
 
