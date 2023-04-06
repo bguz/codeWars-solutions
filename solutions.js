@@ -2452,12 +2452,20 @@
 
 
 
-// The Office 3 - Broken Photocopier
-function broken(x) {
-    return x.split('').map(digit => digit === '0' ? '1' : '0').join('');
-}
-console.log(broken('100010'));
+// // The Office 3 - Broken Photocopier
+// function broken(x) {
+//     return x.split('').map(digit => digit === '0' ? '1' : '0').join('');
+// }
+// console.log(broken('100010'));
 
+
+
+
+// The Office 4 - Find a Meeting Room
+function meeting(x) {
+    return x.indexOf('O') !== -1 ? x.indexOf('O') : 'None available!';
+}
+console.log(meeting(['X', 'X', 'X']));
 
 
 
