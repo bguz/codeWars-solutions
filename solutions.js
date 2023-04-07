@@ -2461,12 +2461,24 @@
 
 
 
-// The Office 4 - Find a Meeting Room
-function meeting(x) {
-    return x.indexOf('O') !== -1 ? x.indexOf('O') : 'None available!';
-}
-console.log(meeting(['X', 'X', 'X']));
+// // The Office 4 - Find a Meeting Room
+// function meeting(x) {
+//     return x.indexOf('O') !== -1 ? x.indexOf('O') : 'None available!';
+// }
+// console.log(meeting(['X', 'X', 'X']));
 
+
+
+
+// Help the Fruit Guy
+function removeRotten(bagOfFruits){
+    if (bagOfFruits === null || bagOfFruits === undefined || bagOfFruits.length === 0) return [];
+
+    return bagOfFruits.map(fruit => {
+        return fruit.includes('rotten') ? fruit.toLowerCase().slice(6) : fruit;
+    })
+}
+console.log(removeRotten(["apple","rottenBanana","apple"]));
 
 
 
