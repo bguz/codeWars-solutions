@@ -2470,15 +2470,28 @@
 
 
 
-// Help the Fruit Guy
-function removeRotten(bagOfFruits){
-    if (bagOfFruits === null || bagOfFruits === undefined || bagOfFruits.length === 0) return [];
+// // Help the Fruit Guy
+// function removeRotten(bagOfFruits){
+//     if (bagOfFruits === null || bagOfFruits === undefined || bagOfFruits.length === 0) return [];
 
-    return bagOfFruits.map(fruit => {
-        return fruit.includes('rotten') ? fruit.toLowerCase().slice(6) : fruit;
-    })
-}
-console.log(removeRotten(["apple","rottenBanana","apple"]));
+//     return bagOfFruits.map(fruit => {
+//         return fruit.includes('rotten') ? fruit.toLowerCase().slice(6) : fruit;
+//     })
+// }
+// console.log(removeRotten(["apple","rottenBanana","apple"]));
+
+
+
+
+// Count Strings in Objects
+function strCount(obj){
+    let count = 0;
+    for (let key in obj) {
+      if (typeof obj[key] === 'string') count++;
+      if (typeof obj[key] === 'object') count += strCount(obj[key]);
+    }
+    return count;
+  }
 
 
 
