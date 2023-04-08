@@ -2483,16 +2483,25 @@
 
 
 
-// Count Strings in Objects
-function strCount(obj){
-    let count = 0;
-    for (let key in obj) {
-      if (typeof obj[key] === 'string') count++;
-      if (typeof obj[key] === 'object') count += strCount(obj[key]);
-    }
-    return count;
-  }
+// // Count Strings in Objects
+// function strCount(obj){
+//     let count = 0;
+//     for (let key in obj) {
+//       if (typeof obj[key] === 'string') count++;
+//       if (typeof obj[key] === 'object') count += strCount(obj[key]);
+//     }
+//     return count;
+// }
 
+
+
+
+function switcher(x) {
+    const alphabet = ['z', 'y', 'x', 'w', 'v', 'u', 't', 's', 'r', 'q', 'p', 'o', 'n', 'm', 'l', 'k', 'j', 'i', 'h', 'g', 'f', 'e', 'd', 'c', 'b', 'a', '!', '?', ' '];
+
+    return x.map(str => alphabet[Number(str) - 1]).join('');
+}
+console.log(switcher(['24', '12', '23', '22', '4', '26', '9', '8']));
 
 
 
