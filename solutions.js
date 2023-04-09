@@ -2506,6 +2506,14 @@
 
 
 
+// By 3, or not by 3? That is the Question...
+function divisibleByThree(str) {
+    return Number.isInteger(Array.from(String(str), Number).reduce((sum, curr) => sum + curr, 0) / 3);
+}
+console.log(divisibleByThree('123'))
+
+
+
 
 
 
