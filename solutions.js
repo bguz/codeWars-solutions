@@ -2506,11 +2506,25 @@
 
 
 
-// By 3, or not by 3? That is the Question...
-function divisibleByThree(str) {
-    return Number.isInteger(Array.from(String(str), Number).reduce((sum, curr) => sum + curr, 0) / 3);
-}
-console.log(divisibleByThree('123'))
+// // By 3, or not by 3? That is the Question...
+// function divisibleByThree(str) {
+//     return Number.isInteger(Array.from(String(str), Number).reduce((sum, curr) => sum + curr, 0) / 3);
+// }
+// console.log(divisibleByThree('123'));
+
+
+
+
+// // My Language Skills (REFACTOR)
+// function myLanguages(results) {
+//     const result = [];
+//     Object.entries(results).sort((a, b) => b[1] - a[1]).filter(lang => {
+//         if (lang[1] >= 60) result.push(lang[0]);
+//     })
+//     return result;
+// }
+// console.log(myLanguages({"Hindi" : 60, "Greek" : 71, "Dutch" : 93}));
+// console.log(myLanguages({"Java" : 10, "Ruby" : 80, "Python" : 65}));
 
 
 
