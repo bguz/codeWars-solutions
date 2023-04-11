@@ -2529,6 +2529,27 @@
 
 
 
+// Combine Objects
+const objA = { a: 10, b: 20, c: 30 }
+const objB = { a: 3, c: 6, d: 3 }
+
+function combine() {
+    var obj = {};
+
+    for (var i = 0; i < arguments.length; i++) {
+        for (var key in arguments[i]) {
+            obj[key] = obj[key] ? obj[key] + arguments[i][key] : arguments[i][key];
+        }
+    }
+
+    return obj;
+
+}
+console.log(combine(objA, objB))
+
+
+
+
 
 
 
