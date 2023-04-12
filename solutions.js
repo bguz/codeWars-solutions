@@ -2919,11 +2919,7 @@
 function bingo(ticket, win) {
     let wins = 0;
     ticket.map((chance) => {
-        chance[0].split('').map((letter, index) => {
-            if (letter.charCodeAt() === chance[1]) {
-                wins++;
-            }
-        })
+        if (chance[0].includes(String.fromCharCode(chance[1]))) wins++;
     });
     return wins < win ? 'Loser!' : 'Winner!';
 }
