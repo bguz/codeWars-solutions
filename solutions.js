@@ -2564,6 +2564,15 @@
 
 
 
+// Javascript Filter - 1
+function searchNames(logins) {
+    return logins.filter(login => login[0].slice(-1) === '_');
+}
+console.log(searchNames([['foo', 'foo@foo.com'], ['bar_', 'bar@bar.com']]));
+
+
+
+
 
 
 
@@ -2915,18 +2924,15 @@
 
 
 
-// Lottery Ticket
-function bingo(ticket, win) {
-    let wins = 0;
-    ticket.map((chance) => {
-        if (chance[0].includes(String.fromCharCode(chance[1]))) wins++;
-    });
-    return wins < win ? 'Loser!' : 'Winner!';
-}
-console.log(bingo([['ABC', 65], ['HGR', 74], ['BYHT', 74]], 1));
-
-
-// console.log(letter.charCodeAt(), index, chance[1])
+// // Lottery Ticket
+// function bingo(ticket, win) {
+//     let wins = 0;
+//     ticket.map((chance) => {
+//         if (chance[0].includes(String.fromCharCode(chance[1]))) wins++;
+//     });
+//     return wins < win ? 'Loser!' : 'Winner!';
+// }
+// console.log(bingo([['ABC', 65], ['HGR', 74], ['BYHT', 74]], 1));
 
 
 
