@@ -2529,23 +2529,37 @@
 
 
 
-// Combine Objects
-const objA = { a: 10, b: 20, c: 30 }
-const objB = { a: 3, c: 6, d: 3 }
+// // Combine Objects
+// const objA = { a: 10, b: 20, c: 30 }
+// const objB = { a: 3, c: 6, d: 3 }
 
-function combine() {
-    var obj = {};
+// function combine() {
+//     var obj = {};
 
-    for (var i = 0; i < arguments.length; i++) {
-        for (var key in arguments[i]) {
-            obj[key] = obj[key] ? obj[key] + arguments[i][key] : arguments[i][key];
-        }
-    }
+//     for (var i = 0; i < arguments.length; i++) {
+//         for (var key in arguments[i]) {
+//             obj[key] = obj[key] ? obj[key] + arguments[i][key] : arguments[i][key];
+//         }
+//     }
 
-    return obj;
+//     return obj;
 
+// }
+// console.log(combine(objA, objB))
+
+
+
+
+// Find Your Villian Name
+function getVillainName(birthday){
+    const m = ["Evil","Vile","Cruel","Trashy","Despicable","Embarrassing","Disreputable","Atrocious","Twirling","Orange","Terrifying","Awkward"];
+    const d = ["Mustache","Pickle","Hood Ornament","Raisin","Recycling Bin","Potato","Tomato","House Cat","Teaspoon","Laundry Basket"];
+    const fName = m[birthday.getMonth()];
+    const lName = d[birthday.getDate() % 10];
+  
+    return `The ${fName} ${lName}`;
 }
-console.log(combine(objA, objB))
+console.log(getVillainName(new Date("April 21")));
 
 
 
