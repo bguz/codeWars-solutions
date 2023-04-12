@@ -2550,16 +2550,16 @@
 
 
 
-// Find Your Villian Name
-function getVillainName(birthday){
-    const m = ["Evil","Vile","Cruel","Trashy","Despicable","Embarrassing","Disreputable","Atrocious","Twirling","Orange","Terrifying","Awkward"];
-    const d = ["Mustache","Pickle","Hood Ornament","Raisin","Recycling Bin","Potato","Tomato","House Cat","Teaspoon","Laundry Basket"];
-    const fName = m[birthday.getMonth()];
-    const lName = d[birthday.getDate() % 10];
+// // Find Your Villian Name
+// function getVillainName(birthday){
+//     const m = ["Evil","Vile","Cruel","Trashy","Despicable","Embarrassing","Disreputable","Atrocious","Twirling","Orange","Terrifying","Awkward"];
+//     const d = ["Mustache","Pickle","Hood Ornament","Raisin","Recycling Bin","Potato","Tomato","House Cat","Teaspoon","Laundry Basket"];
+//     const fName = m[birthday.getMonth()];
+//     const lName = d[birthday.getDate() % 10];
   
-    return `The ${fName} ${lName}`;
-}
-console.log(getVillainName(new Date("April 21")));
+//     return `The ${fName} ${lName}`;
+// }
+// console.log(getVillainName(new Date("April 21")));
 
 
 
@@ -2910,8 +2910,27 @@ console.log(getVillainName(new Date("April 21")));
 //     }
 //     return str;
 // }
-// console.log(diamond(3))
+// console.log(diamond(3));
 
+
+
+
+// Lottery Ticket
+function bingo(ticket, win) {
+    let wins = 0;
+    ticket.map((chance) => {
+        chance[0].split('').map((letter, index) => {
+            if (letter.charCodeAt() === chance[1]) {
+                wins++;
+            }
+        })
+    });
+    return wins < win ? 'Loser!' : 'Winner!';
+}
+console.log(bingo([['ABC', 65], ['HGR', 74], ['BYHT', 74]], 1));
+
+
+// console.log(letter.charCodeAt(), index, chance[1])
 
 
 
