@@ -2564,11 +2564,11 @@
 
 
 
-// Javascript Filter - 1
-function searchNames(logins) {
-    return logins.filter(login => login[0].slice(-1) === '_');
-}
-console.log(searchNames([['foo', 'foo@foo.com'], ['bar_', 'bar@bar.com']]));
+// // Javascript Filter - 1
+// function searchNames(logins) {
+//     return logins.filter(login => login[0].slice(-1) === '_');
+// }
+// console.log(searchNames([['foo', 'foo@foo.com'], ['bar_', 'bar@bar.com']]));
 
 
 
@@ -2933,6 +2933,17 @@ console.log(searchNames([['foo', 'foo@foo.com'], ['bar_', 'bar@bar.com']]));
 //     return wins < win ? 'Loser!' : 'Winner!';
 // }
 // console.log(bingo([['ABC', 65], ['HGR', 74], ['BYHT', 74]], 1));
+
+
+
+
+// Javascript Filter - 3
+function searchNames(logins) {
+    return logins
+        .filter((login) => login.startsWith('.') || login.endsWith('.'))
+        .map(login => logins[logins.indexOf(login) + 1]);
+}
+console.log(searchNames(['foo', 'foo@foo.com', 'bar.', 'bar@bar.com', '.test', 'test@test.com']));
 
 
 
