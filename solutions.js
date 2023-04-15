@@ -1251,6 +1251,19 @@
 
 
 
+// A Wolf in Sheep's Clothing 
+function warnTheSheep(queue) {
+    if (queue[queue.length - 1] === 'wolf') {
+        return 'Pls go away and stop eating my sheep';
+    } else {
+        const wolf = queue.indexOf('wolf');
+        return `Oi! Sheep number ${(queue.length - wolf) - 1}! You are about to be eaten by a wolf!`;
+    }
+}
+console.log(warnTheSheep(["sheep", "sheep", "sheep", "sheep", "sheep", "wolf", "sheep", "sheep"]));
+
+
+
 
 
 /* =====================================
@@ -2573,18 +2586,18 @@
 
 
 
-// Absent Vowel
-function absentVowel(x) {
-    const vowels = ['a', 'e', 'i', 'o', 'u'];
-    for (let i = 0; i < vowels.length; i++) {
-        if (!x.includes(vowels[i])) {
-            return i;
-        }
-    }
-}
+// // Absent Vowel
+// function absentVowel(x) {
+//     const vowels = ['a', 'e', 'i', 'o', 'u'];
+//     for (let i = 0; i < vowels.length; i++) {
+//         if (!x.includes(vowels[i])) {
+//             return i;
+//         }
+//     }
+// }
 
-console.log(absentVowel('John Doe hs seven red pples under his bsket'));
-console.log(absentVowel("Bb Smith sent us six neatly arranged range bicycles"));
+// console.log(absentVowel('John Doe hs seven red pples under his bsket'));
+// console.log(absentVowel("Bb Smith sent us six neatly arranged range bicycles"));
 
 
 
@@ -2951,14 +2964,25 @@ console.log(absentVowel("Bb Smith sent us six neatly arranged range bicycles"));
 
 
 
-// Javascript Filter - 3
-function searchNames(logins) {
-    return logins
-        .filter((login) => login.startsWith('.') || login.endsWith('.'))
-        .map(login => logins[logins.indexOf(login) + 1]);
-}
-console.log(searchNames(['foo', 'foo@foo.com', 'bar.', 'bar@bar.com', '.test', 'test@test.com']));
+// // Javascript Filter - 3
+// function searchNames(logins) {
+//     return logins
+//         .filter((login) => login.startsWith('.') || login.endsWith('.'))
+//         .map(login => logins[logins.indexOf(login) + 1]);
+// }
+// console.log(searchNames(['foo', 'foo@foo.com', 'bar.', 'bar@bar.com', '.test', 'test@test.com']));
 
+
+
+
+// // Count Characters in Your String
+// function count(string) {
+//     return string.split('').reduce((obj, curr) => {
+//         obj[curr] = obj[curr] + 1 || 1;
+//         return obj;
+//     }, {});
+// }
+// console.log(count('aba'));
 
 
 
