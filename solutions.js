@@ -1265,11 +1265,20 @@
 
 
 
-// No Loops 2 - You Only Need One
-function check(a, x){
-    return a.includes(x) ? true : false;
+// // No Loops 2 - You Only Need One
+// function check(a, x){
+//     return a.includes(x) ? true : false;
+// }
+// console.log(check([66, 101], 66))
+
+
+
+
+// Arguments to Binary Addition
+function arr2bin(arr) {
+    return arr.filter(entry => typeof entry === 'number').reduce((sum, curr) => sum + curr, 0).toString(2);
 }
-console.log(check([66, 101], 66))
+console.log(arr2bin([true, true, false, 15]));
 
 
 
