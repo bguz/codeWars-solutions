@@ -1251,16 +1251,25 @@
 
 
 
-// A Wolf in Sheep's Clothing 
-function warnTheSheep(queue) {
-    if (queue[queue.length - 1] === 'wolf') {
-        return 'Pls go away and stop eating my sheep';
-    } else {
-        const wolf = queue.indexOf('wolf');
-        return `Oi! Sheep number ${(queue.length - wolf) - 1}! You are about to be eaten by a wolf!`;
-    }
+// // A Wolf in Sheep's Clothing 
+// function warnTheSheep(queue) {
+//     if (queue[queue.length - 1] === 'wolf') {
+//         return 'Pls go away and stop eating my sheep';
+//     } else {
+//         const wolf = queue.indexOf('wolf');
+//         return `Oi! Sheep number ${(queue.length - wolf) - 1}! You are about to be eaten by a wolf!`;
+//     }
+// }
+// console.log(warnTheSheep(["sheep", "sheep", "sheep", "sheep", "sheep", "wolf", "sheep", "sheep"]));
+
+
+
+
+// No Loops 2 - You Only Need One
+function check(a, x){
+    return a.includes(x) ? true : false;
 }
-console.log(warnTheSheep(["sheep", "sheep", "sheep", "sheep", "sheep", "wolf", "sheep", "sheep"]));
+console.log(check([66, 101], 66))
 
 
 
