@@ -1274,11 +1274,16 @@
 
 
 
-// Arguments to Binary Addition
-function arr2bin(arr) {
-    return arr.filter(entry => typeof entry === 'number').reduce((sum, curr) => sum + curr, 0).toString(2);
-}
-console.log(arr2bin([true, true, false, 15]));
+// // Arguments to Binary Addition
+// function arr2bin(arr) {
+//     return arr.filter(entry => typeof entry === 'number').reduce((sum, curr) => sum + curr, 0).toString(2);
+// }
+// console.log(arr2bin([true, true, false, 15]));
+
+
+
+
+
 
 
 
@@ -2616,6 +2621,34 @@ console.log(arr2bin([true, true, false, 15]));
 
 // console.log(absentVowel('John Doe hs seven red pples under his bsket'));
 // console.log(absentVowel("Bb Smith sent us six neatly arranged range bicycles"));
+
+
+
+
+// Longest Vowel Chain (No Regex)
+function solve(s) {
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+    const chain = [];
+    let count = 0;
+
+    for (let i = 0; i < s.length; i++) {
+        if (!vowels.includes(s[i])) {
+            chain.push(count);
+            count = 0;
+        } else {
+            count++;
+        }
+    }
+    return Math.max(...chain);
+}
+console.log(solve('ultrarevolutionariees'));
+
+
+
+
+
+
+
 
 
 
