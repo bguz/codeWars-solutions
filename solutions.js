@@ -2625,23 +2625,38 @@
 
 
 
-// Longest Vowel Chain (No Regex)
-function solve(s) {
-    const vowels = ['a', 'e', 'i', 'o', 'u'];
-    const chain = [];
-    let count = 0;
+// // Longest Vowel Chain (No Regex)
+// function solve(s) {
+//     const vowels = ['a', 'e', 'i', 'o', 'u'];
+//     const chain = [];
+//     let count = 0;
 
-    for (let i = 0; i < s.length; i++) {
-        if (!vowels.includes(s[i])) {
-            chain.push(count);
-            count = 0;
-        } else {
-            count++;
-        }
-    }
-    return Math.max(...chain);
+//     for (let i = 0; i < s.length; i++) {
+//         if (!vowels.includes(s[i])) {
+//             chain.push(count);
+//             count = 0;
+//         } else {
+//             count++;
+//         }
+//     }
+//     return Math.max(...chain);
+// }
+// console.log(solve('ultrarevolutionariees'));
+
+
+
+
+// Convert String to Camel Case (NO REGEX) (REFACTOR)
+function toCamelCase(str) {
+    return str
+            .split('')
+            .map(d => d === '-' || d === '_' ? ' ' : d)
+            .join('')
+            .split(' ')
+            .map((w, i) => i === 0 ? w : w[0].toUpperCase() + w.slice(1))
+            .join('');
 }
-console.log(solve('ultrarevolutionariees'));
+console.log(toCamelCase('the-stealth_warrior'));
 
 
 
