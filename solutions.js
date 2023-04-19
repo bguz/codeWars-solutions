@@ -2646,17 +2646,18 @@
 
 
 
-// Convert String to Camel Case (NO REGEX) (REFACTOR)
-function toCamelCase(str) {
-    return str
-            .split('')
-            .map(d => d === '-' || d === '_' ? ' ' : d)
-            .join('')
-            .split(' ')
-            .map((w, i) => i === 0 ? w : w[0].toUpperCase() + w.slice(1))
-            .join('');
+// Remove Consecuritve Duplicate Words
+function removeConsecutiveDuplicates(string) {
+    const stringArr = string.split(' ');
+    const newArr = [];
+    for (let i = 0; i < stringArr.length; i++) {
+        if (stringArr[i] !== stringArr[i + 1]) {
+            newArr.push(stringArr[i]);
+        }
+    }
+    return newArr.join(' ');
 }
-console.log(toCamelCase('the-stealth_warrior'));
+console.log(removeConsecutiveDuplicates("alpha alpha alpha alpha"));
 
 
 
@@ -3049,6 +3050,26 @@ console.log(toCamelCase('the-stealth_warrior'));
 //     }, {});
 // }
 // console.log(count('aba'));
+
+
+
+
+// // Convert String to Camel Case (NO REGEX) (REFACTOR)
+// function toCamelCase(str) {
+//     return str
+//             .split('')
+//             .map(d => d === '-' || d === '_' ? ' ' : d)
+//             .join('')
+//             .split(' ')
+//             .map((w, i) => i === 0 ? w : w[0].toUpperCase() + w.slice(1))
+//             .join('');
+// }
+// console.log(toCamelCase('the-stealth_warrior'));
+
+
+
+
+
 
 
 
