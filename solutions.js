@@ -2646,18 +2646,18 @@
 
 
 
-// Remove Consecuritve Duplicate Words
-function removeConsecutiveDuplicates(string) {
-    const stringArr = string.split(' ');
-    const newArr = [];
-    for (let i = 0; i < stringArr.length; i++) {
-        if (stringArr[i] !== stringArr[i + 1]) {
-            newArr.push(stringArr[i]);
-        }
-    }
-    return newArr.join(' ');
-}
-console.log(removeConsecutiveDuplicates("alpha alpha alpha alpha"));
+// // Remove Consecuritve Duplicate Words
+// function removeConsecutiveDuplicates(string) {
+//     const stringArr = string.split(' ');
+//     const newArr = [];
+//     for (let i = 0; i < stringArr.length; i++) {
+//         if (stringArr[i] !== stringArr[i + 1]) {
+//             newArr.push(stringArr[i]);
+//         }
+//     }
+//     return newArr.join(' ');
+// }
+// console.log(removeConsecutiveDuplicates("alpha alpha alpha alpha"));
 
 
 
@@ -3066,6 +3066,22 @@ console.log(removeConsecutiveDuplicates("alpha alpha alpha alpha"));
 // }
 // console.log(toCamelCase('the-stealth_warrior'));
 
+
+
+
+// Split Strings 
+function solution(str) {
+    str = str.length % 2 !== 0 ? `${str}_` : str;
+    const result = [];
+    
+    for (let i = 0; i < str.length; i += 2) {
+        result.push([...str].splice(i, 2));
+    }
+
+    return result.map(arr => arr.join(''));
+}
+console.log(solution('abcdef'));
+console.log(solution('abcdefg'));
 
 
 
