@@ -3069,19 +3069,37 @@
 
 
 
-// Split Strings 
-function solution(str) {
-    str = str.length % 2 !== 0 ? `${str}_` : str;
-    const result = [];
+// // Split Strings 
+// function solution(str) {
+//     str = str.length % 2 !== 0 ? `${str}_` : str;
+//     const result = [];
     
-    for (let i = 0; i < str.length; i += 2) {
-        result.push([...str].splice(i, 2));
-    }
+//     for (let i = 0; i < str.length; i += 2) {
+//         result.push([...str].splice(i, 2));
+//     }
 
-    return result.map(arr => arr.join(''));
+//     return result.map(arr => arr.join(''));
+// }
+// console.log(solution('abcdef'));
+// console.log(solution('abcdefg'));
+
+
+
+
+// Detect Panagram
+function isPangram(string) {
+    const pangram = new Set( 
+        string
+            .replace(/[^\w\s\']|_/g, '')
+            .replace(/[0-9]/g, '')
+            .replace(/\s+/g, '')
+            .toLowerCase()
+            .split('')
+            .sort()
+    )
+    return pangram.size === 26 ? true : false;
 }
-console.log(solution('abcdef'));
-console.log(solution('abcdefg'));
+console.log(isPangram('ABCD45EFGH,IJK,LMNOPQR56STUVW3XYZ'));
 
 
 
