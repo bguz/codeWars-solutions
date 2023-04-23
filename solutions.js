@@ -2662,6 +2662,15 @@
 
 
 
+// Get Key/Value Pairs as Arrays
+function keysAndValues(data) {
+    return [Object.keys(data), Object.values(data)];
+}
+console.log(keysAndValues({a: 1, b: 2, c: 3}));
+
+
+
+
 
 
 
@@ -3086,20 +3095,20 @@
 
 
 
-// Detect Panagram
-function isPangram(string) {
-    const pangram = new Set( 
-        string
-            .replace(/[^\w\s\']|_/g, '')
-            .replace(/[0-9]/g, '')
-            .replace(/\s+/g, '')
-            .toLowerCase()
-            .split('')
-            .sort()
-    )
-    return pangram.size === 26 ? true : false;
-}
-console.log(isPangram('ABCD45EFGH,IJK,LMNOPQR56STUVW3XYZ'));
+// // Detect Panagram
+// function isPangram(string) {
+//     const pangram = new Set( 
+//         string
+//             .replace(/[^\w\s\']|_/g, '')
+//             .replace(/[0-9]/g, '')
+//             .replace(/\s+/g, '')
+//             .toLowerCase()
+//             .split('')
+//             .sort()
+//     )
+//     return pangram.size === 26 ? true : false;
+// }
+// console.log(isPangram('ABCD45EFGH,IJK,LMNOPQR56STUVW3XYZ'));
 
 
 
