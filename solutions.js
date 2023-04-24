@@ -3113,12 +3113,20 @@
 
 
 
-// Your Order, Please
-function order(words) {
-    return words.split(' ').sort((a, b) => a.match(/\d/) - b.match(/\d/)).join(' ');
-}
-console.log(order("is2 Thi1s T4est 3a"));
+// // Your Order, Please
+// function order(words) {
+//     return words.split(' ').sort((a, b) => a.match(/\d/) - b.match(/\d/)).join(' ');
+// }
+// console.log(order("is2 Thi1s T4est 3a"));
 
+
+
+
+// Break camelCase
+function solution(string) {
+    return string.match(/([A-Z]?[^A-Z]*)/g).join(' ').trim();
+}
+console.log(solution('camelCasingTest'));
 
 
 
