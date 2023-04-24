@@ -2662,11 +2662,11 @@
 
 
 
-// Get Key/Value Pairs as Arrays
-function keysAndValues(data) {
-    return [Object.keys(data), Object.values(data)];
-}
-console.log(keysAndValues({a: 1, b: 2, c: 3}));
+// // Get Key/Value Pairs as Arrays
+// function keysAndValues(data) {
+//     return [Object.keys(data), Object.values(data)];
+// }
+// console.log(keysAndValues({a: 1, b: 2, c: 3}));
 
 
 
@@ -3109,6 +3109,15 @@ console.log(keysAndValues({a: 1, b: 2, c: 3}));
 //     return pangram.size === 26 ? true : false;
 // }
 // console.log(isPangram('ABCD45EFGH,IJK,LMNOPQR56STUVW3XYZ'));
+
+
+
+
+// Your Order, Please
+function order(words) {
+    return words.split(' ').sort((a, b) => a.match(/\d/) - b.match(/\d/)).join(' ');
+}
+console.log(order("is2 Thi1s T4est 3a"));
 
 
 
