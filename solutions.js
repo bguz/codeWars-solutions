@@ -2672,6 +2672,23 @@
 
 
 
+// Moves in Squared Strings (I)
+function vertMirror(strng) {
+    return strng.split('\n').map(w => w.split('').reverse().join('')).join('\n');
+}
+function horMirror(strng) {
+    return strng.split('\n').reverse().join('\n');
+}
+function oper(fct, s) {
+    return fct(s);
+}
+
+console.log(oper(vertMirror, "hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu"));
+console.log(oper(horMirror, "lVHt\nJVhv\nCSbg\nyeCt"));
+
+
+
+
 
 
 
@@ -3122,13 +3139,11 @@
 
 
 
-// Break camelCase
-function solution(string) {
-    return string.match(/([A-Z]?[^A-Z]*)/g).join(' ').trim();
-}
-console.log(solution('camelCasingTest'));
-
-
+// // Break camelCase
+// function solution(string) {
+//     return string.match(/([A-Z]?[^A-Z]*)/g).join(' ').trim();
+// }
+// console.log(solution('camelCasingTest'));
 
 
 
