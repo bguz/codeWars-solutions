@@ -2672,20 +2672,29 @@
 
 
 
-// Moves in Squared Strings (I)
-function vertMirror(strng) {
-    return strng.split('\n').map(w => w.split('').reverse().join('')).join('\n');
-}
-function horMirror(strng) {
-    return strng.split('\n').reverse().join('\n');
-}
-function oper(fct, s) {
-    return fct(s);
-}
+// // Moves in Squared Strings (I)
+// function vertMirror(strng) {
+//     return strng.split('\n').map(w => w.split('').reverse().join('')).join('\n');
+// }
+// function horMirror(strng) {
+//     return strng.split('\n').reverse().join('\n');
+// }
+// function oper(fct, s) {
+//     return fct(s);
+// }
 
-console.log(oper(vertMirror, "hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu"));
-console.log(oper(horMirror, "lVHt\nJVhv\nCSbg\nyeCt"));
+// console.log(oper(vertMirror, "hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu"));
+// console.log(oper(horMirror, "lVHt\nJVhv\nCSbg\nyeCt"));
 
+
+
+
+// The Old Switcheroo
+function vowel2index(str) {
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+    return str.split('').map((l,i) => vowels.includes(l.toLowerCase()) ? i + 1 : l).join('');
+}
+console.log(vowel2index('90\'s cornhole Austin, pickled butcher yr messenger bag gastropub next level leggings listicle meditation try-hard Vice. Taxidermy gastropub gentrify, meh fap organic ennui fingerstache pickled vegan. Seitan sustainable PBR&B cornhole VHS. Jean shorts actually bitters ugh blog Intelligentsia. Artisan Kickstarter DIY, fixie cliche salvia lo-fi four loko. PBR&B Odd Future ugh fingerstache cray Wes Anderson chia typewriter iPhone bespoke four loko, Intelligentsia photo booth direct trade. Aesthetic Tumblr Portland XOXO squid, synth viral listicle skateboard four dollar toast cornhole Blue Bottle semiotics.'));
 
 
 
