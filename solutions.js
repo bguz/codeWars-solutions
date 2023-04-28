@@ -2699,14 +2699,32 @@
 
 
 
-// Lost Number in Number Sequence
-function findDeletedNumber(arr, mixArr) {
-    const missing = arr.filter(num => !mixArr.includes(num));
-    return missing.length === 0 ? 0 : Number(missing);
+// // Lost Number in Number Sequence
+// function findDeletedNumber(arr, mixArr) {
+//     const missing = arr.filter(num => !mixArr.includes(num));
+//     return missing.length === 0 ? 0 : Number(missing);
+// }
+// console.log(findDeletedNumber([1,2,3,4,5], [3,4,1,5]));
+
+
+
+
+// Return the Missing Element
+function getMissingElement(superImportantArray){
+    const sorted = superImportantArray.sort();
+    let missingNum = 0;
+
+    for (let i = 0; i < sorted.length; i++) {
+        if (i < sorted[i]) {
+            missingNum = i;
+            break;
+        }
+    }
+
+    return missingNum;
 }
-console.log(findDeletedNumber([1,2,3,4,5], [3,4,1,5]));
-
-
+console.log(getMissingElement([0,5,1,3,2,9,7,6,4]));
+console.log(getMissingElement([9,2,4,5,7,0,8,6,1]));
 
 
 
