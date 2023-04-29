@@ -2709,25 +2709,52 @@
 
 
 
-// Return the Missing Element
-function getMissingElement(superImportantArray){
-    const sorted = superImportantArray.sort();
-    let missingNum = 0;
+// // Return the Missing Element
+// function getMissingElement(superImportantArray){
+//     const sorted = superImportantArray.sort();
+//     let missingNum = 0;
 
-    for (let i = 0; i < sorted.length; i++) {
-        if (i < sorted[i]) {
-            missingNum = i;
-            break;
-        }
-    }
+//     for (let i = 0; i < sorted.length; i++) {
+//         if (i < sorted[i]) {
+//             missingNum = i;
+//             break;
+//         }
+//     }
 
-    return missingNum;
+//     return missingNum;
+// }
+// console.log(getMissingElement([0,5,1,3,2,9,7,6,4]));
+// console.log(getMissingElement([9,2,4,5,7,0,8,6,1]));
+
+
+
+
+// Naughty or Nice?
+function getNiceNames(people){
+    return people.filter(p => {
+        if (p.wasNice === true) return p.name;
+    }).map(p => p.name);
 }
-console.log(getMissingElement([0,5,1,3,2,9,7,6,4]));
-console.log(getMissingElement([9,2,4,5,7,0,8,6,1]));
+  
+function getNaughtyNames(people){
+    return people.filter(p => {
+        if (p.wasNice === false) return p.name;
+    }).map(p => p.name);
+}
 
+console.log(getNiceNames( [
+    { name: 'Warrior reading this kata', wasNice: true },
+    { name: 'xDranik', wasNice: false },
+    { name: 'Santa', wasNice: true }
+] ));
+// => returns [ 'Warrior reading this kata', 'Santa' ]
 
-
+console.log(getNaughtyNames( [
+    { name: 'Warrior reading this kata', wasNice: true },
+    { name: 'xDranik', wasNice: false },
+    { name: 'Santa', wasNice: true }
+] ));
+// => returns [ 'xDranik' ]
 
 
 
