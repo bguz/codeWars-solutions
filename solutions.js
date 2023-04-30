@@ -2745,14 +2745,12 @@ function getNaughtyNames(people){
 console.log(getNiceNames( [
     { name: 'Warrior reading this kata', wasNice: true },
     { name: 'xDranik', wasNice: false },
-    { name: 'Santa', wasNice: true }
 ] ));
 // => returns [ 'Warrior reading this kata', 'Santa' ]
 
 console.log(getNaughtyNames( [
     { name: 'Warrior reading this kata', wasNice: true },
     { name: 'xDranik', wasNice: false },
-    { name: 'Santa', wasNice: true }
 ] ));
 // => returns [ 'xDranik' ]
 
