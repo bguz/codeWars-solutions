@@ -2729,31 +2729,39 @@
 
 
 
-// Naughty or Nice?
-function getNiceNames(people){
-    return people.filter(p => {
-        if (p.wasNice === true) return p.name;
-    }).map(p => p.name);
-}
+// // Naughty or Nice?
+// function getNiceNames(people){
+//     return people.filter(p => {
+//         if (p.wasNice === true) return p.name;
+//     }).map(p => p.name);
+// }
   
-function getNaughtyNames(people){
-    return people.filter(p => {
-        if (p.wasNice === false) return p.name;
-    }).map(p => p.name);
+// function getNaughtyNames(people){
+//     return people.filter(p => {
+//         if (p.wasNice === false) return p.name;
+//     }).map(p => p.name);
+// }
+
+// console.log(getNiceNames( [
+//     { name: 'Warrior reading this kata', wasNice: true },
+//     { name: 'xDranik', wasNice: false },
+// ] ));
+// // => returns [ 'Warrior reading this kata', 'Santa' ]
+
+// console.log(getNaughtyNames( [
+//     { name: 'Warrior reading this kata', wasNice: true },
+//     { name: 'xDranik', wasNice: false },
+// ] ));
+// // => returns [ 'xDranik' ]
+
+
+
+
+// The reject() Function
+function reject(array, predicate) {
+    return array.filter(num => !predicate(num));
 }
-
-console.log(getNiceNames( [
-    { name: 'Warrior reading this kata', wasNice: true },
-    { name: 'xDranik', wasNice: false },
-] ));
-// => returns [ 'Warrior reading this kata', 'Santa' ]
-
-console.log(getNaughtyNames( [
-    { name: 'Warrior reading this kata', wasNice: true },
-    { name: 'xDranik', wasNice: false },
-] ));
-// => returns [ 'xDranik' ]
-
+console.log(reject([1, 2, 3, 4, 5, 6], (n) => n % 2 == 0));
 
 
 
