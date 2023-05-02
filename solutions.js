@@ -2757,11 +2757,57 @@
 
 
 
-// The reject() Function
-function reject(array, predicate) {
-    return array.filter(num => !predicate(num));
+// // The reject() Function
+// function reject(array, predicate) {
+//     return array.filter(num => !predicate(num));
+// }
+// console.log(reject([1, 2, 3, 4, 5, 6], (n) => n % 2 == 0));
+
+
+
+
+// // Interview Questions (easy)
+// function getStrings(city) {
+//     const result = [];
+//     const instances = city.replace(/\s/g, '').toLowerCase().split('').reduce((obj, curr) => {
+//         obj[curr] = obj[curr] + 1 || 1;
+//         return obj;
+//     }, {}).forEach(prop => {
+//         console.log(prop);
+//     });
+
+//     for (let prop in instances) {
+//         result.push(`${prop}:${'*'.repeat(instances[prop])}`);
+//     }
+
+//     return result.join(',');
+// }
+// console.log(getStrings('Chicago'));
+// console.log(getStrings("Las Vegas"));
+
+
+
+
+// Insert Dashes
+function insertDash(num) {
+    const numStr = String(num);
+    const result = [];
+    
+    for (let i = 0; i < numStr.length; i++) {
+        if (i === (numStr.length - 1)) {
+            result.push(numStr[i]);
+            break;
+        } else if (numStr[i] % 2 !== 0 && (numStr[i + 1] % 2 !== 0)) {
+            result.push(numStr[i] + '-');
+        } else {
+            result.push(numStr[i]);
+        }
+    }
+
+    return result.join('');
 }
-console.log(reject([1, 2, 3, 4, 5, 6], (n) => n % 2 == 0));
+console.log(insertDash(117191));
+console.log(insertDash(123456));
 
 
 
