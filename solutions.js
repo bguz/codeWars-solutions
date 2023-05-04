@@ -3267,6 +3267,16 @@
 
 
 
+// Dashatize It
+function dashatize(num) {
+    return isNaN(num) ? 'NaN' : num.toString().match(/([13579]|[02468]+)/g).join('-');
+}
+console.log(dashatize(274));
+console.log(dashatize(6815));
+
+
+
+
 
 
 
