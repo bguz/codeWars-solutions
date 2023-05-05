@@ -1283,6 +1283,16 @@
 
 
 
+// Pluck
+function pluck(objs, name) {
+    return objs.map(i => i.hasOwnProperty(name) ? i[name] : undefined);
+}
+console.log(pluck([{a:1}, {a:2}], 'a'));
+console.log(pluck([{a:1, b:3}, {a:2}], 'b'));
+
+
+
+
 
 
 
@@ -3267,12 +3277,12 @@
 
 
 
-// Dashatize It
-function dashatize(num) {
-    return isNaN(num) ? 'NaN' : num.toString().match(/([13579]|[02468]+)/g).join('-');
-}
-console.log(dashatize(274));
-console.log(dashatize(6815));
+// // Dashatize It
+// function dashatize(num) {
+//     return isNaN(num) ? 'NaN' : num.toString().match(/([13579]|[02468]+)/g).join('-');
+// }
+// console.log(dashatize(274));
+// console.log(dashatize(6815));
 
 
 
