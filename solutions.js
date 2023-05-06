@@ -1283,14 +1283,52 @@
 
 
 
-// Pluck
-function pluck(objs, name) {
-    return objs.map(i => i.hasOwnProperty(name) ? i[name] : undefined);
+// // Pluck
+// function pluck(objs, name) {
+//     return objs.map(i => i.hasOwnProperty(name) ? i[name] : undefined);
+// }
+// console.log(pluck([{a:1}, {a:2}], 'a'));
+// console.log(pluck([{a:1, b:3}, {a:2}], 'b'));
+
+
+
+
+// makeBackronym
+const dict = {
+    A: 'awesome',
+    B: 'beautiful',
+    C: 'confident',
+    D: 'disturbing',
+    E: 'eager',
+    F: 'fantastic',
+    G: 'gregarious',
+    H: 'hippy',
+    I: 'ingestable',
+    J: 'joke',
+    K: 'klingon',
+    L: 'literal',
+    M: 'mustache',
+    N: 'newtonian',
+    O: 'oscillating',
+    P: 'perfect',
+    Q: 'queen',
+    R: 'rant',
+    S: 'stylish',
+    T: 'turn',
+    U: 'underlying',
+    V: 'volcano',
+    W: 'weird',
+    X: 'xylophone',
+    Y: 'yogic',
+    Z: 'zero'
 }
-console.log(pluck([{a:1}, {a:2}], 'a'));
-console.log(pluck([{a:1, b:3}, {a:2}], 'b'));
 
-
+var makeBackronym = function(string){
+    return string.toUpperCase().split('').map(l => {
+        return dict[l];
+    }).join(' ');
+};
+console.log(makeBackronym('dgm'));
 
 
 
