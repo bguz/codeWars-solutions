@@ -1293,43 +1293,56 @@
 
 
 
-// makeBackronym
-const dict = {
-    A: 'awesome',
-    B: 'beautiful',
-    C: 'confident',
-    D: 'disturbing',
-    E: 'eager',
-    F: 'fantastic',
-    G: 'gregarious',
-    H: 'hippy',
-    I: 'ingestable',
-    J: 'joke',
-    K: 'klingon',
-    L: 'literal',
-    M: 'mustache',
-    N: 'newtonian',
-    O: 'oscillating',
-    P: 'perfect',
-    Q: 'queen',
-    R: 'rant',
-    S: 'stylish',
-    T: 'turn',
-    U: 'underlying',
-    V: 'volcano',
-    W: 'weird',
-    X: 'xylophone',
-    Y: 'yogic',
-    Z: 'zero'
+// // makeBackronym
+// const dict = {
+//     A: 'awesome',
+//     B: 'beautiful',
+//     C: 'confident',
+//     D: 'disturbing',
+//     E: 'eager',
+//     F: 'fantastic',
+//     G: 'gregarious',
+//     H: 'hippy',
+//     I: 'ingestable',
+//     J: 'joke',
+//     K: 'klingon',
+//     L: 'literal',
+//     M: 'mustache',
+//     N: 'newtonian',
+//     O: 'oscillating',
+//     P: 'perfect',
+//     Q: 'queen',
+//     R: 'rant',
+//     S: 'stylish',
+//     T: 'turn',
+//     U: 'underlying',
+//     V: 'volcano',
+//     W: 'weird',
+//     X: 'xylophone',
+//     Y: 'yogic',
+//     Z: 'zero'
+// }
+
+// var makeBackronym = function(string){
+//     return string.toUpperCase().split('').map(l => {
+//         return dict[l];
+//     }).join(' ');
+// };
+// console.log(makeBackronym('dgm'));
+
+
+
+
+// Fix My Phone Numbers! (NO REGEX)
+function isItANum(str) {
+    const filteredStr = str.split('').filter(d => Number(d) >= 0 && d !== ' ');
+    console.log(filteredStr);
+    return Number(filteredStr[0]) !== 0 || filteredStr.length !== 11 ? 'Not a phone number' : filteredStr.join('');
 }
-
-var makeBackronym = function(string){
-    return string.toUpperCase().split('').map(l => {
-        return dict[l];
-    }).join(' ');
-};
-console.log(makeBackronym('dgm'));
-
+console.log(isItANum("0x £ C q l t £ ^ & M D408314708"));
+console.log(isItANum("sjfniebienvr12312312312ehfWh"));
+console.log(isItANum("v   uf  f 0tt2eg qe0b 8rtyq4eyq564()(((((165"));
+console.log(isItANum("stop calling me no I have never been in an accident"));
 
 
 
