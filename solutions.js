@@ -1333,20 +1333,6 @@
 
 
 
-// Fix My Phone Numbers! (NO REGEX)
-function isItANum(str) {
-    const filteredStr = str.split('').filter(d => Number(d) >= 0 && d !== ' ');
-    console.log(filteredStr);
-    return Number(filteredStr[0]) !== 0 || filteredStr.length !== 11 ? 'Not a phone number' : filteredStr.join('');
-}
-console.log(isItANum("0x £ C q l t £ ^ & M D408314708"));
-console.log(isItANum("sjfniebienvr12312312312ehfWh"));
-console.log(isItANum("v   uf  f 0tt2eg qe0b 8rtyq4eyq564()(((((165"));
-console.log(isItANum("stop calling me no I have never been in an accident"));
-
-
-
-
 
 
 
@@ -2869,6 +2855,21 @@ console.log(isItANum("stop calling me no I have never been in an accident"));
 // }
 // console.log(insertDash(117191));
 // console.log(insertDash(123456));
+
+
+
+
+// // Fix My Phone Numbers! (NO REGEX)
+// function isItANum(str) {
+//     const filteredStr = str.split('').filter(d => Number(d) >= 0 && d !== ' ');
+//     console.log(filteredStr);
+//     return Number(filteredStr[0]) !== 0 || filteredStr.length !== 11 ? 'Not a phone number' : filteredStr.join('');
+// }
+// console.log(isItANum("0x £ C q l t £ ^ & M D408314708"));
+// console.log(isItANum("sjfniebienvr12312312312ehfWh"));
+// console.log(isItANum("v   uf  f 0tt2eg qe0b 8rtyq4eyq564()(((((165"));
+// console.log(isItANum("stop calling me no I have never been in an accident"));
+
 
 
 
