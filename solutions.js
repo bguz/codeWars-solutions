@@ -1408,7 +1408,6 @@
 
 
 
-
 // // Descending Order
 // function descendingOrder(n){
 //     return Number(String(n).split('').sort((a, b) => b - a).join(''));
@@ -2870,6 +2869,17 @@
 // console.log(isItANum("v   uf  f 0tt2eg qe0b 8rtyq4eyq564()(((((165"));
 // console.log(isItANum("stop calling me no I have never been in an accident"));
 
+
+
+
+// Are They Square?
+var isSquare = function(arr) {
+    if (arr.length === 0) return undefined;
+    return arr.map(n => Math.sqrt(n) % 1 === 0).includes(false) ? false : true;
+}
+console.log(isSquare([1,4,9,16]));
+console.log(isSquare([3,4,7,9]));
+console.log(isSquare([]));
 
 
 
