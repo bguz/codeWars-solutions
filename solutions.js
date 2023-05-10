@@ -2872,15 +2872,23 @@
 
 
 
-// Are They Square?
-var isSquare = function(arr) {
-    if (arr.length === 0) return undefined;
-    return arr.map(n => Math.sqrt(n) % 1 === 0).includes(false) ? false : true;
-}
-console.log(isSquare([1,4,9,16]));
-console.log(isSquare([3,4,7,9]));
-console.log(isSquare([]));
+// // Are They Square?
+// var isSquare = function(arr) {
+//     if (arr.length === 0) return undefined;
+//     return arr.map(n => Math.sqrt(n) % 1 === 0).includes(false) ? false : true;
+// }
+// console.log(isSquare([1,4,9,16]));
+// console.log(isSquare([3,4,7,9]));
+// console.log(isSquare([]));
 
+
+
+
+// String Merge
+function stringMerge(string1, string2, letter){
+    return string1.slice(0, string1.indexOf(letter) + 1) + string2.slice(string2.indexOf(letter) + 1);
+}
+console.log(stringMerge('coding', 'anywhwere', 'n'));
 
 
 
