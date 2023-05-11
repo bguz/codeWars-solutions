@@ -2884,11 +2884,18 @@
 
 
 
-// String Merge
-function stringMerge(string1, string2, letter){
-    return string1.slice(0, string1.indexOf(letter) + 1) + string2.slice(string2.indexOf(letter) + 1);
-}
-console.log(stringMerge('coding', 'anywhwere', 'n'));
+// // String Merge
+// function stringMerge(string1, string2, letter){
+//     return string1.slice(0, string1.indexOf(letter) + 1) + string2.slice(string2.indexOf(letter) + 1);
+// }
+// console.log(stringMerge('coding', 'anywhwere', 'n'));
+
+
+
+
+// Coding Meetup $7 - Higher Order Functions Series
+// Find the Most Senior Developer
+
 
 
 
