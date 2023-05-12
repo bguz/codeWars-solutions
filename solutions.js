@@ -3357,20 +3357,20 @@
 
 
 
-// Coding Meetup $7 - Higher Order Functions Series
-// Find the Most Senior Developer
-var list1 = [
-    { firstName: 'Gabriel', lastName: 'X.', country: 'Monaco', continent: 'Europe', age: 49, language: 'PHP' },
-    { firstName: 'Odval', lastName: 'F.', country: 'Mongolia', continent: 'Asia', age: 38, language: 'Python' },
-    { firstName: 'Emilija', lastName: 'S.', country: 'Lithuania', continent: 'Europe', age: 19, language: 'Python' },
-    { firstName: 'Sou', lastName: 'B.', country: 'Japan', continent: 'Asia', age: 49, language: 'PHP' },
-];
+// // Coding Meetup $7 - Higher Order Functions Series
+// // Find the Most Senior Developer
+// var list1 = [
+//     { firstName: 'Gabriel', lastName: 'X.', country: 'Monaco', continent: 'Europe', age: 49, language: 'PHP' },
+//     { firstName: 'Odval', lastName: 'F.', country: 'Mongolia', continent: 'Asia', age: 38, language: 'Python' },
+//     { firstName: 'Emilija', lastName: 'S.', country: 'Lithuania', continent: 'Europe', age: 19, language: 'Python' },
+//     { firstName: 'Sou', lastName: 'B.', country: 'Japan', continent: 'Asia', age: 49, language: 'PHP' },
+// ];
 
-function findSenior(list) {
-    return list.sort((a, b) => b.age - a.age).filter(p => p.age === list[0].age);
-}
+// function findSenior(list) {
+//     return list.sort((a, b) => b.age - a.age).filter(p => p.age === list[0].age);
+// }
 
-console.log(findSenior(list1));
+// console.log(findSenior(list1));
 
 
 
