@@ -3375,6 +3375,16 @@
 
 
 
+// WeIrD StRiNg CaSe
+function toWeirdCase(string) {
+    return string.split(' ').map(w => w.split('').map((l, i) => i % 2 === 0 ? l.toUpperCase() : l).join('')).join(' ');
+}
+console.log(toWeirdCase('String'));
+console.log(toWeirdCase( "Weird string case" ));
+
+
+
+
 
 
 
