@@ -2893,6 +2893,24 @@
 
 
 
+// Partial Word Searching
+function wordSearch(query, seq) {
+    const filtered = seq.filter(s => s.toLowerCase().includes(query.toLowerCase()));
+    return filtered.length > 0 ? filtered : ["Empty"];
+}
+console.log(wordSearch("ab", ["za", "ab", "abc", "zAB", "zbc"]));
+console.log(wordSearch("zzz", ["za", "ab", "abc", "zAB", "zbc"]));
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3375,12 +3393,12 @@
 
 
 
-// WeIrD StRiNg CaSe
-function toWeirdCase(string) {
-    return string.split(' ').map(w => w.split('').map((l, i) => i % 2 === 0 ? l.toUpperCase() : l).join('')).join(' ');
-}
-console.log(toWeirdCase('String'));
-console.log(toWeirdCase( "Weird string case" ));
+// // WeIrD StRiNg CaSe
+// function toWeirdCase(string) {
+//     return string.split(' ').map(w => w.split('').map((l, i) => i % 2 === 0 ? l.toUpperCase() : l).join('')).join(' ');
+// }
+// console.log(toWeirdCase('String'));
+// console.log(toWeirdCase( "Weird string case" ));
 
 
 
