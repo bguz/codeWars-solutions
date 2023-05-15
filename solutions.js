@@ -2893,13 +2893,13 @@
 
 
 
-// Partial Word Searching
-function wordSearch(query, seq) {
-    const filtered = seq.filter(s => s.toLowerCase().includes(query.toLowerCase()));
-    return filtered.length > 0 ? filtered : ["Empty"];
-}
-console.log(wordSearch("ab", ["za", "ab", "abc", "zAB", "zbc"]));
-console.log(wordSearch("zzz", ["za", "ab", "abc", "zAB", "zbc"]));
+// // Partial Word Searching
+// function wordSearch(query, seq) {
+//     const filtered = seq.filter(s => s.toLowerCase().includes(query.toLowerCase()));
+//     return filtered.length > 0 ? filtered : ["Empty"];
+// }
+// console.log(wordSearch("ab", ["za", "ab", "abc", "zAB", "zbc"]));
+// console.log(wordSearch("zzz", ["za", "ab", "abc", "zAB", "zbc"]));
 
 
 
