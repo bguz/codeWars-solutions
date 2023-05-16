@@ -2904,44 +2904,44 @@
 
 
 
-// Whos Online? (REFACTOR)
-const list = [
-  {
-    username: 'David',
-    status: 'online',
-    lastActivity: 10
-  }, {
-    username: 'Lucy', 
-    status: 'offline',
-    lastActivity: 22
-  }, {
-    username: 'Bob', 
-    status: 'online',
-    lastActivity: 104
-  }
-];
+// // Whos Online? (REFACTOR)
+// const list = [
+//   {
+//     username: 'David',
+//     status: 'online',
+//     lastActivity: 10
+//   }, {
+//     username: 'Lucy', 
+//     status: 'offline',
+//     lastActivity: 22
+//   }, {
+//     username: 'Bob', 
+//     status: 'online',
+//     lastActivity: 104
+//   }
+// ];
 
-const whosOnline = (friends) => {
-    const online = [];
-    const offline = [];
-    const away = [];
+// const whosOnline = (friends) => {
+//     const online = [];
+//     const offline = [];
+//     const away = [];
 
-    return friends.reduce((obj, curr) => {
-        if (curr.status === 'online' && curr.lastActivity <= 10) {
-            online.push(curr.username)
-            obj['online'] = online;
-        } else if (curr.status === 'offline') {
-            offline.push(curr.username);
-            obj['offline'] = offline;
-        } else {
-            away.push(curr.username);
-            obj['away'] = away;
-        }
-        return obj;
-    }, {})
-}
+//     return friends.reduce((obj, curr) => {
+//         if (curr.status === 'online' && curr.lastActivity <= 10) {
+//             online.push(curr.username)
+//             obj['online'] = online;
+//         } else if (curr.status === 'offline') {
+//             offline.push(curr.username);
+//             obj['offline'] = offline;
+//         } else {
+//             away.push(curr.username);
+//             obj['away'] = away;
+//         }
+//         return obj;
+//     }, {})
+// }
 
-console.log(whosOnline(list));
+// console.log(whosOnline(list));
 
 
 
