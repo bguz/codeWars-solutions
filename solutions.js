@@ -2946,25 +2946,46 @@
 
 
 
-// 99 Bottles of Beer
-var sing = function(num) {
-  var lyrics = [];
+// // 99 Bottles of Beer
+// var sing = function(num) {
+//   var lyrics = [];
 
-  for (let i = 99; i >= 3; i--) {
-    lyrics.push(i + ' bottles of beer on the wall, ' + i + ' bottles of beer.');
-    lyrics.push('Take one down and pass it around, ' + (i - 1) + ' bottles of beer on the wall.');
+//   for (let i = 99; i >= 3; i--) {
+//     lyrics.push(i + ' bottles of beer on the wall, ' + i + ' bottles of beer.');
+//     lyrics.push('Take one down and pass it around, ' + (i - 1) + ' bottles of beer on the wall.');
+//   }
+
+//   return lyrics.concat([
+//     '2 bottles of beer on the wall, 2 bottles of beer.',
+//     'Take one down and pass it around, 1 bottle of beer on the wall.',
+//     '1 bottle of beer on the wall, 1 bottle of beer.',
+//     'Take one down and pass it around, no more bottles of beer on the wall.',
+//     'No more bottles of beer on the wall, no more bottles of beer.',
+//     'Go to the store and buy some more, 99 bottles of beer on the wall.'
+//   ]);
+// }
+// console.log(sing(99))
+
+
+
+
+// Alphabet Symmetry
+function solve(arr) {
+  const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+  let count = 0;
+  const finalArr = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      if (alphabet.indexOf(arr[i][j].toLowerCase()) === j) count++;
+    }
+    finalArr.push(count);
+    count = 0;
   }
 
-  return lyrics.concat([
-    '2 bottles of beer on the wall, 2 bottles of beer.',
-    'Take one down and pass it around, 1 bottle of beer on the wall.',
-    '1 bottle of beer on the wall, 1 bottle of beer.',
-    'Take one down and pass it around, no more bottles of beer on the wall.',
-    'No more bottles of beer on the wall, no more bottles of beer.',
-    'Go to the store and buy some more, 99 bottles of beer on the wall.'
-  ]);
+  return finalArr;
 }
-console.log(sing(99))
+console.log(solve(["abode", "ABc", "xyzD"]))
 
 
 
