@@ -2969,23 +2969,23 @@
 
 
 
-// Alphabet Symmetry
-function solve(arr) {
-  const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-  let count = 0;
-  const finalArr = [];
+// // Alphabet Symmetry
+// function solve(arr) {
+//   const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+//   let count = 0;
+//   const finalArr = [];
 
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr[i].length; j++) {
-      if (alphabet.indexOf(arr[i][j].toLowerCase()) === j) count++;
-    }
-    finalArr.push(count);
-    count = 0;
-  }
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = 0; j < arr[i].length; j++) {
+//       if (alphabet.indexOf(arr[i][j].toLowerCase()) === j) count++;
+//     }
+//     finalArr.push(count);
+//     count = 0;
+//   }
 
-  return finalArr;
-}
-console.log(solve(["abode", "ABc", "xyzD"]))
+//   return finalArr;
+// }
+// console.log(solve(["abode", "ABc", "xyzD"]))
 
 
 
@@ -3485,6 +3485,16 @@ console.log(solve(["abode", "ABc", "xyzD"]))
 // }
 // console.log(toWeirdCase('String'));
 // console.log(toWeirdCase( "Weird string case" ));
+
+
+
+
+// Arrh, Grabscrab!
+function grabscrab(anagram, dictionary) {
+  return dictionary.filter(w => [...w].sort().join('') === [...anagram].sort().join(''));
+}
+console.log(grabscrab("ortsp", ["sport", "parrot", "ports", "matey"]));
+console.log(grabscrab("oob", ["bob", "baobab"]));
 
 
 
