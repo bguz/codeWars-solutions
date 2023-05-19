@@ -2985,9 +2985,21 @@
 
 //   return finalArr;
 // }
-// console.log(solve(["abode", "ABc", "xyzD"]))
+// console.log(solve(["abode", "ABc", "xyzD"]));
 
 
+
+
+// Complete The Pattern #1
+function pattern(n) {
+  let output = [];
+  for (let i = 1; i <= n; i++) {
+    output.push(String(i).repeat(i));
+  }
+  return output.join('\n');
+}
+
+console.log(pattern(5));
 
 
 
@@ -3489,13 +3501,38 @@
 
 
 
-// Arrh, Grabscrab!
-function grabscrab(anagram, dictionary) {
-  return dictionary.filter(w => [...w].sort().join('') === [...anagram].sort().join(''));
-}
-console.log(grabscrab("ortsp", ["sport", "parrot", "ports", "matey"]));
-console.log(grabscrab("oob", ["bob", "baobab"]));
+// // Arrh, Grabscrab!
+// function grabscrab(anagram, dictionary) {
+//   return dictionary.filter(w => [...w].sort().join('') === [...anagram].sort().join(''));
+// }
+// console.log(grabscrab("ortsp", ["sport", "parrot", "ports", "matey"]));
+// console.log(grabscrab("oob", ["bob", "baobab"]));
 
+
+
+
+// // Decipher This!
+// function decipherThis(str) {
+//   return str
+//     .split(' ')
+//     .map(el => String.fromCharCode(el.replace(/[^0-9]/g, '')) + el.replace(/[^a-z]/ig, ''))
+//     .map(el => el.length < 3 ? el : el.slice(0, 1) + el.slice(-1) + el.slice(2, el.length - 1) + el.slice(1, 2))
+//     .join(' ')
+// };
+// console.log(decipherThis('72olle 103doo 100ya')); 
+// console.log(decipherThis('65 119esi 111dl 111lw 108dvei 105n 97n 111ka')); 
+
+
+
+
+// // Dashatize It
+// function dashatize(num) {
+//     return isNaN(num) ? 'NaN' : num.toString().match(/([13579]|[02468]+)/g).join('-');
+// }
+// console.log(dashatize(274));
+// console.log(dashatize(6815));
+// console.log(dashatize(274));
+// console.log(dashatize(6815));
 
 
 
