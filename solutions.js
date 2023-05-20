@@ -2990,16 +2990,29 @@
 
 
 
-// Complete The Pattern #1
-function pattern(n) {
-  let output = [];
-  for (let i = 1; i <= n; i++) {
-    output.push(String(i).repeat(i));
-  }
-  return output.join('\n');
-}
+// // Complete The Pattern #1
+// function pattern(n) {
+//   let output = [];
+//   for (let i = 1; i <= n; i++) {
+//     output.push(String(i).repeat(i));
+//   }
+//   return output.join('\n');
+// }
 
-console.log(pattern(5));
+// console.log(pattern(5));
+
+
+
+
+// Simple Consecutive Pairs
+function pairs(arr){
+  let count = 0;
+  for (let i = 1; i <= arr.length; i += 2) {
+    if (arr[i - 1] + 1 === arr[i] || arr[i - 1] - 1 === arr[i]) count++;
+  }
+  return count;
+};
+console.log(pairs([1,2,5,8,-4,-3,7,6,5]));
 
 
 
