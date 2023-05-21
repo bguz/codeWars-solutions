@@ -3004,16 +3004,33 @@
 
 
 
-// Simple Consecutive Pairs
-function pairs(arr){
-  let count = 0;
-  for (let i = 1; i <= arr.length; i += 2) {
-    if (arr[i - 1] + 1 === arr[i] || arr[i - 1] - 1 === arr[i]) count++;
-  }
-  return count;
-};
-console.log(pairs([1,2,5,8,-4,-3,7,6,5]));
+// // Simple Consecutive Pairs
+// function pairs(arr){
+//   let count = 0;
+//   for (let i = 1; i <= arr.length; i += 2) {
+//     if (arr[i - 1] + 1 === arr[i] || arr[i - 1] - 1 === arr[i]) count++;
+//   }
+//   return count;
+// };
+// console.log(pairs([1,2,5,8,-4,-3,7,6,5]));
 
+
+
+
+// Minimum Steps (Array Series #6)
+function minimumSteps(numbers, value){
+  const arrSort = numbers.sort( (x, y) => x - y);
+  let count = 0;
+  let sum = 0;
+  for (let i = 0; i < arrSort.length; i++){
+      if (sum >= value) break;
+      sum+= arrSort[i];
+      count++; 
+  } 
+  return count - 1;   
+}
+console.log(minimumSteps([4,6,3], 7));
+console.log(minimumSteps([8,9,10,4,2], 23));
 
 
 
