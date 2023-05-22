@@ -3017,20 +3017,38 @@
 
 
 
-// Minimum Steps (Array Series #6)
-function minimumSteps(numbers, value){
-  const arrSort = numbers.sort( (x, y) => x - y);
-  let count = 0;
-  let sum = 0;
-  for (let i = 0; i < arrSort.length; i++){
-      if (sum >= value) break;
-      sum+= arrSort[i];
-      count++; 
-  } 
-  return count - 1;   
+// // Minimum Steps (Array Series #6)
+// function minimumSteps(numbers, value){
+//   const arrSort = numbers.sort( (x, y) => x - y);
+//   let count = 0;
+//   let sum = 0;
+//   for (let i = 0; i < arrSort.length; i++){
+//       if (sum >= value) break;
+//       sum+= arrSort[i];
+//       count++; 
+//   } 
+//   return count - 1;   
+// }
+// console.log(minimumSteps([4,6,3], 7));
+// console.log(minimumSteps([8,9,10,4,2], 23));
+
+
+
+
+// Spoonerize Me
+function spoonerize(words) {
+    const arr = words.split(' ');
+    return arr.map((w, i) => {
+        if (i === 0) {
+            return arr[arr.length - 1][0] + w.slice(1);
+        } else if (i === (arr.length - 1)) {
+            return arr[0][0] + w.slice(1);
+        } else {
+            return w;
+        }
+    }).join(' ');
 }
-console.log(minimumSteps([4,6,3], 7));
-console.log(minimumSteps([8,9,10,4,2], 23));
+console.log(spoonerize('wedding of bells'));
 
 
 
