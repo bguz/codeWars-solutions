@@ -3035,20 +3035,37 @@
 
 
 
-// Spoonerize Me
-function spoonerize(words) {
-    const arr = words.split(' ');
-    return arr.map((w, i) => {
-        if (i === 0) {
-            return arr[arr.length - 1][0] + w.slice(1);
-        } else if (i === (arr.length - 1)) {
-            return arr[0][0] + w.slice(1);
-        } else {
-            return w;
-        }
-    }).join(' ');
+// // Spoonerize Me
+// function spoonerize(words) {
+//     const arr = words.split(' ');
+//     return arr.map((w, i) => {
+//         if (i === 0) {
+//             return arr[arr.length - 1][0] + w.slice(1);
+//         } else if (i === (arr.length - 1)) {
+//             return arr[0][0] + w.slice(1);
+//         } else {
+//             return w;
+//         }
+//     }).join(' ');
+// }
+// console.log(spoonerize('wedding of bells'));
+
+
+
+
+// Coding Meetup #12 - Higher Order Functions Series
+// Find GitHub Admins
+var list1 = [
+    { firstName: 'Harry', lastName: 'K.', country: 'Brazil', continent: 'Americas', age: 22, language: 'JavaScript', githubAdmin: 'yes' },
+    { firstName: 'Kseniya', lastName: 'T.', country: 'Belarus', continent: 'Europe', age: 49, language: 'Ruby', githubAdmin: 'no' },
+    { firstName: 'Jing', lastName: 'X.', country: 'China', continent: 'Asia', age: 34, language: 'JavaScript', githubAdmin: 'yes' },
+    { firstName: 'Piotr', lastName: 'B.', country: 'Poland', continent: 'Europe', age: 128, language: 'JavaScript', githubAdmin: 'no' }
+];
+
+function findAdmin(list, lang) {
+    return list.filter(dev => dev.language === lang && dev.githubAdmin === 'yes');
 }
-console.log(spoonerize('wedding of bells'));
+console.log(findAdmin(list1, 'JavaScript'));
 
 
 
