@@ -3070,12 +3070,11 @@
 
 
 
-// We Have Liftoff
-function liftoff(instructions) {
-    return instructions.sort((a,b) => b - a).join(' ') + ' liftoff!';
-}
-console.log(liftoff([2, 8, 10, 9, 1, 3, 4, 7, 6, 5]));
-
+// // We Have Liftoff
+// function liftoff(instructions) {
+//     return instructions.sort((a,b) => b - a).join(' ') + ' liftoff!';
+// }
+// console.log(liftoff([2, 8, 10, 9, 1, 3, 4, 7, 6, 5]));
 
 
 
@@ -3607,6 +3606,31 @@ console.log(liftoff([2, 8, 10, 9, 1, 3, 4, 7, 6, 5]));
 // console.log(dashatize(6815));
 // console.log(dashatize(274));
 // console.log(dashatize(6815));
+
+
+
+
+// // Only Duplicates (REFACTOR)
+// function onlyDuplicates(str) {
+//     const reducedStr = [...str].reduce((obj, curr) => {
+//             obj[curr] = obj[curr] + 1 || 1;
+//             return obj;
+//         }, {});
+//     const grabKeys = Object.keys(reducedStr).filter(el => reducedStr[el] > 1);
+//     return [...str].filter(l => grabKeys.includes(l)).join('');
+// }
+// console.log(onlyDuplicates('abccdefee'));
+// console.log(onlyDuplicates('hello'));
+// console.log(onlyDuplicates('colloquial'));
+
+
+
+
+
+
+
+
+
 
 
 
