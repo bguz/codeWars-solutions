@@ -3079,6 +3079,17 @@
 
 
 
+// sillyCASE
+function sillycase(silly) {
+    let mid = Math.ceil(silly.length / 2);
+    return silly.slice(0, mid).toLowerCase() + silly.slice(mid).toUpperCase();
+}
+console.log(sillycase('brian'));
+console.log(sillycase('foobar'));
+console.log(sillycase('javascript'))
+
+
+
 
 
 
