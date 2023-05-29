@@ -3091,16 +3091,16 @@
 
 
 
-// Evens Times Last
-function evenLast(numbers) {
-    return numbers.length !== 0 ? 
-            numbers
-                .filter((n, i) => i % 2 === 0)
-                .reduce((sum, curr) => sum + curr, 0) * numbers[numbers.length - 1] 
-            :
-            0
-}
-console.log(evenLast([2, 3, 4, 5]));
+// // Evens Times Last
+// function evenLast(numbers) {
+//     return numbers.length !== 0 ? 
+//             numbers
+//                 .filter((n, i) => i % 2 === 0)
+//                 .reduce((sum, curr) => sum + curr, 0) * numbers[numbers.length - 1] 
+//             :
+//             0
+// }
+// console.log(evenLast([2, 3, 4, 5]));
 
 
 
