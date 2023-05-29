@@ -3079,14 +3079,28 @@
 
 
 
-// sillyCASE
-function sillycase(silly) {
-    let mid = Math.ceil(silly.length / 2);
-    return silly.slice(0, mid).toLowerCase() + silly.slice(mid).toUpperCase();
+// // sillyCASE
+// function sillycase(silly) {
+//     let mid = Math.ceil(silly.length / 2);
+//     return silly.slice(0, mid).toLowerCase() + silly.slice(mid).toUpperCase();
+// }
+// console.log(sillycase('brian'));
+// console.log(sillycase('foobar'));
+// console.log(sillycase('javascript'))
+
+
+
+
+// Evens Times Last
+function evenLast(numbers) {
+    return numbers.length !== 0 ? 
+            numbers
+                .filter((n, i) => i % 2 === 0)
+                .reduce((sum, curr) => sum + curr, 0) * numbers[numbers.length - 1] 
+            :
+            0
 }
-console.log(sillycase('brian'));
-console.log(sillycase('foobar'));
-console.log(sillycase('javascript'))
+console.log(evenLast([2, 3, 4, 5]));
 
 
 
