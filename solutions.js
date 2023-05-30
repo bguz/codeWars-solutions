@@ -3651,6 +3651,23 @@
 
 
 
+// Coding Meetup #10 - Higher-Order Functions Series
+// Create Username
+var list1 = [
+    { firstName: 'Emily', lastName: 'N.', country: 'Ireland', continent: 'Europe', age: 30, language: 'Ruby' },
+    { firstName: 'Nor', lastName: 'E.', country: 'Malaysia', continent: 'Asia', age: 20, language: 'Clojure' }
+];
+function addUsername(list) {
+    const d = new Date();
+    return list.map(p => {
+        p.username = `${p.firstName.toLowerCase()}${p.lastName[0].toLowerCase()}${d.getFullYear() - p.age}`
+        return p;
+    });
+}
+console.log(addUsername(list1));
+
+
+
 
 
 
