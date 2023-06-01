@@ -3105,6 +3105,26 @@
 
 
 
+// Coding Meetup #11 - Higher-Order Functions Series
+// Find the Average Age
+var list1 = [
+    { firstName: 'Maria', lastName: 'Y.', country: 'Cyprus', continent: 'Europe', age: 30, language: 'Java' },
+    { firstName: 'Victoria', lastName: 'T.', country: 'Puerto Rico', continent: 'Americas', age: 70, language: 'Python' },
+];
+
+function getAverageAge(list) {
+    return Math.round(list1.reduce((sum, curr) => sum + curr.age, 0) / list.length);
+}
+console.log(getAverageAge(list1));
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3669,24 +3689,24 @@
 
 
 
-// Coding Meetup #8 - Higher-Orer Function Series
-// Will all continents be represented?
-var list1 = [
-    { firstName: 'Fatima', lastName: 'A.', country: 'Algeria', continent: 'Africa', age: 25, language: 'JavaScript' },
-    { firstName: 'Agustín', lastName: 'M.', country: 'Chile', continent: 'Americas', age: 37, language: 'C' },
-    { firstName: 'Jing', lastName: 'X.', country: 'China', continent: 'Asia', age: 39, language: 'Ruby' },
-    { firstName: 'Laia', lastName: 'P.', country: 'Andorra', continent: 'Europe', age: 55, language: 'Ruby' },
-    { firstName: 'Oliver', lastName: 'Q.', country: 'Australia', continent: 'Oceania', age: 65, language: 'PHP' },
-];
+// // Coding Meetup #8 - Higher-Orer Function Series
+// // Will all continents be represented?
+// var list1 = [
+//     { firstName: 'Fatima', lastName: 'A.', country: 'Algeria', continent: 'Africa', age: 25, language: 'JavaScript' },
+//     { firstName: 'Agustín', lastName: 'M.', country: 'Chile', continent: 'Americas', age: 37, language: 'C' },
+//     { firstName: 'Jing', lastName: 'X.', country: 'China', continent: 'Asia', age: 39, language: 'Ruby' },
+//     { firstName: 'Laia', lastName: 'P.', country: 'Andorra', continent: 'Europe', age: 55, language: 'Ruby' },
+//     { firstName: 'Oliver', lastName: 'Q.', country: 'Australia', continent: 'Oceania', age: 65, language: 'PHP' },
+// ];
 
-function allContinents(list) {
-    return Object.entries(list1.reduce((obj, curr) => {
-        obj[curr.continent] = obj[curr.continent] + 1 || 1;
-        return obj;
-    }, {})).length === 5 ? true : false;
-}
+// function allContinents(list) {
+//     return Object.entries(list1.reduce((obj, curr) => {
+//         obj[curr.continent] = obj[curr.continent] + 1 || 1;
+//         return obj;
+//     }, {})).length === 5 ? true : false;
+// }
 
-console.log(allContinents(list1));
+// console.log(allContinents(list1));
 
 
 
