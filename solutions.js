@@ -3120,13 +3120,36 @@
 
 
 
-// Sort Numbers
-function solution(nums) {
-    if (nums === null || nums.length === 0) return []
-    return nums.sort((a,b) => a - b);
+// // Sort Numbers
+// function solution(nums) {
+//     if (nums === null || nums.length === 0) return []
+//     return nums.sort((a,b) => a - b);
+// }
+// console.log(solution([1,2,3,10,5]));
+// console.log(solution(null));
+
+
+
+
+// Coding Meetup #14 - Higher Order Functions Series
+// Order the Food
+var list1 = [
+    { firstName: 'Noah', lastName: 'M.', country: 'Switzerland', continent: 'Europe', age: 19, language: 'C', 
+      meal: 'vegetarian' },
+    { firstName: 'Anna', lastName: 'R.', country: 'Liechtenstein', continent: 'Europe', age: 52, language: 'JavaScript', 
+      meal: 'standard' },
+    { firstName: 'Ramona', lastName: 'R.', country: 'Paraguay', continent: 'Americas', age: 29, language: 'Ruby', 
+      meal: 'vegan' },
+    { firstName: 'George', lastName: 'B.', country: 'England', continent: 'Europe', age: 81, language: 'C', 
+      meal: 'vegetarian' },
+];
+function orderFood(list) {
+    return list.reduce((obj, curr) => {
+        obj[curr.meal] = obj[curr.meal] + 1 || 1;
+        return obj;
+    }, {})
 }
-console.log(solution([1,2,3,10,5]));
-console.log(solution(null));
+console.log(orderFood(list1));
 
 
 
@@ -3709,7 +3732,7 @@ console.log(solution(null));
 // ];
 
 // function allContinents(list) {
-//     return Object.entries(list1.reduce((obj, curr) => {
+//     return Object.entries(list.reduce((obj, curr) => {
 //         obj[curr.continent] = obj[curr.continent] + 1 || 1;
 //         return obj;
 //     }, {})).length === 5 ? true : false;
