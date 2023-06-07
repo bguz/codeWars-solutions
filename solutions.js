@@ -3131,25 +3131,25 @@
 
 
 
-// Coding Meetup #14 - Higher Order Functions Series
-// Order the Food
-var list1 = [
-    { firstName: 'Noah', lastName: 'M.', country: 'Switzerland', continent: 'Europe', age: 19, language: 'C', 
-      meal: 'vegetarian' },
-    { firstName: 'Anna', lastName: 'R.', country: 'Liechtenstein', continent: 'Europe', age: 52, language: 'JavaScript', 
-      meal: 'standard' },
-    { firstName: 'Ramona', lastName: 'R.', country: 'Paraguay', continent: 'Americas', age: 29, language: 'Ruby', 
-      meal: 'vegan' },
-    { firstName: 'George', lastName: 'B.', country: 'England', continent: 'Europe', age: 81, language: 'C', 
-      meal: 'vegetarian' },
-];
-function orderFood(list) {
-    return list.reduce((obj, curr) => {
-        obj[curr.meal] = obj[curr.meal] + 1 || 1;
-        return obj;
-    }, {})
-}
-console.log(orderFood(list1));
+// // Coding Meetup #14 - Higher Order Functions Series
+// // Order the Food
+// var list1 = [
+//     { firstName: 'Noah', lastName: 'M.', country: 'Switzerland', continent: 'Europe', age: 19, language: 'C', 
+//       meal: 'vegetarian' },
+//     { firstName: 'Anna', lastName: 'R.', country: 'Liechtenstein', continent: 'Europe', age: 52, language: 'JavaScript', 
+//       meal: 'standard' },
+//     { firstName: 'Ramona', lastName: 'R.', country: 'Paraguay', continent: 'Americas', age: 29, language: 'Ruby', 
+//       meal: 'vegan' },
+//     { firstName: 'George', lastName: 'B.', country: 'England', continent: 'Europe', age: 81, language: 'C', 
+//       meal: 'vegetarian' },
+// ];
+// function orderFood(list) {
+//     return list.reduce((obj, curr) => {
+//         obj[curr.meal] = obj[curr.meal] + 1 || 1;
+//         return obj;
+//     }, {})
+// }
+// console.log(orderFood(list1));
 
 
 
@@ -3740,6 +3740,46 @@ console.log(orderFood(list1));
 
 // console.log(allContinents(list1));
 
+
+
+
+// // Coding Meetup #15 - Higher Order Functions Series
+// // Find the Odd Names
+// var list1 = [
+//   { firstName: 'Aba', lastName: 'N.', country: 'Ghana', continent: 'Africa', age: 21, language: 'Python' },
+//   { firstName: 'Abb', lastName: 'O.', country: 'Israel', continent: 'Asia', age: 39, language: 'Java' }
+// ];
+
+// function findOddNames(list) {
+//   return list
+//           .filter(p => p.firstName.split('')
+//             .map(l => l.charCodeAt(0))
+//               .reduce((sum, curr) => sum + curr, 0) % 2 !== 0);
+// }
+// console.log(findOddNames(list1));
+
+
+
+
+// Coding Meetup #16 - Higher Order Functions Series
+// Ask for Missing Details
+var list1 = [
+  { firstName: null, lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
+  { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: null },
+  { firstName: 'Madison', lastName: 'U.', country: 'United States', continent: 'Americas', age: 32, language: 'Ruby' } 
+];
+
+function askForMissingDetails(list) {
+  return list.filter(person => {
+    for (let item in person) {
+      if (person[item] === null) {
+        return person.question = `Hi, could you please provide your ${item}.`;
+        return person;
+      }
+    }
+  });
+}
+console.log(askForMissingDetails(list1));
 
 
 
