@@ -4,6 +4,8 @@
 
 ======================================== */
 
+// const { deepEqual } = require("assert");
+
 // // Function 1 - Hello World
 // function greet() {
 //     return `hello world!`;
@@ -3154,6 +3156,17 @@
 
 
 
+// Last Digits of a Number
+function lastDigit(n, d) {
+  return d <= 0 ? [] : [...n.toString()].map(n => Number(n)).slice(-d);
+}
+console.log(lastDigit(123767, 4));
+console.log(lastDigit(1234, 0));
+console.log(lastDigit(1345,5))
+
+
+
+
 
 
 
@@ -3761,25 +3774,25 @@
 
 
 
-// Coding Meetup #16 - Higher Order Functions Series
-// Ask for Missing Details
-var list1 = [
-  { firstName: null, lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
-  { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: null },
-  { firstName: 'Madison', lastName: 'U.', country: 'United States', continent: 'Americas', age: 32, language: 'Ruby' } 
-];
+// // Coding Meetup #16 - Higher Order Functions Series
+// // Ask for Missing Details
+// var list1 = [
+//   { firstName: null, lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
+//   { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: null },
+//   { firstName: 'Madison', lastName: 'U.', country: 'United States', continent: 'Americas', age: 32, language: 'Ruby' } 
+// ];
 
-function askForMissingDetails(list) {
-  return list.filter(person => {
-    for (let item in person) {
-      if (person[item] === null) {
-        return person.question = `Hi, could you please provide your ${item}.`;
-        return person;
-      }
-    }
-  });
-}
-console.log(askForMissingDetails(list1));
+// function askForMissingDetails(list) {
+//   return list.filter(person => {
+//     for (let item in person) {
+//       if (person[item] === null) {
+//         return person.question = `Hi, could you please provide your ${item}.`;
+//         return person;
+//       }
+//     }
+//   });
+// }
+// console.log(askForMissingDetails(list1));
 
 
 
