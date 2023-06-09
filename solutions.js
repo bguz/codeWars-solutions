@@ -3156,13 +3156,22 @@
 
 
 
-// Last Digits of a Number
-function lastDigit(n, d) {
-  return d <= 0 ? [] : [...n.toString()].map(n => Number(n)).slice(-d);
+// // Last Digits of a Number
+// function lastDigit(n, d) {
+//   return d <= 0 ? [] : [...n.toString()].map(n => Number(n)).slice(-d);
+// }
+// console.log(lastDigit(123767, 4));
+// console.log(lastDigit(1234, 0));
+// console.log(lastDigit(1345,5));
+
+
+
+
+// Lucky Number
+function isLucky(n) {
+  return n % 9 === 0 ? true : false;
 }
-console.log(lastDigit(123767, 4));
-console.log(lastDigit(1234, 0));
-console.log(lastDigit(1345,5))
+console.log(isLucky(1892376));
 
 
 
