@@ -3167,11 +3167,32 @@
 
 
 
-// Lucky Number
-function isLucky(n) {
-  return n % 9 === 0 ? true : false;
+// // Lucky Number
+// function isLucky(n) {
+//   return n % 9 === 0 ? true : false;
+// }
+// console.log(isLucky(1892376));
+
+
+
+// Hells Kitchen
+function gordon(a) {
+  const vowels = ['e', 'i', 'o', 'u'];
+  return a
+        .toLowerCase()
+        .split(' ')
+        .map(word => word + '!!!!')
+        .map(word => word.split('').map(letter => {
+          if (letter === 'a') {
+            return '@';
+          } else if (vowels.includes(letter)) {
+            return '*';
+          } else {
+            return letter;
+          }
+        }).join('')).join(' ').toUpperCase();
 }
-console.log(isLucky(1892376));
+console.log(gordon('What feck damn cake'));
 
 
 
