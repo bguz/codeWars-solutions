@@ -3197,14 +3197,14 @@
 
 
 
-// Double Sort
-function dbSort(a) {
-  const nums = a.filter(n => typeof n === 'number').sort((a,b) => a - b);
-  const str = a.filter(s => typeof s === 'string').sort();
-  return [...nums, ...str];
-}
-console.log(dbSort(['C', 'W', 'W', 'W', 1, 2, 0]));
-console.log(dbSort(["Apple",46,"287",574,"Peach","3","69",78,"Grape","423"]));
+// // Double Sort
+// function dbSort(a) {
+//   const nums = a.filter(n => typeof n === 'number').sort((a,b) => a - b);
+//   const str = a.filter(s => typeof s === 'string').sort();
+//   return [...nums, ...str];
+// }
+// console.log(dbSort(['C', 'W', 'W', 'W', 1, 2, 0]));
+// console.log(dbSort(["Apple",46,"287",574,"Peach","3","69",78,"Grape","423"]));
 
 
 
@@ -3835,6 +3835,28 @@ console.log(dbSort(["Apple",46,"287",574,"Peach","3","69",78,"Grape","423"]));
 //   });
 // }
 // console.log(askForMissingDetails(list1));
+
+
+
+
+// Find the Odd Int
+function findOdd(a) {
+  let result = 0;
+  const obj = a.reduce((obj, curr) => {
+    obj[curr] = obj[curr] + 1 || 1;
+    return obj;
+  }, {})
+  
+  for (let key in obj) {
+    if (Number(obj[key]) === 1 || Number(obj[key]) % 2 !== 0) {
+      result = key;
+    }
+  }
+
+  return +result;
+}
+console.log(findOdd([1,1,1,1,1,1,10,1,1,1,1]));
+console.log(findOdd([20,1,1,2,2,3,3,5,5,4,20,4,5]));
 
 
 
