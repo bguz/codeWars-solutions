@@ -3175,24 +3175,36 @@
 
 
 
-// Hells Kitchen
-function gordon(a) {
-  const vowels = ['e', 'i', 'o', 'u'];
-  return a
-        .toLowerCase()
-        .split(' ')
-        .map(word => word + '!!!!')
-        .map(word => word.split('').map(letter => {
-          if (letter === 'a') {
-            return '@';
-          } else if (vowels.includes(letter)) {
-            return '*';
-          } else {
-            return letter;
-          }
-        }).join('')).join(' ').toUpperCase();
+// // Hells Kitchen
+// function gordon(a) {
+//   const vowels = ['e', 'i', 'o', 'u'];
+//   return a
+//         .toLowerCase()
+//         .split(' ')
+//         .map(word => word + '!!!!')
+//         .map(word => word.split('').map(letter => {
+//           if (letter === 'a') {
+//             return '@';
+//           } else if (vowels.includes(letter)) {
+//             return '*';
+//           } else {
+//             return letter;
+//           }
+//         }).join('')).join(' ').toUpperCase();
+// }
+// console.log(gordon('What feck damn cake'));
+
+
+
+
+// Double Sort
+function dbSort(a) {
+  const nums = a.filter(n => typeof n === 'number').sort((a,b) => a - b);
+  const str = a.filter(s => typeof s === 'string').sort();
+  return [...nums, ...str];
 }
-console.log(gordon('What feck damn cake'));
+console.log(dbSort(['C', 'W', 'W', 'W', 1, 2, 0]));
+console.log(dbSort(["Apple",46,"287",574,"Peach","3","69",78,"Grape","423"]));
 
 
 
