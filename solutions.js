@@ -3209,6 +3209,16 @@
 
 
 
+// Printer Error
+function printerError(s) {
+  const range = ['a','b','c','d','e','f','g','h','i','j','k','l','m']
+  return `${[...s].filter(c => !range.includes(c)).length}/${s.length}`;
+}
+console.log(printerError("aaabbbbhaijjjm"));
+console.log(printerError("aaaxbbbbyyhwawiwjjjwwm"));
+
+
+
 
 
 
@@ -3839,24 +3849,29 @@
 
 
 
-// Find the Odd Int
-function findOdd(a) {
-  let result = 0;
-  const obj = a.reduce((obj, curr) => {
-    obj[curr] = obj[curr] + 1 || 1;
-    return obj;
-  }, {})
+// // Find the Odd Int
+// function findOdd(a) {
+//   let result = 0;
+//   const obj = a.reduce((obj, curr) => {
+//     obj[curr] = obj[curr] + 1 || 1;
+//     return obj;
+//   }, {})
   
-  for (let key in obj) {
-    if (Number(obj[key]) === 1 || Number(obj[key]) % 2 !== 0) {
-      result = key;
-    }
-  }
+//   for (let key in obj) {
+//     if (Number(obj[key]) === 1 || Number(obj[key]) % 2 !== 0) {
+//       result = key;
+//     }
+//   }
 
-  return +result;
-}
-console.log(findOdd([1,1,1,1,1,1,10,1,1,1,1]));
-console.log(findOdd([20,1,1,2,2,3,3,5,5,4,20,4,5]));
+//   return +result;
+// }
+// console.log(findOdd([1,1,1,1,1,1,10,1,1,1,1]));
+// console.log(findOdd([20,1,1,2,2,3,3,5,5,4,20,4,5]));
+
+
+
+
+
 
 
 
