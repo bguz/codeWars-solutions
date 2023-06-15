@@ -3229,10 +3229,24 @@
 
 
 
-// Beginner Series #3 Sum of Numbers
-function GetSum(a, b) {
-  return (Math.abs(a - b) * (a + b) / 2);
-}
+// // Beginner Series #3 Sum of Numbers
+// function GetSum(a, b) {
+//   return (Math.abs(a - b) * (a + b) / 2);
+// }
+
+
+
+
+// // Incrementer
+// function incrementer(nums) {
+//   if (nums.length === 0) return [];
+//   return nums.map((a,i) => (a + i + 1) % 10);
+// }
+// console.log(incrementer([3, 6, 9, 8, 9]));
+// console.log(incrementer([1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9, 9, 9, 8]));
+// console.log(incrementer([3, 6, 9, 8, 9]));
+// console.log(incrementer([4, 6, 7, 1, 3]));
+
 
 
 
