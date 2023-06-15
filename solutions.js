@@ -3209,13 +3209,22 @@
 
 
 
-// Printer Error
-function printerError(s) {
-  const range = ['a','b','c','d','e','f','g','h','i','j','k','l','m']
-  return `${[...s].filter(c => !range.includes(c)).length}/${s.length}`;
+// // Printer Error
+// function printerError(s) {
+//   const range = ['a','b','c','d','e','f','g','h','i','j','k','l','m']
+//   return `${[...s].filter(c => !range.includes(c)).length}/${s.length}`;
+// }
+// console.log(printerError("aaabbbbhaijjjm"));
+// console.log(printerError("aaaxbbbbyyhwawiwjjjwwm"));
+
+
+
+
+// Summing a Number's Digits
+function sumDigits(number) {
+  return String(number).split('').filter(Number).reduce((sum, curr) => sum + Number(curr), 0);
 }
-console.log(printerError("aaabbbbhaijjjm"));
-console.log(printerError("aaaxbbbbyyhwawiwjjjwwm"));
+console.log(sumDigits(-32));
 
 
 
