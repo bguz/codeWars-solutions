@@ -3220,11 +3220,19 @@
 
 
 
-// Summing a Number's Digits
-function sumDigits(number) {
-  return String(number).split('').filter(Number).reduce((sum, curr) => sum + Number(curr), 0);
+// // Summing a Number's Digits
+// function sumDigits(number) {
+//   return String(number).split('').filter(Number).reduce((sum, curr) => sum + Number(curr), 0);
+// }
+// console.log(sumDigits(-32));
+
+
+
+
+// Beginner Series #3 Sum of Numbers
+function GetSum(a, b) {
+  return (Math.abs(a - b) * (a + b) / 2);
 }
-console.log(sumDigits(-32));
 
 
 
