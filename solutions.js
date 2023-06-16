@@ -3250,6 +3250,18 @@
 
 
 
+// Initialize My Name
+function initializeNames(name) {
+    return name.split(' ').map((n, i) => {
+        return i === 0 || (i === name.split(' ').length - 1) ? n : `${n[0].toUpperCase()}.`;
+    }).join(' ');
+}
+console.log(initializeNames('Lois Mary Lane'));
+console.log(initializeNames('Alice Betty Catherine Davis'));
+
+
+
+
 
 
 
