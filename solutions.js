@@ -3250,14 +3250,26 @@
 
 
 
-// Initialize My Name
-function initializeNames(name) {
-    return name.split(' ').map((n, i) => {
-        return i === 0 || (i === name.split(' ').length - 1) ? n : `${n[0].toUpperCase()}.`;
-    }).join(' ');
+// // Initialize My Name
+// function initializeNames(name) {
+//     return name.split(' ').map((n, i) => {
+//         return i === 0 || (i === name.split(' ').length - 1) ? n : `${n[0].toUpperCase()}.`;
+//     }).join(' ');
+// }
+// console.log(initializeNames('Lois Mary Lane'));
+// console.log(initializeNames('Alice Betty Catherine Davis'));
+
+
+
+
+// Last
+function last(list) {
+    let last = arguments[arguments.length - 1];
+    return last[last.length - 1] || last;
 }
-console.log(initializeNames('Lois Mary Lane'));
-console.log(initializeNames('Alice Betty Catherine Davis'));
+console.log(last([1,2,3,4,5]));
+console.log(last("abcde"));
+console.log(last(1,"b",3,"d",5));
 
 
 
