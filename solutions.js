@@ -1335,6 +1335,24 @@
 
 
 
+// Multiple of Index
+function multipleOfIndex(array) {
+    return array.filter((n, i) => n === 0 || n % i === 0);
+}
+console.log(multipleOfIndex([22, -6, 32, 82, 9, 25]));
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3274,18 +3292,18 @@
 
 
 
-// Max-Min Arrays
-function solve(arr) {
-    const arrDuplicate = [...arr];
-    return arr.map((n,i) => {
-        if (i % 2 !== 0) {
-            return arrDuplicate.splice(arrDuplicate.indexOf(Math.min(...arrDuplicate)), 1);
-        } else {
-            return arrDuplicate.splice(arrDuplicate.indexOf(Math.max(...arrDuplicate)), 1);
-        }
-    }).map(a => a.pop());
-}
-console.log(solve([15,11,10,7,12]));
+// // Max-Min Arrays
+// function solve(arr) {
+//     const arrDuplicate = [...arr];
+//     return arr.map((n,i) => {
+//         if (i % 2 !== 0) {
+//             return arrDuplicate.splice(arrDuplicate.indexOf(Math.min(...arrDuplicate)), 1);
+//         } else {
+//             return arrDuplicate.splice(arrDuplicate.indexOf(Math.max(...arrDuplicate)), 1);
+//         }
+//     }).map(a => a.pop());
+// }
+// console.log(solve([15,11,10,7,12]));
 
 
 
