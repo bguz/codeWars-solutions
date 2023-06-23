@@ -1335,16 +1335,20 @@
 
 
 
-// Multiple of Index
-function multipleOfIndex(array) {
-    return array.filter((n, i) => n === 0 || n % i === 0);
+// // Multiple of Index
+// function multipleOfIndex(array) {
+//     return array.filter((n, i) => n === 0 || n % i === 0);
+// }
+// console.log(multipleOfIndex([22, -6, 32, 82, 9, 25]));
+
+
+
+
+// String Templates - Bug Fixing #5
+function buildString(...args) {
+    return `I like ${args.join(', ')}!`;
 }
-console.log(multipleOfIndex([22, -6, 32, 82, 9, 25]));
-
-
-
-
-
+console.log(buildString('Cheese', 'Milk', 'Chocolate'));
 
 
 
