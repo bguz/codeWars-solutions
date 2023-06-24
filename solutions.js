@@ -1344,12 +1344,26 @@
 
 
 
-// String Templates - Bug Fixing #5
-function buildString(...args) {
-    return `I like ${args.join(', ')}!`;
-}
-console.log(buildString('Cheese', 'Milk', 'Chocolate'));
+// // String Templates - Bug Fixing #5
+// function buildString(...args) {
+//     return `I like ${args.join(', ')}!`;
+// }
+// console.log(buildString('Cheese', 'Milk', 'Chocolate'));
 
+
+
+
+// Factorial
+function factorial(n) {
+    if (n < 0 || n > 12) throw new RangeError('Number must not be below 0 or more than 12.');
+
+    let current = 1;
+    for (let i = 0; i < n; i++) {
+        current = current * (i + 1);
+    }
+    return current;
+}
+console.log(factorial(5));
 
 
 
