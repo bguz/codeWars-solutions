@@ -1368,11 +1368,11 @@
 
 
 
-// Reverse List Order
-function reverseList(list) {
-    return list.reverse();
-}
-console.log(reverseList([1,2,3,4]));
+// // Reverse List Order
+// function reverseList(list) {
+//     return list.reverse();
+// }
+// console.log(reverseList([1,2,3,4]));
 
 
 
@@ -3978,6 +3978,15 @@ console.log(reverseList([1,2,3,4]));
 // }
 // console.log(findOdd([1,1,1,1,1,1,10,1,1,1,1]));
 // console.log(findOdd([20,1,1,2,2,3,3,5,5,4,20,4,5]));
+
+
+
+
+// Unique In Order (REFACTOR)
+var uniqueInOrder = function(iterable) {
+    return iterable.split('').filter((n, i) => n !== iterable[i + 1]);
+}
+console.log(uniqueInOrder('AAAABBBCCDAABBB'));
 
 
 
