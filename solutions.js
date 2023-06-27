@@ -1377,6 +1377,18 @@
 
 
 
+// Grasshopper - Debug Say Hello
+function sayHello(name) {
+    return `Hello, ${name}`;
+}
+console.log(sayHello('Mr. Spock'));
+
+
+
+
+
+
+
 
 
 /* =====================================
@@ -3982,11 +3994,11 @@
 
 
 
-// Unique In Order (REFACTOR)
-var uniqueInOrder = function(iterable) {
-    return iterable.split('').filter((n, i) => n !== iterable[i + 1]);
-}
-console.log(uniqueInOrder('AAAABBBCCDAABBB'));
+// // Unique In Order (REFACTOR)
+// var uniqueInOrder = function(iterable) {
+//     return iterable.split('').filter((n, i) => n !== iterable[i + 1]);
+// }
+// console.log(uniqueInOrder('AAAABBBCCDAABBB'));
 
 
 
