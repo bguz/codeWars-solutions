@@ -1386,10 +1386,18 @@
 
 
 
-// Parse Nice Int from Char Problem
-function getAge(inputString){
-    // return the girl's correct age as an integer. Happy coding :) 
-    return Number(inputString[0])
+// // Parse Nice Int from Char Problem
+// function getAge(inputString){
+//     // return the girl's correct age as an integer. Happy coding :) 
+//     return Number(inputString[0])
+// }
+
+
+
+
+// 5 Without Numbers!! 
+function unusualFive() {
+    return ".....".length;
 }
 
 
@@ -3351,28 +3359,36 @@ function getAge(inputString){
 
 
 
-// Two Fighters, One Winner
-function Fighter(name, health, damagePerAttack) {
-    this.name = name;
-    this.health = health;
-    this.damagePerAttack = damagePerAttack;
-    this.toString = function() { return this.name; }
-}
+// // Two Fighters, One Winner
+// function Fighter(name, health, damagePerAttack) {
+//     this.name = name;
+//     this.health = health;
+//     this.damagePerAttack = damagePerAttack;
+//     this.toString = function() { return this.name; }
+// }
 
-function declareWinner(fighter1, fighter2, firstAttacker) {
-    let fac1 = Math.ceil(fighter1.health / fighter2.damagePerAttack);
-    let fac2 = Math.ceil(fighter2.health / fighter1.damagePerAttack);
+// function declareWinner(fighter1, fighter2, firstAttacker) {
+//     let players = fighter1.name == firstAttacker ? [fighter1, fighter2] : [fighter2, fighter1];
 
-    if (fac1 < fac2) {
-        return fighter2.name;
-    } else if (fac2 < fac1) {
-        return fighter1.name;
-    } else {
-        return firstAttacker;
-    }
-}
+//     while (true) {
+//         let currentTurnPlayer = players[0];
+//         let nextTurnPlayer = players[1];
 
-console.log(declareWinner(new Fighter("Lew", 10, 2), new Fighter("Harry", 5, 4), "Lew"));
+//         nextTurnPlayer.health -= currentTurnPlayer.damagePerAttack;
+
+//         const haveWinner = nextTurnPlayer.health <= 0;
+
+//         console.log(`${currentTurnPlayer} attacks ${nextTurnPlayer}; ${nextTurnPlayer} now has ${nextTurnPlayer.health} health ${haveWinner ? `and is dead. ${currentTurnPlayer} wins` : ""}`);
+
+//         if (haveWinner) {
+//             return currentTurnPlayer.name;
+//         } else {
+//             [players[0], players[1]] = [players[1], players[0]];
+//         }
+//     }
+// }
+
+// console.log(declareWinner(new Fighter("Lew", 10, 2), new Fighter("Harry", 5, 4), "Lew"));
 
 
 
