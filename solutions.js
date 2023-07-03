@@ -1403,14 +1403,14 @@
 
 
 
-// Powers of 2
-function powersOfTwo(n) {
-    const result = [];
-    for(let i = 0; i <= n; i++) {
-      result.push(2 ** i);
-    }
-    return result;
-}
+// // Powers of 2
+// function powersOfTwo(n) {
+//     const result = [];
+//     for(let i = 0; i <= n; i++) {
+//       result.push(2 ** i);
+//     }
+//     return result;
+// }
 
 
 
@@ -4061,6 +4061,15 @@ function powersOfTwo(n) {
 // }
 // console.log(uniqueInOrder('AAAABBBCCDAABBB'));
 
+
+
+
+// Count the Smiley Faces!
+function countSmileys(arr) {
+  return arr.filter(s => /^[:;][-~]?[)D]$/.test(s)).length;
+}
+console.log(countSmileys([':)', ';(', ';}', ':-D']));
+console.log(countSmileys([ ':)', ':(', ':D', ':O', ':;' ]));
 
 
 
