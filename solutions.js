@@ -1395,11 +1395,22 @@
 
 
 
-// 5 Without Numbers!! 
-function unusualFive() {
-    return ".....".length;
-}
+// // 5 Without Numbers!! 
+// function unusualFive() {
+//     return ".....".length;
+// }
 
+
+
+
+// Powers of 2
+function powersOfTwo(n) {
+    const result = [];
+    for(let i = 0; i <= n; i++) {
+      result.push(2 ** i);
+    }
+    return result;
+}
 
 
 
