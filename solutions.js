@@ -1415,6 +1415,19 @@
 
 
 
+// Money, Money, Money
+function calculateYears(principal, interest, tax, desired) {
+  let years = 0; 
+  while (principal < desired) {
+    principal += (principal * interest) - (principal * interest * tax)
+    years++;
+  }
+  return years;
+}
+console.log(calculateYears(1000,0.01625,0.18,1200));
+
+
+
 
 
 
@@ -3410,7 +3423,6 @@
 
 
 
-
 /* =====================================
 
                 6 Kyu
@@ -4064,12 +4076,12 @@
 
 
 
-// Count the Smiley Faces!
-function countSmileys(arr) {
-  return arr.filter(s => /^[:;][-~]?[)D]$/.test(s)).length;
-}
-console.log(countSmileys([':)', ';(', ';}', ':-D']));
-console.log(countSmileys([ ':)', ':(', ':D', ':O', ':;' ]));
+// // Count the Smiley Faces!
+// function countSmileys(arr) {
+//   return arr.filter(s => /^[:;][-~]?[)D]$/.test(s)).length;
+// }
+// console.log(countSmileys([':)', ';(', ';}', ':-D']));
+// console.log(countSmileys([ ':)', ':(', ':D', ':O', ':;' ]));
 
 
 
