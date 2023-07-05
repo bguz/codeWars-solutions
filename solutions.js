@@ -1415,17 +1415,34 @@
 
 
 
-// Money, Money, Money
-function calculateYears(principal, interest, tax, desired) {
-  let years = 0; 
-  while (principal < desired) {
-    principal += (principal * interest) - (principal * interest * tax)
-    years++;
-  }
-  return years;
-}
-console.log(calculateYears(1000,0.01625,0.18,1200));
+// // Money, Money, Money
+// function calculateYears(principal, interest, tax, desired) {
+//   let years = 0; 
+//   while (principal < desired) {
+//     principal += (principal * interest) - (principal * interest * tax)
+//     years++;
+//   }
+//   return years;
+// }
+// console.log(calculateYears(1000,0.01625,0.18,1200));
 
+
+
+
+// No Zeros for Heros
+function noBoringZeros(n) {
+  let nStr = String(n).split('');
+  for (let i = nStr.length - 1; i >= 0; i--) {
+    if (nStr[i] === '0') {
+      nStr.pop();
+    } else {
+      break;
+    }
+  }
+  return +nStr.join('');
+}
+// console.log(noBoringZeros(960000));
+console.log(noBoringZeros(1050));
 
 
 
