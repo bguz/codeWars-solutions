@@ -1429,20 +1429,20 @@
 
 
 
-// No Zeros for Heros
-function noBoringZeros(n) {
-  let nStr = String(n).split('');
-  for (let i = nStr.length - 1; i >= 0; i--) {
-    if (nStr[i] === '0') {
-      nStr.pop();
-    } else {
-      break;
-    }
-  }
-  return +nStr.join('');
-}
-// console.log(noBoringZeros(960000));
-console.log(noBoringZeros(1050));
+// // No Zeros for Heros
+// function noBoringZeros(n) {
+//   let nStr = String(n).split('');
+//   for (let i = nStr.length - 1; i >= 0; i--) {
+//     if (nStr[i] === '0') {
+//       nStr.pop();
+//     } else {
+//       break;
+//     }
+//   }
+//   return +nStr.join('');
+// }
+// // console.log(noBoringZeros(960000));
+// console.log(noBoringZeros(1050));
 
 
 
