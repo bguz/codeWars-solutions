@@ -1457,12 +1457,12 @@
 
 
 
-// Grasshopper - Terminal Game Combat Function
-function combat(health, damage) {
-    const newHealth = health - damage;
-    return newHealth <= 0 ? 0 : newHealth;
-}
-console.log(combat(100, 5));
+// // Grasshopper - Terminal Game Combat Function
+// function combat(health, damage) {
+//     const newHealth = health - damage;
+//     return newHealth <= 0 ? 0 : newHealth;
+// }
+// console.log(combat(100, 5));
 
 
 
