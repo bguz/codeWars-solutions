@@ -1467,11 +1467,23 @@
 
 
 
-// Enumerable Magic #25 - Take the First N Elements
-function take(arr, n) {
-    return arr.slice(0, n);
+// // Enumerable Magic #25 - Take the First N Elements
+// function take(arr, n) {
+//     return arr.slice(0, n);
+// }
+// console.log(take([0, 1, 2, 3, 5, 8, 13], 3));
+
+
+
+
+// Hello, Name or World!
+function hello(name) {
+    return !name ? `Hello, World!` : `Hello, ${name[0].toUpperCase() + name.slice(1).toLowerCase()}!`;
 }
-console.log(take([0, 1, 2, 3, 5, 8, 13], 3));
+console.log(hello());
+console.log(hello(''));
+console.log(hello('BEto'));
+
 
 
 
