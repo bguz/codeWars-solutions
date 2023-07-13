@@ -1476,13 +1476,13 @@
 
 
 
-// Hello, Name or World!
-function hello(name) {
-    return !name ? `Hello, World!` : `Hello, ${name[0].toUpperCase() + name.slice(1).toLowerCase()}!`;
-}
-console.log(hello());
-console.log(hello(''));
-console.log(hello('BEto'));
+// // Hello, Name or World!
+// function hello(name) {
+//     return !name ? `Hello, World!` : `Hello, ${name[0].toUpperCase() + name.slice(1).toLowerCase()}!`;
+// }
+// console.log(hello());
+// console.log(hello(''));
+// console.log(hello('BEto'));
 
 
 
@@ -3482,6 +3482,14 @@ console.log(hello('BEto'));
 
 // console.log(declareWinner(new Fighter("Lew", 10, 2), new Fighter("Harry", 5, 4), "Lew"));
 
+
+
+
+// Simple Fun #176 - Reverse Letter
+function reverseLetter(str) {
+    return [...str].filter(l => l.match(/[a-z]/i)).reverse().join('');
+}
+console.log(reverseLetter('ultr53o?n'))
 
 
 
