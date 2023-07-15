@@ -3485,11 +3485,20 @@
 
 
 
-// Simple Fun #176 - Reverse Letter
-function reverseLetter(str) {
-    return [...str].filter(l => l.match(/[a-z]/i)).reverse().join('');
+// // Simple Fun #176 - Reverse Letter
+// function reverseLetter(str) {
+//     return [...str].filter(l => l.match(/[a-z]/i)).reverse().join('');
+// }
+// console.log(reverseLetter('ultr53o?n'))
+
+
+
+
+// Function 2 - Squaring an Argument
+function square(n) {
+    return n ** 2;
 }
-console.log(reverseLetter('ultr53o?n'))
+console.log(square(3));
 
 
 
