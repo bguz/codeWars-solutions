@@ -1487,12 +1487,21 @@
 
 
 
-// Plural
-function plural(n) {
-    return n === 1 ? false : true;
+// // Plural
+// function plural(n) {
+//     return n === 1 ? false : true;
+// }
+// console.log(plural(0));
+// console.log(plural(1));
+
+
+
+
+// Keep Up The Hoop
+function hoopCount(n) {
+    return n >= 10 ? 'Great, now move on to tricks' : 'Keep at it until you get it';
 }
-console.log(plural(0));
-console.log(plural(1));
+console.log(hoopCount(3));
 
 
 
