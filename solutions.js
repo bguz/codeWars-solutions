@@ -1487,6 +1487,15 @@
 
 
 
+// Plural
+function plural(n) {
+    return n === 1 ? false : true;
+}
+console.log(plural(0));
+console.log(plural(1));
+
+
+
 
 
 
@@ -3494,11 +3503,11 @@
 
 
 
-// Function 2 - Squaring an Argument
-function square(n) {
-    return n ** 2;
-}
-console.log(square(3));
+// // Function 2 - Squaring an Argument
+// function square(n) {
+//     return n ** 2;
+// }
+// console.log(square(3));
 
 
 
