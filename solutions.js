@@ -1497,11 +1497,21 @@
 
 
 
-// Keep Up The Hoop
-function hoopCount(n) {
-    return n >= 10 ? 'Great, now move on to tricks' : 'Keep at it until you get it';
+// // Keep Up The Hoop
+// function hoopCount(n) {
+//     return n >= 10 ? 'Great, now move on to tricks' : 'Keep at it until you get it';
+// }
+// console.log(hoopCount(3));
+
+
+
+
+// Hex to Decimal
+function hexToDec(hexString) {
+    return parseInt(hexString, 16);
 }
-console.log(hoopCount(3));
+console.log(hexToDec("a"));
+console.log(hexToDec("FF"));
 
 
 
