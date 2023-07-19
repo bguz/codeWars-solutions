@@ -1506,12 +1506,21 @@
 
 
 
-// Hex to Decimal
-function hexToDec(hexString) {
-    return parseInt(hexString, 16);
+// // Hex to Decimal
+// function hexToDec(hexString) {
+//     return parseInt(hexString, 16);
+// }
+// console.log(hexToDec("a"));
+// console.log(hexToDec("FF"));
+
+
+
+
+// Holiday VIII - Duty Free
+function dutyFree(normPrice, discount, hol){
+    return Math.floor(hol / (normPrice * (discount / 100)));
 }
-console.log(hexToDec("a"));
-console.log(hexToDec("FF"));
+console.log(dutyFree(12, 50, 1000));
 
 
 
