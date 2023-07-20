@@ -1516,11 +1516,20 @@
 
 
 
-// Holiday VIII - Duty Free
-function dutyFree(normPrice, discount, hol){
-    return Math.floor(hol / (normPrice * (discount / 100)));
+// // Holiday VIII - Duty Free
+// function dutyFree(normPrice, discount, hol){
+//     return Math.floor(hol / (normPrice * (discount / 100)));
+// }
+// console.log(dutyFree(12, 50, 1000));
+
+
+
+
+// Grasshopper - Basic Function Fixer
+function addFive(num) {
+    return num + 5;
 }
-console.log(dutyFree(12, 50, 1000));
+console.log(addFive(5));
 
 
 
