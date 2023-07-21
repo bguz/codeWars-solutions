@@ -1525,11 +1525,20 @@
 
 
 
-// Grasshopper - Basic Function Fixer
-function addFive(num) {
-    return num + 5;
+// // Grasshopper - Basic Function Fixer
+// function addFive(num) {
+//     return num + 5;
+// }
+// console.log(addFive(5));
+
+
+
+
+// Convert to Binary
+function toBinary(n){
+    return Number(n.toString(2));
 }
-console.log(addFive(5));
+console.log(toBinary(11));
 
 
 
