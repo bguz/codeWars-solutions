@@ -1568,10 +1568,10 @@
 
 
 
-// Grasshopper - Check for Factor
-function checkForFactor (base, factor) {
-    return base % factor === 0;
-}
+// // Grasshopper - Check for Factor
+// function checkForFactor (base, factor) {
+//     return base % factor === 0;
+// }
 
 
 
