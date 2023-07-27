@@ -1577,20 +1577,20 @@
 
 
 
-// Drink About
-function peopleWithAgeDrink(old) {
-    switch (true) {
-        case old < 14:
-            return 'drink toddy';
-        case old < 18:
-            return 'drink coke';
-        case old < 21:
-            return 'drink beer';
-        default:
-            return 'drink whisky';
-    }
-}
-console.log(peopleWithAgeDrink(13));
+// // Drink About
+// function peopleWithAgeDrink(old) {
+//     switch (true) {
+//         case old < 14:
+//             return 'drink toddy';
+//         case old < 18:
+//             return 'drink coke';
+//         case old < 21:
+//             return 'drink beer';
+//         default:
+//             return 'drink whisky';
+//     }
+// }
+// console.log(peopleWithAgeDrink(13));
 
 
 
@@ -3604,6 +3604,16 @@ console.log(peopleWithAgeDrink(13));
 //     return n ** 2;
 // }
 // console.log(square(3));
+
+
+
+
+// Numbers in Strings 
+function solve(s) {
+    let num = s.match(/\d+/g);
+    return Math.max(...num);
+}
+console.log(solve('gh12cdy695m1'));
 
 
 
