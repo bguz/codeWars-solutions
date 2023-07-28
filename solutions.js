@@ -3608,12 +3608,21 @@
 
 
 
-// Numbers in Strings 
-function solve(s) {
-    let num = s.match(/\d+/g);
-    return Math.max(...num);
+// // Numbers in Strings 
+// function solve(s) {
+//     let num = s.match(/\d+/g);
+//     return Math.max(...num);
+// }
+// console.log(solve('gh12cdy695m1'));
+
+
+
+
+// Simple Remove Duplicates
+function solve(arr) {
+    return Array.from(new Set(arr.reverse())).reverse();
 }
-console.log(solve('gh12cdy695m1'));
+console.log(solve([3,4,4,3,6,3]))
 
 
 
