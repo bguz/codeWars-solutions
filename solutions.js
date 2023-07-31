@@ -3640,7 +3640,7 @@
 function longestWord(stringOfWords) {
     return String(stringOfWords.split(' ').sort((a,b) => a.length - b.length).slice(-1));  
 }
-console.log(longestWord('one two three asada'));
+console.log(longestWord('one two three'));
 
 
 
