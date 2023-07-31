@@ -1595,6 +1595,15 @@
 
 
 
+// Find the Reminder
+function remainder(n, m){
+    return n > m ? n % m : m % n;
+}
+console.log(remainder(17, 5));
+
+
+
+
 
 
 
@@ -3618,11 +3627,11 @@
 
 
 
-// Simple Remove Duplicates
-function solve(arr) {
-    return Array.from(new Set(arr.reverse())).reverse();
-}
-console.log(solve([3,4,4,3,6,3]))
+// // Simple Remove Duplicates
+// function solve(arr) {
+//     return Array.from(new Set(arr.reverse())).reverse();
+// }
+// console.log(solve([3,4,4,3,6,3]))
 
 
 
