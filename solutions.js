@@ -1595,11 +1595,11 @@
 
 
 
-// Find the Reminder
-function remainder(n, m){
-    return n > m ? n % m : m % n;
-}
-console.log(remainder(17, 5));
+// // Find the Reminder
+// function remainder(n, m){
+//     return n > m ? n % m : m % n;
+// }
+// console.log(remainder(17, 5));
 
 
 
@@ -3632,6 +3632,15 @@ console.log(remainder(17, 5));
 //     return Array.from(new Set(arr.reverse())).reverse();
 // }
 // console.log(solve([3,4,4,3,6,3]))
+
+
+
+
+// Inspiring Strings
+function longestWord(stringOfWords) {
+    return String(stringOfWords.split(' ').sort((a,b) => a.length - b.length).slice(-1));  
+}
+console.log(longestWord('one two three asada'));
 
 
 
