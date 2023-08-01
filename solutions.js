@@ -3636,12 +3636,21 @@
 
 
 
-// Inspiring Strings
-function longestWord(stringOfWords) {
-    return String(stringOfWords.split(' ').sort((a,b) => a.length - b.length).slice(-1));  
-}
-console.log(longestWord('one two three'));
+// // Inspiring Strings
+// function longestWord(stringOfWords) {
+//     return String(stringOfWords.split(' ').sort((a,b) => a.length - b.length).slice(-1));  
+// }
+// console.log(longestWord('one two three'));
 
+
+
+
+// Covfefe
+function covfefe(str) {
+    return str.includes('coverage') ? str.replaceAll('coverage', 'covfefe') : `${str} covfefe`;
+}
+console.log(covfefe('coverage coverage'));
+console.log(covfefe('nothing'));
 
 
 
