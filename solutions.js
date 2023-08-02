@@ -3645,12 +3645,25 @@
 
 
 
-// Covfefe
-function covfefe(str) {
-    return str.includes('coverage') ? str.replaceAll('coverage', 'covfefe') : `${str} covfefe`;
+// // Covfefe
+// function covfefe(str) {
+//     return str.includes('coverage') ? str.replaceAll('coverage', 'covfefe') : `${str} covfefe`;
+// }
+// console.log(covfefe('coverage coverage'));
+// console.log(covfefe('nothing'));
+
+
+
+
+// All Inclusive?
+function containAllRots(str, arr) {
+    for (var i = 0; i < str.length; i++) {
+      if (arr.indexOf(str.slice(i) + str.slice(0, i)) === -1) {
+        return false
+      }
+    }
+    return true
 }
-console.log(covfefe('coverage coverage'));
-console.log(covfefe('nothing'));
 
 
 
