@@ -3655,15 +3655,29 @@
 
 
 
-// All Inclusive?
-function containAllRots(str, arr) {
-    for (var i = 0; i < str.length; i++) {
-      if (arr.indexOf(str.slice(i) + str.slice(0, i)) === -1) {
-        return false
-      }
-    }
-    return true
+// // All Inclusive?
+// function containAllRots(str, arr) {
+//     for (var i = 0; i < str.length; i++) {
+//       if (arr.indexOf(str.slice(i) + str.slice(0, i)) === -1) {
+//         return false
+//       }
+//     }
+//     return true
+// }
+
+
+
+
+// Character Counter
+function validateWord(s) {
+    const values = Object.values(s.toLowerCase().split('').reduce((obj, curr) => {
+        obj[curr] = obj[curr] + 1 || 1;
+        return obj;
+    }, {})).sort((a,b) => b - a);
+    return values.every(v => v === values[0]);
 }
+console.log(validateWord('abcabc'));
+console.log(validateWord('abc123a3'));
 
 
 
