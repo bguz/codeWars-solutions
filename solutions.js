@@ -3682,21 +3682,21 @@
 
 
 
-// Password Maker (No Regex)
-function makePassword(phrase) {
-    return phrase.split(' ').map(w => {
-        if (w[0].toLowerCase() === 'i') {
-            return '1';
-        } else if (w[0].toLowerCase() === 'o') {
-            return '0';
-        } else if (w[0].toLowerCase() === 's') {
-            return '5';
-        } else {
-            return w[0];
-        }
-    }).join('')
-}
-console.log(makePassword("Give me liberty or give me death"));
+// // Password Maker (No Regex)
+// function makePassword(phrase) {
+//     return phrase.split(' ').map(w => {
+//         if (w[0].toLowerCase() === 'i') {
+//             return '1';
+//         } else if (w[0].toLowerCase() === 'o') {
+//             return '0';
+//         } else if (w[0].toLowerCase() === 's') {
+//             return '5';
+//         } else {
+//             return w[0];
+//         }
+//     }).join('')
+// }
+// console.log(makePassword("Give me liberty or give me death"));
 
 
 
