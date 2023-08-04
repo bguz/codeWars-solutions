@@ -3668,17 +3668,35 @@
 
 
 
-// Character Counter
-function validateWord(s) {
-    const values = Object.values(s.toLowerCase().split('').reduce((obj, curr) => {
-        obj[curr] = obj[curr] + 1 || 1;
-        return obj;
-    }, {})).sort((a,b) => b - a);
-    return values.every(v => v === values[0]);
-}
-console.log(validateWord('abcabc'));
-console.log(validateWord('abc123a3'));
+// // Character Counter
+// function validateWord(s) {
+//     const values = Object.values(s.toLowerCase().split('').reduce((obj, curr) => {
+//         obj[curr] = obj[curr] + 1 || 1;
+//         return obj;
+//     }, {})).sort((a,b) => b - a);
+//     return values.every(v => v === values[0]);
+// }
+// console.log(validateWord('abcabc'));
+// console.log(validateWord('abc123a3'));
 
+
+
+
+// Password Maker (No Regex)
+function makePassword(phrase) {
+    return phrase.split(' ').map(w => {
+        if (w[0].toLowerCase() === 'i') {
+            return '1';
+        } else if (w[0].toLowerCase() === 'o') {
+            return '0';
+        } else if (w[0].toLowerCase() === 's') {
+            return '5';
+        } else {
+            return w[0];
+        }
+    }).join('')
+}
+console.log(makePassword("Give me liberty or give me death"));
 
 
 
