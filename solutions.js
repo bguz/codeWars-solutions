@@ -3700,9 +3700,9 @@
 
 
 
-// Move 10 (REFACTOR)
+// Move 10 (No Regex)
 function moveTen(s) {
-    const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz';
 
     return s.toLowerCase().split('').map(l => {
         let i = alphabet.indexOf(l) + 10;
