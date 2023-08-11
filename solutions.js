@@ -3700,20 +3700,29 @@
 
 
 
-// Move 10 (No Regex)
-function moveTen(s) {
-    const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+// // Move 10 (No Regex)
+// function moveTen(s) {
+//     const alphabet = 'abcdefghijklmnopqrstuvwxyz';
 
-    return s.toLowerCase().split('').map(l => {
-        let i = alphabet.indexOf(l) + 10;
-        console.log(i)
-        if (i > (alphabet.length - 1)) {
-            i = i - alphabet.length;
-        }
-        return alphabet[i]; 
-    }).join('')
+//     return s.toLowerCase().split('').map(l => {
+//         let i = alphabet.indexOf(l) + 10;
+//         console.log(i)
+//         if (i > (alphabet.length - 1)) {
+//             i = i - alphabet.length;
+//         }
+//         return alphabet[i]; 
+//     }).join('')
+// }
+// console.log(moveTen('saiowvkrdqqcknzafs'));
+
+
+
+
+// Substring Fun
+function nthChar(words) {
+    return words.map((w, i) => w.substr(i, 1)).join('');
 }
-console.log(moveTen('saiowvkrdqqcknzafs'));
+console.log(nthChar(['yoda', 'best', 'has']));
 
 
 
