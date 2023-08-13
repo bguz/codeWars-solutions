@@ -2816,15 +2816,15 @@
 // }
 // console.log(nthChar(['yoda', 'best', 'has']));
 
-// sPoNgEbOb MeMe
-function spongeMeme(sentence) {
-  return sentence
-    .toLowerCase()
-    .split("")
-    .map((l, i) => (i % 2 === 0 ? l.toUpperCase() : l))
-    .join("");
-}
-console.log(spongeMeme("stop Making spongebob Memes!"));
+// // sPoNgEbOb MeMe
+// function spongeMeme(sentence) {
+//   return sentence
+//     .toLowerCase()
+//     .split("")
+//     .map((l, i) => (i % 2 === 0 ? l.toUpperCase() : l))
+//     .join("");
+// }
+// console.log(spongeMeme("stop Making spongebob Memes!"));
 
 /* =====================================
 
