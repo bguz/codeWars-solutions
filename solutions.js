@@ -2826,6 +2826,12 @@
 // }
 // console.log(spongeMeme("stop Making spongebob Memes!"));
 
+// Hello World - Without Strings
+const helloWorld = () => {
+    return new String("Hello, World!");
+}
+console.log(helloWorld());
+
 /* =====================================
 
                 6 Kyu
