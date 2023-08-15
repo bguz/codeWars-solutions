@@ -1177,6 +1177,13 @@
 // }
 // console.log(remainder(17, 5));
 
+// Fix Your Code Before The Garden Dies!
+function rainAmount(mm){
+    return mm<40 ?
+        `You need to give your plant ${40-mm}mm of water`:
+        `Your plant has had more than enough water for today!`
+}
+
 /* =====================================
 
                 7 Kyu
