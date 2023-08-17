@@ -2833,11 +2833,12 @@ function rainAmount(mm){
 // }
 // console.log(spongeMeme("stop Making spongebob Memes!"));
 
-// Hello World - Without Strings
-const helloWorld = () => {
-    return new String("Hello, World!");
-}
-console.log(helloWorld());
+// // Hello World - Without Strings
+// const helloWorld = () => {
+//     return new String("Hello, World!");
+// }
+// console.log(helloWorld());
+
 
 /* =====================================
 
