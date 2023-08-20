@@ -3781,11 +3781,11 @@ function rainAmount(mm){
 
 
 
-// Tea for Two
-function tea42(input) {
-  return String(input).split('').map(l => l === '2' ? 't' : l).join('');
-}
-console.log(tea42(102));
+// // Tea for Two
+// function tea42(input) {
+//   return String(input).split('').map(l => l === '2' ? 't' : l).join('');
+// }
+// console.log(tea42(102));
 
 
 
