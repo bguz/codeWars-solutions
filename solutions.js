@@ -3790,6 +3790,14 @@ function rainAmount(mm){
 
 
 
+// Failed Filter - Bux Fixing #3
+const FilterNumbers = function(str) {
+    return str.split('').filter(c => isNaN(c)).join('');
+}
+console.log(FilterNumbers('test0123'))
+
+
+
 
 
 
