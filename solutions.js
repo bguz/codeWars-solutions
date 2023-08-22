@@ -3790,11 +3790,22 @@ function rainAmount(mm){
 
 
 
-// Failed Filter - Bux Fixing #3
-const FilterNumbers = function(str) {
-    return str.split('').filter(c => isNaN(c)).join('');
+// // Failed Filter - Bux Fixing #3
+// const FilterNumbers = function(str) {
+//     return str.split('').filter(c => isNaN(c)).join('');
+// }
+// console.log(FilterNumbers('test0123'))
+
+
+
+
+// Numbers to Objects
+function numObj(s){
+    return s.map(num => {
+        return {[num]: String.fromCharCode(num)}
+    })
 }
-console.log(FilterNumbers('test0123'))
+console.log(numObj([118, 117, 120]));
 
 
 
