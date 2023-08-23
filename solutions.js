@@ -3799,13 +3799,27 @@ function rainAmount(mm){
 
 
 
-// Numbers to Objects
-function numObj(s){
-    return s.map(num => {
-        return {[num]: String.fromCharCode(num)}
-    })
+// // Numbers to Objects
+// function numObj(s){
+//     return s.map(num => {
+//         return {[num]: String.fromCharCode(num)}
+//     })
+// }
+// console.log(numObj([118, 117, 120]));
+
+
+
+
+// Dropcaps
+function dropCap(n) {
+    return n
+            .split(' ')
+            .map(word => word.length > 2 ? word[0].toUpperCase() + word.slice(1).toLowerCase() : word)
+            .join(' ')
 }
-console.log(numObj([118, 117, 120]));
+console.log(dropCap('   space WALK   '));
+console.log(dropCap('apple'));
+console.log(dropCap('apple of banana'));
 
 
 
