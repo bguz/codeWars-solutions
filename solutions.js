@@ -3810,16 +3810,16 @@ function rainAmount(mm){
 
 
 
-// Dropcaps
-function dropCap(n) {
-    return n
-            .split(' ')
-            .map(word => word.length > 2 ? word[0].toUpperCase() + word.slice(1).toLowerCase() : word)
-            .join(' ')
-}
-console.log(dropCap('   space WALK   '));
-console.log(dropCap('apple'));
-console.log(dropCap('apple of banana'));
+// // Dropcaps
+// function dropCap(n) {
+//     return n
+//             .split(' ')
+//             .map(word => word.length > 2 ? word[0].toUpperCase() + word.slice(1).toLowerCase() : word)
+//             .join(' ')
+// }
+// console.log(dropCap('   space WALK   '));
+// console.log(dropCap('apple'));
+// console.log(dropCap('apple of banana'));
 
 
 
