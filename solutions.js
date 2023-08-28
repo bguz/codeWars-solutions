@@ -3841,21 +3841,21 @@ function rainAmount(mm){
 
 
 
-// How Many Unique Consonants (NEEDS REFACTORING)
-function countConsonants(str) {
-    const consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'];
-    const result = [];
-    str
-        .toLowerCase()
-        .split('')
-        .filter(l => consonants.includes(l))
-        .map(l => {
-            if (!result.includes(l)) result.push(l);
-        })
-    return result.length;
-}
-console.log(countConsonants('sillystring'))
-console.log(countConsonants('FN7KO'))
+// // How Many Unique Consonants (NEEDS)
+// function countConsonants(str) {
+//     const consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'];
+//     const result = [];
+//     str
+//         .toLowerCase()
+//         .split('')
+//         .filter(l => consonants.includes(l))
+//         .map(l => {
+//             if (!result.includes(l)) result.push(l);
+//         })
+//     return result.length;
+// }
+// console.log(countConsonants('sillystring'))
+// console.log(countConsonants('FN7KO'))
 
 
 
