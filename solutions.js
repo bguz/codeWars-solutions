@@ -3860,6 +3860,15 @@ function rainAmount(mm){
 
 
 
+// Mispelled Word
+function getCount(words) {
+    if (typeof str != 'string') str = '';
+    return {
+        vowels: str.replace(/[^aeiou]/gi, '').length,
+        consonants: str.replace(/[eiuo]|[^b-z]/gi, '').length
+    }
+}
+console.log(getCount('Here is some text'));
 
 
 
