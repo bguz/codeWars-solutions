@@ -3860,16 +3860,28 @@ function rainAmount(mm){
 
 
 
-// Mispelled Word
-function getCount(words) {
-    if (typeof str != 'string') str = '';
-    return {
-        vowels: str.replace(/[^aeiou]/gi, '').length,
-        consonants: str.replace(/[eiuo]|[^b-z]/gi, '').length
-    }
-}
-console.log(getCount('Here is some text'));
+// // Mispelled Word
+// function getCount(words) {
+//     if (typeof str != 'string') str = '';
+//     return {
+//         vowels: str.replace(/[^aeiou]/gi, '').length,
+//         consonants: str.replace(/[eiuo]|[^b-z]/gi, '').length
+//     }
+// }
+// console.log(getCount('Here is some text'));
 
+
+
+
+// Is it a vowel on this position?
+function checkVowel(string, position) {
+    const vowels = ['a','e','i','o','u'];
+    return vowels.includes(string.toLowerCase()[position]);
+}
+console.log(checkVowel('cat', 1));
+console.log(checkVowel('cat', 0));
+console.log(checkVowel('cat', 4));
+console.log(checkVowel('Amanda', -2));
 
 
 
