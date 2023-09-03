@@ -3873,15 +3873,34 @@ function rainAmount(mm){
 
 
 
-// Is it a vowel on this position?
-function checkVowel(string, position) {
-    const vowels = ['a','e','i','o','u'];
-    return vowels.includes(string.toLowerCase()[position]);
+// // Is it a vowel on this position?
+// function checkVowel(string, position) {
+//     const vowels = ['a','e','i','o','u'];
+//     return vowels.includes(string.toLowerCase()[position]);
+// }
+// console.log(checkVowel('cat', 1));
+// console.log(checkVowel('cat', 0));
+// console.log(checkVowel('cat', 4));
+// console.log(checkVowel('Amanda', -2));
+
+
+
+
+// Ghostbusters (whitespace removal) (no regex)
+function ghostBusters(building) {
+    return building.includes(' ') ? building.split(' ').join('') : `You just wanted my autograph didn't you?`;
 }
-console.log(checkVowel('cat', 1));
-console.log(checkVowel('cat', 0));
-console.log(checkVowel('cat', 4));
-console.log(checkVowel('Amanda', -2));
+console.log(ghostBusters('Factor y s t s'));
+
+
+
+
+
+
+
+
+
+
 
 
 
