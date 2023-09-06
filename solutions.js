@@ -3886,11 +3886,11 @@ function rainAmount(mm){
 
 
 
-// // Ghostbusters (whitespace removal) (no regex)
-// function ghostBusters(building) {
-//     return building.includes(' ') ? building.split(' ').join('') : `You just wanted my autograph didn't you?`;
-// }
-// console.log(ghostBusters('Factor y s t s'));
+// Ghostbusters (whitespace removal) (no regex)
+function ghostBusters(building) {
+    return building.includes(' ') ? building.split(' ').join('') : `You just wanted my autograph didn't you?`;
+}
+console.log(ghostBusters('Factor y s t s'));
 
 
 
