@@ -6,7 +6,7 @@
 
 // All non-vowels including non alpha characters (spaces,commas etc.) should be included.
 
-// Examples:
+// Examples
 
 // vowelOne( "abceios" ) // "1001110"
 
