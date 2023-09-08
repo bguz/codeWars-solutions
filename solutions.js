@@ -3886,12 +3886,26 @@ function rainAmount(mm){
 
 
 
-// Ghostbusters (whitespace removal) (no regex)
-function ghostBusters(building) {
-    return building.includes(' ') ? building.split(' ').join('') : `You just wanted my autograph didn't you?`;
-}
-console.log(ghostBusters('Factor y s t s'));
+// // Ghostbusters (whitespace removal) (no regex)
+// function ghostBusters(building) {
+//     return building.includes(' ') ? building.split(' ').join('') : `You just wanted my autograph didn't you?`;
+// }
+// console.log(ghostBusters('Factor y s t s'));
 
+
+
+
+// String Chunks
+function stringChunk(str, n) {
+    if (isNaN(n) || n <= 0) return [];
+    else if (n > str.length) return [str];
+
+    const result = [];
+    for (let i = 0; i < str.length; i += n) {
+        result.push(str.slice(i, i + n))
+    }
+    return result;
+}
 
 
 
