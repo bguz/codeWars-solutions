@@ -3895,17 +3895,30 @@ function rainAmount(mm){
 
 
 
-// String Chunks
-function stringChunk(str, n) {
-    if (isNaN(n) || n <= 0) return [];
-    else if (n > str.length) return [str];
+// // String Chunks
+// function stringChunk(str, n) {
+//     if (isNaN(n) || n <= 0) return [];
+//     else if (n > str.length) return [str];
 
-    const result = [];
-    for (let i = 0; i < str.length; i += n) {
-        result.push(str.slice(i, i + n))
-    }
-    return result;
+//     const result = [];
+//     for (let i = 0; i < str.length; i += n) {
+//         result.push(str.slice(i, i + n))
+//     }
+//     return result;
+// }
+
+
+
+
+// Email Address Obfuscator (No Regex)
+function obfuscate(email) {
+    return email.split('').map(c => {
+        if (c === '@') return ' [at] ';
+        else if(c === '.') return ' [dot] ';
+        else return c;
+    }).join('');
 }
+console.log(obfuscate('test@123.com'));
 
 
 
