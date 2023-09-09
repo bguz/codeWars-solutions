@@ -3910,15 +3910,32 @@ function rainAmount(mm){
 
 
 
-// Email Address Obfuscator (No Regex)
-function obfuscate(email) {
-    return email.split('').map(c => {
-        if (c === '@') return ' [at] ';
-        else if(c === '.') return ' [dot] ';
-        else return c;
-    }).join('');
+// // Email Address Obfuscator (No Regex)
+// function obfuscate(email) {
+//     return email.split('').map(c => {
+//         if (c === '@') return ' [at] ';
+//         else if(c === '.') return ' [dot] ';
+//         else return c;
+//     }).join('');
+// }
+// console.log(obfuscate('test@123.com'));
+
+
+
+
+// Keypad Horror
+function computerToPhone(numbers){
+    const keys = {
+        7: "1",
+        8: "2",
+        9: "3",
+        1: "7",
+        2: "8",
+        3: "9"
+    }
+    return numbers.split('').map(n => keys[n] ? keys[n] : n).join('');
 }
-console.log(obfuscate('test@123.com'));
+console.log(computerToPhone("0789456123"));
 
 
 
