@@ -3923,19 +3923,19 @@ function rainAmount(mm){
 
 
 
-// Keypad Horror
-function computerToPhone(numbers){
-    const keys = {
-        7: "1",
-        8: "2",
-        9: "3",
-        1: "7",
-        2: "8",
-        3: "9"
-    }
-    return numbers.split('').map(n => keys[n] ? keys[n] : n).join('');
-}
-console.log(computerToPhone("0789456123"));
+// // Keypad Horror
+// function computerToPhone(numbers){
+//     const keys = {
+//         7: "1",
+//         8: "2",
+//         9: "3",
+//         1: "7",
+//         2: "8",
+//         3: "9"
+//     }
+//     return numbers.split('').map(n => keys[n] ? keys[n] : n).join('');
+// }
+// console.log(computerToPhone("0789456123"));
 
 
 
