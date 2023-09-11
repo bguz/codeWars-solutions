@@ -3940,6 +3940,16 @@ function rainAmount(mm){
 
 
 
+// String to Integer Conversion
+function myParseInt(str) {
+    return /^d+$/g.test(str.trim()) ? +str : NaN;
+}
+console.log(myParseInt('1'));
+console.log(myParseInt('08540654065'));
+
+
+
+
 
 
 
