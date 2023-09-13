@@ -3950,13 +3950,13 @@ function rainAmount(mm){
 
 
 
-// Number of Digit Tiers
-function createArrayOfTiers(num) {
-    return num.toString().split('').map((n, i) => {
-        return num.toString().slice(0, (i + 1));
-    });
-}
-console.log(createArrayOfTiers(420));
+// // Number of Digit Tiers
+// function createArrayOfTiers(num) {
+//     return num.toString().split('').map((n, i) => {
+//         return num.toString().slice(0, (i + 1));
+//     });
+// }
+// console.log(createArrayOfTiers(420));
 
 
 
