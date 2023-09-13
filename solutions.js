@@ -3940,12 +3940,23 @@ function rainAmount(mm){
 
 
 
-// String to Integer Conversion
-function myParseInt(str) {
-    return /^d+$/g.test(str.trim()) ? +str : NaN;
+// // String to Integer Conversion
+// function myParseInt(str) {
+//     return /^d+$/g.test(str.trim()) ? +str : NaN;
+// }
+// console.log(myParseInt('1'));
+// console.log(myParseInt('08540654065'));
+
+
+
+
+// Number of Digit Tiers
+function createArrayOfTiers(num) {
+    return num.toString().split('').map((n, i) => {
+        return num.toString().slice(0, (i + 1));
+    });
 }
-console.log(myParseInt('1'));
-console.log(myParseInt('08540654065'));
+console.log(createArrayOfTiers(420));
 
 
 
