@@ -3961,6 +3961,15 @@ function rainAmount(mm){
 
 
 
+// Categorize New Member
+function openOrSenior(data) {
+    return data.map(m => m[0] >= 55 && m[1] > 7 ? 'Senior' : 'Open');
+}
+console.log(openOrSenior([[45, 12],[55,21],[19, -2],[104, 20]]));
+
+
+
+
 
 
 
