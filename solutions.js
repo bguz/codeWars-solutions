@@ -3961,13 +3961,23 @@ function rainAmount(mm){
 
 
 
-// Categorize New Member
-function openOrSenior(data) {
-    return data.map(m => m[0] >= 55 && m[1] > 7 ? 'Senior' : 'Open');
+// // Categorize New Member
+// function openOrSenior(data) {
+//     return data.map(m => m[0] >= 55 && m[1] > 7 ? 'Senior' : 'Open');
+// }
+// console.log(openOrSenior([[45, 12],[55,21],[19, -2],[104, 20]]));
+
+
+
+
+// Filter Unused Digits
+function unusedDigits(...arr) {
+    const digits = arr.join();
+    return [0,1,2,3,4,5,6,7,8,9]
+                .filter(n => !digits.includes(n))
+                .join('');
 }
-console.log(openOrSenior([[45, 12],[55,21],[19, -2],[104, 20]]));
-
-
+console.log(unusedDigits(12, 34, 56, 78));
 
 
 
