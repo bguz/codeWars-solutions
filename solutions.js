@@ -3970,16 +3970,23 @@ function rainAmount(mm){
 
 
 
-// Filter Unused Digits
-function unusedDigits(...arr) {
-    const digits = arr.join();
-    return [0,1,2,3,4,5,6,7,8,9]
-                .filter(n => !digits.includes(n))
-                .join('');
+// // Filter Unused Digits
+// function unusedDigits(...arr) {
+//     const digits = arr.join();
+//     return [0,1,2,3,4,5,6,7,8,9]
+//                 .filter(n => !digits.includes(n))
+//                 .join('');
+// }
+// console.log(unusedDigits(12, 34, 56, 78));
+
+
+
+
+// For the Sake of Argument
+function numbers(...args) {
+    return args.every(n => Number(n));
 }
-console.log(unusedDigits(12, 34, 56, 78));
-
-
+console.log(numbers(1,2,3,4,5));
 
 
 
