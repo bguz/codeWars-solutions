@@ -3982,11 +3982,16 @@ function rainAmount(mm){
 
 
 
-// // For the Sake of Argument
-// function numbers(...args) {
-//     return args.every(n => Number(n));
-// }
-// console.log(numbers(1,2,3,4,5));
+// For the Sake of Argument
+function numbers(...args) {
+    return args.every(n => Number(n));
+}
+console.log(numbers(1,2,3,4,5));
+
+
+
+
+
 
 
 
