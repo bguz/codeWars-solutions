@@ -3982,11 +3982,21 @@ function rainAmount(mm){
 
 
 
-// For the Sake of Argument
-function numbers(...args) {
-    return args.every(n => Number(n));
+// // For the Sake of Argument
+// function numbers(...args) {
+//     return args.every(n => Number(n));
+// }
+// console.log(numbers(1,2,3,4,5));
+
+
+
+
+// Find Duplicates
+function duplicates(arr) {
+    return [...new Set(arr.filter((e, i) => arr.indexOf(e) < i))];
 }
-console.log(numbers(1,2,3,4,5));
+
+console.log(duplicates([1,2,4,4,3,3,1,5,3,"5"]));
 
 
 
