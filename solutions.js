@@ -4001,6 +4001,19 @@ function rainAmount(mm){
 
 
 
+// Scoring Tests 
+function checkThreeAndTwo(array) {
+    const reduced = Object.values(array.reduce((obj, curr) => {
+        obj[curr] = obj[curr] + 1 || 1;
+        return obj;
+    }, {}))
+    return reduced.length === 2 && reduced[0] <= 3 && reduced[1] <= 3;
+}
+
+console.log(checkThreeAndTwo(['a', 'a', 'a', 'b', 'a']));
+
+
+
 
 
 
