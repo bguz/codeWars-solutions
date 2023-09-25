@@ -4001,16 +4001,32 @@ function rainAmount(mm){
 
 
 
-// Scoring Tests 
-function checkThreeAndTwo(array) {
-    const reduced = Object.values(array.reduce((obj, curr) => {
-        obj[curr] = obj[curr] + 1 || 1;
-        return obj;
-    }, {}))
-    return reduced.length === 2 && reduced[0] <= 3 && reduced[1] <= 3;
-}
+// // Scoring Tests 
+// function checkThreeAndTwo(array) {
+//     const reduced = Object.values(array.reduce((obj, curr) => {
+//         obj[curr] = obj[curr] + 1 || 1;
+//         return obj;
+//     }, {}))
+//     return reduced.length === 2 && reduced[0] <= 3 && reduced[1] <= 3;
+// }
 
-console.log(checkThreeAndTwo(['a', 'a', 'a', 'b', 'a']));
+// console.log(checkThreeAndTwo(['a', 'a', 'a', 'b', 'a']));
+
+
+
+
+// Find an Employee Role in the Company
+let employees = [ 
+    {firstName: "Dipper", lastName: "Pines", role: "Boss"},
+    {firstName: "John", lastName: "Doe", role: "Loader"},
+    {firstName: "Jane", lastName: "Doe", role: "Designer"} 
+];
+
+function findEmployeesRole(name) {
+    const filtered = employees.filter(e => name === `${e.firstName} ${e.lastName}`);
+    return filtered.length ? filtered[0].role : 'Does not work here!';
+} 
+console.log(findEmployeesRole('Dipper Pines'));
 
 
 
