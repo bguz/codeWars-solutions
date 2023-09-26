@@ -4015,18 +4015,28 @@ function rainAmount(mm){
 
 
 
-// Find an Employee Role in the Company
-let employees = [ 
-    {firstName: "Dipper", lastName: "Pines", role: "Boss"},
-    {firstName: "John", lastName: "Doe", role: "Loader"},
-    {firstName: "Jane", lastName: "Doe", role: "Designer"} 
-];
+// // Find an Employee Role in the Company
+// let employees = [ 
+//     {firstName: "Dipper", lastName: "Pines", role: "Boss"},
+//     {firstName: "John", lastName: "Doe", role: "Loader"},
+//     {firstName: "Jane", lastName: "Doe", role: "Designer"} 
+// ];
 
-function findEmployeesRole(name) {
-    const filtered = employees.filter(e => name === `${e.firstName} ${e.lastName}`);
-    return filtered.length ? filtered[0].role : 'Does not work here!';
-} 
-console.log(findEmployeesRole('Dipper Pines'));
+// function findEmployeesRole(name) {
+//     const filtered = employees.filter(e => name === `${e.firstName} ${e.lastName}`);
+//     return filtered.length ? filtered[0].role : 'Does not work here!';
+// } 
+// console.log(findEmployeesRole('Dipper Pines'));
+
+
+
+
+// Convert Hash to An Array 
+function convertHashToArray(hash) {
+    return Object.entries(hash).sort();
+}
+
+console.log(convertHashToArray({name: "Jeremy", age: 24}));
 
 
 
