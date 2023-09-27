@@ -4031,12 +4031,12 @@ function rainAmount(mm){
 
 
 
-// Convert Hash to An Array 
-function convertHashToArray(hash) {
-    return Object.entries(hash).sort();
-}
+// // Convert Hash to An Array 
+// function convertHashToArray(hash) {
+//     return Object.entries(hash).sort();
+// }
 
-console.log(convertHashToArray({name: "Jeremy", age: 24}));
+// console.log(convertHashToArray({name: "Jeremy", age: 24}));
 
 
 
