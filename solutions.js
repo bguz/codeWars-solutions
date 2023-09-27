@@ -4041,6 +4041,15 @@ function rainAmount(mm){
 
 
 
+// Multiply Word in String
+function modifyMultiply(str, loc, num) {
+    const word = str.split(' ').splice(loc, 1);
+    return word.concat(... new Array(num - 1).fill(word)).join('-');
+}
+console.log(modifyMultiply('This is a string', 3, 5));
+
+
+
 
 
 
