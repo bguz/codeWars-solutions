@@ -4041,12 +4041,25 @@ function rainAmount(mm){
 
 
 
-// Multiply Word in String
-function modifyMultiply(str, loc, num) {
-    const word = str.split(' ').splice(loc, 1);
-    return word.concat(... new Array(num - 1).fill(word)).join('-');
+// // Multiply Word in String
+// function modifyMultiply(str, loc, num) {
+//     const word = str.split(' ').splice(loc, 1);
+//     return word.concat(... new Array(num - 1).fill(word)).join('-');
+// }
+// console.log(modifyMultiply('This is a string', 3, 5));
+
+
+
+
+// Find All Non-Consecutive Numbers
+function allNonConsecutive(arr) {
+    const result = [];
+    for (let i = 0; i < arr.length; i++) {
+        if ((arr[i + 1]) - arr[i] > 1) result.push({ 'i': arr.indexOf(arr[i + 1]), 'n': arr[i + 1] });
+    }
+    return result;
 }
-console.log(modifyMultiply('This is a string', 3, 5));
+console.log(allNonConsecutive([1,2,3,4,6,7,8,10]));
 
 
 
