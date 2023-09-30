@@ -4051,15 +4051,28 @@ function rainAmount(mm){
 
 
 
-// Find All Non-Consecutive Numbers
-function allNonConsecutive(arr) {
-    const result = [];
-    for (let i = 0; i < arr.length; i++) {
-        if ((arr[i + 1]) - arr[i] > 1) result.push({ 'i': arr.indexOf(arr[i + 1]), 'n': arr[i + 1] });
-    }
-    return result;
+// // Find All Non-Consecutive Numbers
+// function allNonConsecutive(arr) {
+//     const result = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         if ((arr[i + 1]) - arr[i] > 1) result.push({ 'i': arr.indexOf(arr[i + 1]), 'n': arr[i + 1] });
+//     }
+//     return result;
+// }
+// console.log(allNonConsecutive([1,2,3,4,6,7,8,10]));
+
+
+
+
+// Filter Coffee 
+function search(budget, prices) {
+    return prices
+            .filter(p => p <= budget)
+            .sort((a,b) => a - b)
+            .join(',');
 }
-console.log(allNonConsecutive([1,2,3,4,6,7,8,10]));
+console.log(search(3, [6, 1, 2, 9, 2]));
+console.log(search(14, [7, 3, 23, 9, 14, 20, 7]));
 
 
 
