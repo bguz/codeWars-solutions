@@ -4064,15 +4064,15 @@ function rainAmount(mm){
 
 
 
-// Filter Coffee 
-function search(budget, prices) {
-    return prices
-            .filter(p => p <= budget)
-            .sort((a,b) => a - b)
-            .join(',');
-}
-console.log(search(3, [6, 1, 2, 9, 2]));
-console.log(search(14, [7, 3, 23, 9, 14, 20, 7]));
+// // Filter Coffee 
+// function search(budget, prices) {
+//     return prices
+//             .filter(p => p <= budget)
+//             .sort((a,b) => a - b)
+//             .join(',');
+// }
+// console.log(search(3, [6, 1, 2, 9, 2]));
+// console.log(search(14, [7, 3, 23, 9, 14, 20, 7]));
 
 
 
