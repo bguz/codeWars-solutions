@@ -4077,6 +4077,23 @@ function rainAmount(mm){
 
 
 
+// // Product of Largest Pair 
+// function maxProduct(a) {
+//     let f = Math.max(...a);
+//     a.splice(a.indexOf(f), 1);
+//     return f  * Math.max(...a);
+// }
+// console.log(maxProduct([2, 1, 5, 0, 4, 3]));
+
+
+
+
+// Identical Elements
+function duplicateElements(m, n) {
+    return m.some(num => n.includes(num));
+}
+console.log(duplicateElements([1, 2, 3, 4, 5], [1, 6, 7, 8, 9]));
+console.log(duplicateElements([9, 8, 7], [8, 1, 3]));
 
 
 
