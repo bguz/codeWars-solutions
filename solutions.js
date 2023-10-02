@@ -4088,12 +4088,24 @@ function rainAmount(mm){
 
 
 
-// Identical Elements
-function duplicateElements(m, n) {
-    return m.some(num => n.includes(num));
+// // Identical Elements
+// function duplicateElements(m, n) {
+//     return m.some(num => n.includes(num));
+// }
+// console.log(duplicateElements([1, 2, 3, 4, 5], [1, 6, 7, 8, 9]));
+// console.log(duplicateElements([9, 8, 7], [8, 1, 3]));
+
+
+
+
+// Batman Quotes 
+function getQuote(quotes, hero) {
+    const extractedNum = hero.replace(/\D/g, '');
+    if (hero[0] === 'B') return `Batman: ${quotes[+extractedNum]}`;
+    else if (hero[0] === 'R') return `Robin: ${quotes[+extractedNum]}`;
+    else return `Joker: ${quotes[+extractedNum]}`;
 }
-console.log(duplicateElements([1, 2, 3, 4, 5], [1, 6, 7, 8, 9]));
-console.log(duplicateElements([9, 8, 7], [8, 1, 3]));
+console.log(getQuote(["WHERE IS SHE?!", "Holy haberdashery, Batman!", "Let's put a smile on that faaaceee!"], 'Rob1in'));
 
 
 
