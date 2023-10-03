@@ -4098,14 +4098,33 @@ function rainAmount(mm){
 
 
 
-// Batman Quotes 
-function getQuote(quotes, hero) {
-    const extractedNum = hero.replace(/\D/g, '');
-    if (hero[0] === 'B') return `Batman: ${quotes[+extractedNum]}`;
-    else if (hero[0] === 'R') return `Robin: ${quotes[+extractedNum]}`;
-    else return `Joker: ${quotes[+extractedNum]}`;
+// // Batman Quotes 
+// function getQuote(quotes, hero) {
+//     const extractedNum = hero.replace(/\D/g, '');
+//     if (hero[0] === 'B') return `Batman: ${quotes[+extractedNum]}`;
+//     else if (hero[0] === 'R') return `Robin: ${quotes[+extractedNum]}`;
+//     else return `Joker: ${quotes[+extractedNum]}`;
+// }
+// console.log(getQuote(["WHERE IS SHE?!", "Holy haberdashery, Batman!", "Let's put a smile on that faaaceee!"], 'Rob1in'));
+
+
+
+
+// Ironman Triathlon
+function iTri(s) {
+    if (s === 0) return `Starting Line... Good Luck!`;
+    else if (s > 0 && s <= 2.4) return { 'Swim': `${(140.6 - s).toFixed(2)} to go!` };
+    else if (s > 2.4 && s <= 112) return { 'Bike': `${(140.6 - s).toFixed(2)} to go!` };
+    else if (140.6 - s >= 10) return { 'Run': `${(140.6 - s).toFixed(2)} to go!` };
+    else if (140.6 - s <= 10 && s <= 140.6) return { 'Run': `Nearly there!` };
+    else return `You're done! Stop running!`;
 }
-console.log(getQuote(["WHERE IS SHE?!", "Holy haberdashery, Batman!", "Let's put a smile on that faaaceee!"], 'Rob1in'));
+console.log(iTri(105));
+
+
+
+
+
 
 
 
