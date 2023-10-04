@@ -4110,17 +4110,29 @@ function rainAmount(mm){
 
 
 
-// Ironman Triathlon
-function iTri(s) {
-    if (s === 0) return `Starting Line... Good Luck!`;
-    else if (s > 0 && s <= 2.4) return { 'Swim': `${(140.6 - s).toFixed(2)} to go!` };
-    else if (s > 2.4 && s <= 112) return { 'Bike': `${(140.6 - s).toFixed(2)} to go!` };
-    else if (140.6 - s >= 10) return { 'Run': `${(140.6 - s).toFixed(2)} to go!` };
-    else if (140.6 - s <= 10 && s <= 140.6) return { 'Run': `Nearly there!` };
-    else return `You're done! Stop running!`;
-}
-console.log(iTri(105));
+// // Ironman Triathlon
+// function iTri(s) {
+//     if (s === 0) return `Starting Line... Good Luck!`;
+//     else if (s > 0 && s <= 2.4) return { 'Swim': `${(140.6 - s).toFixed(2)} to go!` };
+//     else if (s > 2.4 && s <= 112) return { 'Bike': `${(140.6 - s).toFixed(2)} to go!` };
+//     else if (140.6 - s >= 10) return { 'Run': `${(140.6 - s).toFixed(2)} to go!` };
+//     else if (140.6 - s <= 10 && s <= 140.6) return { 'Run': `Nearly there!` };
+//     else return `You're done! Stop running!`;
+// }
+// console.log(iTri(105));
 
+
+
+
+// Find Missing Numbers
+function findMissingNumbers(arr) {
+    const result = [];
+    for (let i = arr[0]; i < arr[arr.length - 1]; i++) {
+        if (arr.indexOf(i) === -1) result.push(i);
+    }
+    return result;
+}
+console.log(findMissingNumbers([-3, -2, 1, 5]));
 
 
 
