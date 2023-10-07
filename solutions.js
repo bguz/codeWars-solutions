@@ -4124,16 +4124,25 @@ function rainAmount(mm){
 
 
 
-// Find Missing Numbers
-function findMissingNumbers(arr) {
-    const result = [];
-    for (let i = arr[0]; i < arr[arr.length - 1]; i++) {
-        if (arr.indexOf(i) === -1) result.push(i);
-    }
-    return result;
-}
-console.log(findMissingNumbers([-3, -2, 1, 5]));
+// // Find Missing Numbers
+// function findMissingNumbers(arr) {
+//     const result = [];
+//     for (let i = arr[0]; i < arr[arr.length - 1]; i++) {
+//         if (arr.indexOf(i) === -1) result.push(i);
+//     }
+//     return result;
+// }
+// console.log(findMissingNumbers([-3, -2, 1, 5]));
 
+
+
+
+// Sum The Array 
+Array.prototype.sum = function() {
+    return this.reduce((sum, curr) => sum + curr, 0);
+}
+
+console.log([1,2,3,4].sum())
 
 
 
