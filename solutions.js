@@ -4137,12 +4137,12 @@ function rainAmount(mm){
 
 
 
-// Sum The Array 
-Array.prototype.sum = function() {
-    return this.reduce((sum, curr) => sum + curr, 0);
-}
+// // Sum The Array 
+// Array.prototype.sum = function() {
+//     return this.reduce((sum, curr) => sum + curr, 0);
+// }
 
-console.log([1,2,3,4].sum())
+// console.log([1,2,3,4].sum());
 
 
 
