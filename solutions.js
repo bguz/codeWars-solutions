@@ -4147,6 +4147,19 @@ function rainAmount(mm){
 
 
 
+// Train to Remove Duplicates With Filter() 
+function unique(arr) {
+    const newArr = [];
+    arr.filter(n => {
+        if (!newArr.includes(n)) newArr.push(n);
+    });
+    return newArr;
+}
+console.log(unique([1,2,2,3]));
+
+
+
+
 
 
 
