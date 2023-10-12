@@ -4147,15 +4147,24 @@ function rainAmount(mm){
 
 
 
-// Train to Remove Duplicates With Filter() 
-function unique(arr) {
-    const newArr = [];
-    arr.filter(n => {
-        if (!newArr.includes(n)) newArr.push(n);
-    });
-    return newArr;
+// // Train to Remove Duplicates With Filter() 
+// function unique(arr) {
+//     const newArr = [];
+//     arr.filter(n => {
+//         if (!newArr.includes(n)) newArr.push(n);
+//     });
+//     return newArr;
+// }
+// console.log(unique([1,2,2,3]));
+
+
+
+
+// Zero-Balanced Array
+function isZeroBalanced(n) {
+    return n.length > 0 && n.every(d => n.includes(-d)) && n.reduce((sum, n) => sum + n, 0) === 0;
 }
-console.log(unique([1,2,2,3]));
+console.log(isZeroBalanced([0,0,0,0]));
 
 
 
