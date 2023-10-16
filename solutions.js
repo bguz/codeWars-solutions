@@ -4169,14 +4169,24 @@ function rainAmount(mm){
 
 
 
-// Order of Weight
-function arrange(arr) {
-    var r = s => s.replace('KG', '000').replace('T', '000000').replace('G', '');
-    return arr.sort((a, b) => r(a) - r(b));
-}
-console.log(arrange(["200G", "300G", "150G", "100KG", "300T"]));
-console.log(arrange([ '100G', '100T', '1T', '400T' ]));
+// // Order of Weight
+// function arrange(arr) {
+//     var r = s => s.replace('KG', '000').replace('T', '000000').replace('G', '');
+//     return arr.sort((a, b) => r(a) - r(b));
+// }
+// console.log(arrange(["200G", "300G", "150G", "100KG", "300T"]));
+// console.log(arrange([ '100G', '100T', '1T', '400T' ]));
 
+
+
+
+// Empty That Array!
+function empty(array) {
+    array.length = 0;
+    return array;
+}
+const foo = [1,2,3];
+console.log(empty(foo) === foo && foo.length === 0);
 
 
 
