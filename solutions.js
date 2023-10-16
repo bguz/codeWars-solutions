@@ -4160,12 +4160,22 @@ function rainAmount(mm){
 
 
 
-// Zero-Balanced Array
-function isZeroBalanced(n) {
-    return n.length > 0 && n.every(d => n.includes(-d)) && n.reduce((sum, n) => sum + n, 0) === 0;
-}
-console.log(isZeroBalanced([0,0,0,0]));
+// // Zero-Balanced Array
+// function isZeroBalanced(n) {
+//     return n.length > 0 && n.every(d => n.includes(-d)) && n.reduce((sum, n) => sum + n, 0) === 0;
+// }
+// console.log(isZeroBalanced([0,0,0,0]));
 
+
+
+
+// Order of Weight
+function arrange(arr) {
+    var r = s => s.replace('KG', '000').replace('T', '000000').replace('G', '');
+    return arr.sort((a, b) => r(a) - r(b));
+}
+console.log(arrange(["200G", "300G", "150G", "100KG", "300T"]));
+console.log(arrange([ '100G', '100T', '1T', '400T' ]));
 
 
 
