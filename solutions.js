@@ -4180,13 +4180,22 @@ function rainAmount(mm){
 
 
 
-// Empty That Array!
-function empty(array) {
-    array.length = 0;
-    return array;
+// // Empty That Array!
+// function empty(array) {
+//     array.length = 0;
+//     return array;
+// }
+// const foo = [1,2,3];
+// console.log(empty(foo) === foo && foo.length === 0);
+
+
+
+
+// Between Extremes 
+function betweenExtremes(numbers) {
+    return Math.max(...numbers) - Math.min(...numbers);
 }
-const foo = [1,2,3];
-console.log(empty(foo) === foo && foo.length === 0);
+console.log(betweenExtremes([21, 34, 54, 43, 26, 12]));
 
 
 
