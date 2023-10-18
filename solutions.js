@@ -4191,11 +4191,11 @@ function rainAmount(mm){
 
 
 
-// Between Extremes 
-function betweenExtremes(numbers) {
-    return Math.max(...numbers) - Math.min(...numbers);
-}
-console.log(betweenExtremes([21, 34, 54, 43, 26, 12]));
+// // Between Extremes 
+// function betweenExtremes(numbers) {
+//     return Math.max(...numbers) - Math.min(...numbers);
+// }
+// console.log(betweenExtremes([21, 34, 54, 43, 26, 12]));
 
 
 
