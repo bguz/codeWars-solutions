@@ -4200,6 +4200,14 @@ function rainAmount(mm){
 
 
 
+// Return a sorted list of objects
+function sortList(sortBy, list) {
+    return list.sort((a, b) => a[sortBy] < b[sortBy]);
+}
+
+
+
+
 
 
 
