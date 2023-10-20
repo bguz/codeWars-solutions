@@ -4200,10 +4200,21 @@ function rainAmount(mm){
 
 
 
-// Return a sorted list of objects
-function sortList(sortBy, list) {
-    return list.sort((a, b) => a[sortBy] < b[sortBy]);
+// // Return a sorted list of objects
+// function sortList(sortBy, list) {
+//     return list.sort((a, b) => a[sortBy] < b[sortBy]);
+// }
+
+
+
+
+// Alternate Square Sum
+function alternateSqSum(arr) {
+    return arr
+            .map((n, i) => (i + 1) % 2 === 0 ? n ** 2 : n)
+            .reduce((n, c) => n + c, 0);
 }
+console.log(alternateSqSum([1,2,3,4,5]));
 
 
 
