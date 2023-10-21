@@ -4208,13 +4208,22 @@ function rainAmount(mm){
 
 
 
-// Alternate Square Sum
-function alternateSqSum(arr) {
-    return arr
-            .map((n, i) => (i + 1) % 2 === 0 ? n ** 2 : n)
-            .reduce((n, c) => n + c, 0);
+// // Alternate Square Sum
+// function alternateSqSum(arr) {
+//     return arr
+//             .map((n, i) => (i + 1) % 2 === 0 ? n ** 2 : n)
+//             .reduce((n, c) => n + c, 0);
+// }
+// console.log(alternateSqSum([1,2,3,4,5]));
+
+
+
+
+// Odds Ones Out!
+function oddOnesOut(nums) {
+    return nums.filter(n => nums.filter(x => x === n).length % 2 === 0);
 }
-console.log(alternateSqSum([1,2,3,4,5]));
+console.log(oddOnesOut([1,2,3,1,3,3]));
 
 
 
