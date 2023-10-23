@@ -4219,16 +4219,16 @@ function rainAmount(mm){
 
 
 
-// Odds Ones Out!
-function oddOnesOut(nums) {
-    const results = nums.reduce((obj, curr) => {
-        obj[curr] = obj[curr] + 1 || 1;
-        return obj;
-    }, {});
+// // Odds Ones Out!
+// function oddOnesOut(nums) {
+//     const results = nums.reduce((obj, curr) => {
+//         obj[curr] = obj[curr] + 1 || 1;
+//         return obj;
+//     }, {});
 
-    return nums.filter(el => results[el] % 2 === 0);
-}
-console.log(oddOnesOut([1,2,3,1,3,3]));
+//     return nums.filter(el => results[el] % 2 === 0);
+// }
+// console.log(oddOnesOut([1,2,3,1,3,3]));
 
 
 
