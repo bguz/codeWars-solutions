@@ -4233,20 +4233,33 @@ function rainAmount(mm){
 
 
 
-// Make a Function That Does Arithmetic!
-function arithmetic(a, b, operator) {
-    switch (operator) {
-        case 'add':
-            return a + b;
-        case 'subtract':
-            return a - b;
-        case 'multiply':
-            return a * b;
-        case 'divide':
-            return a / b;
-    }
+// // Make a Function That Does Arithmetic!
+// function arithmetic(a, b, operator) {
+//     switch (operator) {
+//         case 'add':
+//             return a + b;
+//         case 'subtract':
+//             return a - b;
+//         case 'multiply':
+//             return a * b;
+//         case 'divide':
+//             return a / b;
+//     }
+// }
+// console.log(arithmetic(10, 10, 'add'));
+
+
+
+
+// Fix String Case
+function solve(s) {
+    let upper = 0;
+    let lower = 0;
+    s.split('').forEach(l => l === l.toUpperCase() ? upper++ : lower++);
+    if (lower > upper || lower === upper) return s.toLowerCase();
+    else return s.toUpperCase();
 }
-console.log(arithmetic(10, 10, 'add'));
+console.log(solve('coDE'));
 
 
 
