@@ -4251,15 +4251,15 @@ function rainAmount(mm){
 
 
 
-// Fix String Case
-function solve(s) {
-    let upper = 0;
-    let lower = 0;
-    s.split('').forEach(l => l === l.toUpperCase() ? upper++ : lower++);
-    if (lower > upper || lower === upper) return s.toLowerCase();
-    else return s.toUpperCase();
-}
-console.log(solve('coDE'));
+// // Fix String Case
+// function solve(s) {
+//     let upper = 0;
+//     let lower = 0;
+//     s.split('').forEach(l => l === l.toUpperCase() ? upper++ : lower++);
+//     if (lower > upper || lower === upper) return s.toLowerCase();
+//     else return s.toUpperCase();
+// }
+// console.log(solve('coDE'));
 
 
 
