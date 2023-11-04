@@ -4274,12 +4274,12 @@ function rainAmount(mm){
 
 
 
-// Love vs Friendship
-function wordsToMarks(string) {
-    const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-    return string.split('').map(l => alphabet.indexOf(l) + 1).reduce((c, n) => c + n, 0);
-}
-console.log(wordsToMarks('attitude'))
+// // Love vs Friendship
+// function wordsToMarks(string) {
+//     const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+//     return string.split('').map(l => alphabet.indexOf(l) + 1).reduce((c, n) => c + n, 0);
+// }
+// console.log(wordsToMarks('attitude'))
 
 
 
