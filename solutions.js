@@ -4284,11 +4284,11 @@ function rainAmount(mm){
 
 
 
-// Sum of All Arguments
-function sum(...args) {
-    return args.reduce((curr, res) => curr + res, 0);
-}
-console.log(sum(5, 7, 9));
+// // Sum of All Arguments
+// function sum(...args) {
+//     return args.reduce((curr, res) => curr + res, 0);
+// }
+// console.log(sum(5, 7, 9));
 
 
 
