@@ -4306,6 +4306,20 @@ function rainAmount(mm){
 
 
 
+// Find The Vowels
+function vowelIndices(word) {
+    const vowels = ['a', 'e', 'i', 'o', 'u', 'y'];
+    const result = [];
+    for (let i = 0; i < word.length; i++) {
+        if (vowels.includes(word[i].toLowerCase())) result.push(i + 1);
+    }
+    return result;
+}
+console.log(vowelIndices('fNUy'));
+
+
+
+
 
 
 /* =====================================
