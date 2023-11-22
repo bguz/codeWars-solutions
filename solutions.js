@@ -4328,12 +4328,20 @@ function rainAmount(mm){
 
 
 
-// Double Every Other
-function doubleEveryOther(a) {
-    return a.map((n, i) => i % 2 !== 0 ? n * 2 : n);
-}
-console.log(doubleEveryOther([1,2,3,4]));
+// // Double Every Other
+// function doubleEveryOther(a) {
+//     return a.map((n, i) => i % 2 !== 0 ? n * 2 : n);
+// }
+// console.log(doubleEveryOther([1,2,3,4]));
 
+
+
+
+// Boiled Eggs
+function cookingTime(eggs) {
+    return Math.ceil(eggs / 8) * 5;
+}
+console.log(cookingTime(10));
 
 
 
