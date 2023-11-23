@@ -4337,12 +4337,30 @@ function rainAmount(mm){
 
 
 
-// Boiled Eggs
-function cookingTime(eggs) {
-    return Math.ceil(eggs / 8) * 5;
-}
-console.log(cookingTime(10));
+// // Boiled Eggs
+// function cookingTime(eggs) {
+//     return Math.ceil(eggs / 8) * 5;
+// }
+// console.log(cookingTime(10));
 
+
+
+
+// Paul's Misery 
+function paul(x) {
+    let score = 0; 
+    x.map(x => {
+        if (x === 'Petes kata') score += 10;
+        else if (x === 'kata') score += 5;
+        else if (x === 'eating') score += 1;
+    });
+
+    if (score < 40) return 'Super happy!';
+    else if (score >= 40 && score < 70) return 'Happy!';
+    else if (score >= 70 && score < 100) return 'Sad!';
+    else return 'Miserable!';
+}
+console.log(paul(['life', 'Petes kata', 'Petes kata', 'eating']));
 
 
 
