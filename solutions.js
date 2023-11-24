@@ -4346,21 +4346,36 @@ function rainAmount(mm){
 
 
 
-// Paul's Misery 
-function paul(x) {
-    let score = 0; 
-    x.map(x => {
-        if (x === 'Petes kata') score += 10;
-        else if (x === 'kata') score += 5;
-        else if (x === 'eating') score += 1;
-    });
+// // Paul's Misery 
+// function paul(x) {
+//     let score = 0; 
+//     x.map(x => {
+//         if (x === 'Petes kata') score += 10;
+//         else if (x === 'kata') score += 5;
+//         else if (x === 'eating') score += 1;
+//     });
 
-    if (score < 40) return 'Super happy!';
-    else if (score >= 40 && score < 70) return 'Happy!';
-    else if (score >= 70 && score < 100) return 'Sad!';
-    else return 'Miserable!';
+//     if (score < 40) return 'Super happy!';
+//     else if (score >= 40 && score < 70) return 'Happy!';
+//     else if (score >= 70 && score < 100) return 'Sad!';
+//     else return 'Miserable!';
+// }
+// console.log(paul(['life', 'Petes kata', 'Petes kata', 'eating']));
+
+
+
+
+// Array Array Array 
+function explode(x) {
+    let [a, b] = x;
+
+    if (typeof a === 'number' && typeof b === 'number') return new Array(a+b).fill(x);
+    else if (typeof a === 'number') return new Array(a).fill(x);
+    else if (typeof b === 'number') return new Array(b).fill(x);
+
+    return 'Void!';
 }
-console.log(paul(['life', 'Petes kata', 'Petes kata', 'eating']));
+console.log(explode([6, 'c']));
 
 
 
