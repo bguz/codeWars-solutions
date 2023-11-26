@@ -4365,17 +4365,34 @@ function rainAmount(mm){
 
 
 
-// Array Array Array 
-function explode(x) {
-    let [a, b] = x;
+// // Array Array Array 
+// function explode(x) {
+//     let [a, b] = x;
 
-    if (typeof a === 'number' && typeof b === 'number') return new Array(a+b).fill(x);
-    else if (typeof a === 'number') return new Array(a).fill(x);
-    else if (typeof b === 'number') return new Array(b).fill(x);
+//     if (typeof a === 'number' && typeof b === 'number') return new Array(a+b).fill(x);
+//     else if (typeof a === 'number') return new Array(a).fill(x);
+//     else if (typeof b === 'number') return new Array(b).fill(x);
 
-    return 'Void!';
-}
-console.log(explode([6, 'c']));
+//     return 'Void!';
+// }
+// console.log(explode([6, 'c']));
+
+
+
+
+// // Merge Two Arrays 
+// function mergeArrays(a, b) {
+//     const finalArr = [];
+//     const longest = a.length > b.length ? a : b;
+
+//     for (let i = 0; i < longest.length; i++) {
+//         if (a[i]) finalArr.push(a[i]);
+//         if (b[i]) finalArr.push(b[i]);
+//     }
+
+//     return finalArr;
+// }
+// console.log(mergeArrays([1,2,3,4,5,6,7,8], ['a','b','c','d','e']))
 
 
 
