@@ -4406,6 +4406,18 @@ function rainAmount(mm){
 
 
 
+// Scrolling Text
+function scrollingText(text) {
+    const result = [];
+    for (let i = 0; i < text.length; i++) {
+        result.push(text.slice(i).toUpperCase() + text.slice(0, i).toUpperCase());
+    }
+    return result;
+}
+console.log(scrollingText('abc'));
+
+
+
 
 
 
