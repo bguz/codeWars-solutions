@@ -4406,15 +4406,28 @@ function rainAmount(mm){
 
 
 
-// Scrolling Text
-function scrollingText(text) {
-    const result = [];
-    for (let i = 0; i < text.length; i++) {
-        result.push(text.slice(i).toUpperCase() + text.slice(0, i).toUpperCase());
+// // Scrolling Text
+// function scrollingText(text) {
+//     const result = [];
+//     for (let i = 0; i < text.length; i++) {
+//         result.push(text.slice(i).toUpperCase() + text.slice(0, i).toUpperCase());
+//     }
+//     return result;
+// }
+// console.log(scrollingText('abc'));
+
+
+
+
+// Number of People In The Bus (Refactor)
+function number(busStops) {
+    let totalRiders = busStops[0][0];
+    for (let i = 1; i < busStops.length; i++) {
+        totalRiders = (totalRiders + busStops[i][0]) - busStops[i][1];
     }
-    return result;
+    return totalRiders;
 }
-console.log(scrollingText('abc'));
+console.log(number([[10, 0], [3, 5], [5, 8]]));
 
 
 
