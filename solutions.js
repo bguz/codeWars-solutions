@@ -4419,15 +4419,24 @@ function rainAmount(mm){
 
 
 
-// Number of People In The Bus (Refactor)
-function number(busStops) {
-    let totalRiders = busStops[0][0];
-    for (let i = 1; i < busStops.length; i++) {
-        totalRiders = (totalRiders + busStops[i][0]) - busStops[i][1];
-    }
-    return totalRiders;
+// // Number of People In The Bus (Refactor)
+// function number(busStops) {
+//     let totalRiders = busStops[0][0];
+//     for (let i = 1; i < busStops.length; i++) {
+//         totalRiders = (totalRiders + busStops[i][0]) - busStops[i][1];
+//     }
+//     return totalRiders;
+// }
+// console.log(number([[10, 0], [3, 5], [5, 8]]));
+
+
+
+
+// VAPORCODE
+function vaporcode(string) {
+    return string.split('').filter(e => e !== ' ').join('  ').toUpperCase();
 }
-console.log(number([[10, 0], [3, 5], [5, 8]]));
+console.log(vaporCode(`Why isn't my code working`));
 
 
 
