@@ -4432,11 +4432,24 @@ function rainAmount(mm){
 
 
 
-// VAPORCODE
-function vaporcode(string) {
-    return string.split('').filter(e => e !== ' ').join('  ').toUpperCase();
+// // VAPORCODE
+// function vaporcode(string) {
+//     return string.split('').filter(e => e !== ' ').join('  ').toUpperCase();
+// }
+// console.log(vaporCode(`Why isn't my code working`));
+
+
+
+
+// getNames()
+function getNames(data) {
+    return data.map(obj => obj.name);
 }
-console.log(vaporCode(`Why isn't my code working`));
+console.log(getNames([
+    {name: 'Joe', age: 20},
+    {name: 'Bill', age: 30},
+    {name: 'Kate', age: 23} 
+]))
 
 
 
