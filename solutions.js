@@ -4441,15 +4441,24 @@ function rainAmount(mm){
 
 
 
-// getNames()
-function getNames(data) {
-    return data.map(obj => obj.name);
+// // getNames()
+// function getNames(data) {
+//     return data.map(obj => obj.name);
+// }
+// console.log(getNames([
+//     {name: 'Joe', age: 20},
+//     {name: 'Bill', age: 30},
+//     {name: 'Kate', age: 23} 
+// ]))
+
+
+
+
+// Alternate Case
+function alternateCase(s) {
+    return s.split('').map(l => l === l.toLowerCase() ? l.toUpperCase() : l.toLowerCase()).join('');
 }
-console.log(getNames([
-    {name: 'Joe', age: 20},
-    {name: 'Bill', age: 30},
-    {name: 'Kate', age: 23} 
-]))
+console.log(alternateCase('aBc'));
 
 
 
