@@ -4454,11 +4454,24 @@ function rainAmount(mm){
 
 
 
-// Alternate Case
-function alternateCase(s) {
-    return s.split('').map(l => l === l.toLowerCase() ? l.toUpperCase() : l.toLowerCase()).join('');
+// // Alternate Case
+// function alternateCase(s) {
+//     return s.split('').map(l => l === l.toLowerCase() ? l.toUpperCase() : l.toLowerCase()).join('');
+// }
+// console.log(alternateCase('aBc'));
+
+
+
+
+// Sum of the First Nth Term of Series
+function SeriesSum(n) {
+    let sum = 0;
+    for (i = 0; i < n; i++) {
+        sum += 1 / (3 * i + 1);
+    }
+    return sum.toFixed(2);
 }
-console.log(alternateCase('aBc'));
+console.log(SeriesSum(2));
 
 
 
