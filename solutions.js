@@ -4463,15 +4463,27 @@ function rainAmount(mm){
 
 
 
-// Sum of the First Nth Term of Series
-function SeriesSum(n) {
-    let sum = 0;
-    for (i = 0; i < n; i++) {
-        sum += 1 / (3 * i + 1);
-    }
-    return sum.toFixed(2);
+// // Sum of the First Nth Term of Series
+// function SeriesSum(n) {
+//     let sum = 0;
+//     for (i = 0; i < n; i++) {
+//         sum += 1 / (3 * i + 1);
+//     }
+//     return sum.toFixed(2);
+// }
+// console.log(SeriesSum(2));
+
+
+
+
+// Sum of Integers in String 
+function sumOfIntegersInString(s) {
+    return s.replace(/\D/g, ' ')
+            .split(' ')
+            .filter(e => e !== '')
+            .reduce((sum, curr) => sum + +curr, 0);
 }
-console.log(SeriesSum(2));
+console.log(sumOfIntegersInString("The30quick20brown10f0x1203jumps914ov3r1349the102l4zy dog"))
 
 
 
