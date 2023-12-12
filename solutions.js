@@ -4476,14 +4476,14 @@ function rainAmount(mm){
 
 
 
-// Sum of Integers in String 
-function sumOfIntegersInString(s) {
-    return s.replace(/\D/g, ' ')
-            .split(' ')
-            .filter(e => e !== '')
-            .reduce((sum, curr) => sum + +curr, 0);
-}
-console.log(sumOfIntegersInString("The30quick20brown10f0x1203jumps914ov3r1349the102l4zy dog"))
+// // Sum of Integers in String 
+// function sumOfIntegersInString(s) {
+//     return s.replace(/\D/g, ' ')
+//             .split(' ')
+//             .filter(e => e !== '')
+//             .reduce((sum, curr) => sum + +curr, 0);
+// }
+// console.log(sumOfIntegersInString("The30quick20brown10f0x1203jumps914ov3r1349the102l4zy dog"))
 
 
 
