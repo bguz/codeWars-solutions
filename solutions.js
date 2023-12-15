@@ -4488,6 +4488,22 @@ function rainAmount(mm){
 
 
 
+// Split in Paris
+function splitInParts(s, partLength) {
+    const result = [];
+
+    for (let i = 0; i < s.length; i += partLength) {
+        result.push(s.slice(i, partLength + i));
+    }
+
+    return result.join(' ')
+
+}
+console.log(splitInParts("supercalifragilisticexpialidocious", 3));
+
+
+
+
 
 
 
