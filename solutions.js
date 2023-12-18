@@ -4488,18 +4488,31 @@ function rainAmount(mm){
 
 
 
-// Split in Paris
-function splitInParts(s, partLength) {
-    const result = [];
+// // Split in Paris
+// function splitInParts(s, partLength) {
+//     const result = [];
 
-    for (let i = 0; i < s.length; i += partLength) {
-        result.push(s.slice(i, partLength + i));
+//     for (let i = 0; i < s.length; i += partLength) {
+//         result.push(s.slice(i, partLength + i));
+//     }
+
+//     return result.join(' ')
+
+// }
+// console.log(splitInParts("supercalifragilisticexpialidocious", 3));
+
+
+
+
+// Find the Index of the Second Occurrence of a Letter in a String
+function secondSymbol(s, symbol) {
+    const indexes = [];
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === symbol) indexes.push(i);
     }
-
-    return result.join(' ')
-
+    return indexes[1] ? indexes[1] : -1;
 }
-console.log(splitInParts("supercalifragilisticexpialidocious", 3));
+console.log(secondSymbol('Hello world!!!', 'A'))
 
 
 
