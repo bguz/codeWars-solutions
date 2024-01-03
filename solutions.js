@@ -4504,15 +4504,15 @@ function rainAmount(mm){
 
 
 
-// Find the Index of the Second Occurrence of a Letter in a String
-function secondSymbol(s, symbol) {
-    const indexes = [];
-    for (let i = 0; i < s.length; i++) {
-        if (s[i] === symbol) indexes.push(i);
-    }
-    return indexes[1] ? indexes[1] : -1;
-}
-console.log(secondSymbol('Hello world!!!', 'A'))
+// // Find the Index of the Second Occurrence of a Letter in a String
+// function secondSymbol(s, symbol) {
+//     const indexes = [];
+//     for (let i = 0; i < s.length; i++) {
+//         if (s[i] === symbol) indexes.push(i);
+//     }
+//     return indexes[1] ? indexes[1] : -1;
+// }
+// console.log(secondSymbol('Hello world!!!', 'A'))
 
 
 
