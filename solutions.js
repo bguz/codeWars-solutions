@@ -4531,16 +4531,25 @@ function rainAmount(mm){
 
 
 
-// Reversing Fun
-function flipNumber(n) {
-    let str = n.split('').reverse().join('');
-    for (let i = 1; i < n.length; i++) {
-        str = str.slice(0, i) + str.slice(i, str.length).split('').reverse().join('');
-    }
-    return str;
-}
-console.log(flipNumber("012345"));
+// // Reversing Fun
+// function flipNumber(n) {
+//     let str = n.split('').reverse().join('');
+//     for (let i = 1; i < n.length; i++) {
+//         str = str.slice(0, i) + str.slice(i, str.length).split('').reverse().join('');
+//     }
+//     return str;
+// }
+// console.log(flipNumber("012345"));
 
+
+
+
+// Ordering the Words!
+function orderWord(s) {
+    if (!s) return "Invalid String!";
+    return s.split('').sort().join('');
+}
+console.log(orderWord("hello world"))
 
 
 
