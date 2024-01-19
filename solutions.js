@@ -4554,12 +4554,12 @@ function rainAmount(mm){
 
 
 
-// The Old Switcheroo 2
-function encode(str) {
-    const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-    return str.toLowerCase().split('').map((l, i) => alphabet.includes(l) ? alphabet.indexOf(l) + 1 : l).join('');
-}
-console.log(encode('ZzzzZ'));
+// // The Old Switcheroo 2
+// function encode(str) {
+//     const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+//     return str.toLowerCase().split('').map((l, i) => alphabet.includes(l) ? alphabet.indexOf(l) + 1 : l).join('');
+// }
+// console.log(encode('ZzzzZ'));
 
 
 
