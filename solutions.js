@@ -4564,6 +4564,18 @@ function rainAmount(mm){
 
 
 
+// Borrwer Speak
+function borrow(s) {
+    return  s
+            .toLowerCase()
+            .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, '')
+            .split(' ')
+            .join('');
+}
+console.log(borrow('WhAt! FiCK! DaMn CAke?'));
+
+
+
 
 
 
