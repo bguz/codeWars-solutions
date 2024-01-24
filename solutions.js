@@ -4564,15 +4564,27 @@ function rainAmount(mm){
 
 
 
-// Borrwer Speak
-function borrow(s) {
-    return  s
-            .toLowerCase()
-            .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, '')
-            .split(' ')
-            .join('');
+// // Borrwer Speak
+// function borrow(s) {
+//     return  s
+//             .toLowerCase()
+//             .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, '')
+//             .split(' ')
+//             .join('');
+// }
+// console.log(borrow('WhAt! FiCK! DaMn CAke?'));
+
+
+
+
+// String Reverse Slicing 101
+function reverseSlice(str) {
+    str = str.split('').reverse();
+    return str.map((l, i) => {
+        return str.slice(i).join('');
+    })
 }
-console.log(borrow('WhAt! FiCK! DaMn CAke?'));
+console.log(reverseSlice('abcde'));
 
 
 
