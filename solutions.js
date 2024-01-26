@@ -4577,15 +4577,29 @@ function rainAmount(mm){
 
 
 
-// String Reverse Slicing 101
-function reverseSlice(str) {
-    str = str.split('').reverse();
-    return str.map((l, i) => {
-        return str.slice(i).join('');
-    })
-}
-console.log(reverseSlice('abcde'));
+// // String Reverse Slicing 101
+// function reverseSlice(str) {
+//     str = str.split('').reverse();
+//     return str.map((l, i) => {
+//         return str.slice(i).join('');
+//     })
+// }
+// console.log(reverseSlice('abcde'));
 
+
+
+
+// Word Values
+function wordValue(a) {
+    const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    return a
+            .map(arr => arr
+                        .split('')
+                        .map(l => alphabet.includes(l) ? alphabet.indexOf(l) + 1 : 0)
+                        .reduce((curr, sum) => curr + sum, 0))
+            .map((val, i) => val * (i + 1));
+}
+console.log(wordValue(["abc abc", "abc abc"]))
 
 
 
