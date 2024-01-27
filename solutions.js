@@ -4589,20 +4589,25 @@ function rainAmount(mm){
 
 
 
-// Word Values
-function wordValue(a) {
-    const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-    return a
-            .map(arr => arr
-                        .split('')
-                        .map(l => alphabet.includes(l) ? alphabet.indexOf(l) + 1 : 0)
-                        .reduce((curr, sum) => curr + sum, 0))
-            .map((val, i) => val * (i + 1));
+// // Word Values
+// function wordValue(a) {
+//     const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+//     return a
+//             .map(arr => arr
+//                         .split('')
+//                         .map(l => alphabet.includes(l) ? alphabet.indexOf(l) + 1 : 0)
+//                         .reduce((curr, sum) => curr + sum, 0))
+//             .map((val, i) => val * (i + 1));
+// }
+// console.log(wordValue(["abc abc", "abc abc"]))
+
+
+
+// Ordered Count of Characters
+const orderedCount = function (text) {
+    return [... new Set([...text])].map(char => [char, text.split(char).length - 1]);
 }
-console.log(wordValue(["abc abc", "abc abc"]))
-
-
-
+console.log(orderedCount("233312"));
 
 
 
