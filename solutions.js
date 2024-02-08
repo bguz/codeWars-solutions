@@ -4603,11 +4603,11 @@ function rainAmount(mm){
 
 
 
-// Ordered Count of Characters
-const orderedCount = function (text) {
-    return [... new Set([...text])].map(char => [char, text.split(char).length - 1]);
-}
-console.log(orderedCount("233312"));
+// // Ordered Count of Characters
+// const orderedCount = function (text) {
+//     return [... new Set([...text])].map(char => [char, text.split(char).length - 1]);
+// }
+// console.log(orderedCount("233312"));
 
 
 
