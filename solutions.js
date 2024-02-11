@@ -4611,6 +4611,22 @@ function rainAmount(mm){
 
 
 
+// Sum Even Numbers
+function sumEvenNumbers(input) {
+    return input
+            .filter((n, i) => n % 2 === 0)
+            .reduce((sum, curr) => sum + curr, 0);
+}
+console.log(sumEvenNumbers([1337,374,849,22.5,19,16,0,0,16,32]));
+
+
+
+
+
+
+
+
+
 /* =====================================
 
                 6 Kyu
