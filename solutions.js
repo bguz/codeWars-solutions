@@ -4611,13 +4611,18 @@ function rainAmount(mm){
 
 
 
-// Sum Even Numbers
-function sumEvenNumbers(input) {
-    return input
-            .filter((n, i) => n % 2 === 0)
-            .reduce((sum, curr) => sum + curr, 0);
-}
-console.log(sumEvenNumbers([1337,374,849,22.5,19,16,0,0,16,32]));
+// // Sum Even Numbers
+// function sumEvenNumbers(input) {
+//     return input
+//             .filter((n, i) => n % 2 === 0)
+//             .reduce((sum, curr) => sum + curr, 0);
+// }
+// console.log(sumEvenNumbers([1337,374,849,22.5,19,16,0,0,16,32]));
+
+
+
+
+// Basic Sequence Practice
 
 
 
@@ -5280,6 +5285,31 @@ console.log(sumEvenNumbers([1337,374,849,22.5,19,16,0,0,16,32]));
 // }
 // console.log(countSmileys([':)', ';(', ';}', ':-D']));
 // console.log(countSmileys([ ':)', ':(', ':D', ':O', ':;' ]));
+
+
+
+
+// Consonant Value (REFACTOR)
+function solve(s) {
+    const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    let count = 0;
+    let str = '';
+    const arr = [];
+
+
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === 'a' || s[i] === 'e' || s[i] === 'i' || s[i] === 'o' || s[i] === 'u') {
+            arr.push(str);
+            str = '';
+        } else {
+            str += s[i];
+        }
+    }
+    arr.push(str);
+
+    return Math.max(...arr.map(s => s.split('').map(l => alphabet.indexOf(l) + 1).reduce((sum, curr) => sum + curr, 0)));
+}
+console.log(solve('strength'));
 
 
 
