@@ -1605,13 +1605,21 @@
 
 
 
-// Fix Your Code Before The Garden Dies!
-function rainAmount(mm){
-    return mm<40 ?
-        `You need to give your plant ${40-mm}mm of water`:
-        `Your plant has had more than enough water for today!`
-}
+// // Fix Your Code Before The Garden Dies!
+// function rainAmount(mm){
+//     return mm<40 ?
+//         `You need to give your plant ${40-mm}mm of water`:
+//         `Your plant has had more than enough water for today!`
+// }
 
+
+
+
+// Is n Divisible by x and y?
+function isDivisible(n, x, y) {
+    return n % x === 0 && n % y === 0;
+}
+console.log(isDivisible(12, 3, 4));
 
 
 
@@ -5289,24 +5297,24 @@ function rainAmount(mm){
 
 
 
-// Consonant Value (No Regex)
-function solve(s) {
-    const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-    let str = '';
-    const arr = [];
+// // Consonant Value (No Regex)
+// function solve(s) {
+//     const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+//     let str = '';
+//     const arr = [];
 
-    s.split('').map(l => {
-        if (l === 'a' || l === 'e' || l === 'i' || l === 'o' || l === 'u') {
-            arr.push(str);
-            str = '';
-        } else {
-            str += l;
-        }
-    })
-    arr.push(str);
-    return Math.max(...arr.map(s => s.split('').map(l => alphabet.indexOf(l) + 1).reduce((sum, curr) => sum + curr, 0)));
-}
-console.log(solve('strength'));
+//     s.split('').map(l => {
+//         if (l === 'a' || l === 'e' || l === 'i' || l === 'o' || l === 'u') {
+//             arr.push(str);
+//             str = '';
+//         } else {
+//             str += l;
+//         }
+//     })
+//     arr.push(str);
+//     return Math.max(...arr.map(s => s.split('').map(l => alphabet.indexOf(l) + 1).reduce((sum, curr) => sum + curr, 0)));
+// }
+// console.log(solve('strength'));
 
 
 
