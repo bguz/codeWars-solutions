@@ -4630,7 +4630,16 @@
 
 
 
-// Basic Sequence Practice
+// First-Class Function Factory 
+function factory(x) {
+    return function(arr) {
+        return arr.map(num => num * x);
+    }
+}
+
+const fives = factory(5);
+const myArray = [1, 2, 3];
+console.log(fives(myArray));
 
 
 
