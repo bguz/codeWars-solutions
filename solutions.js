@@ -4630,16 +4630,25 @@
 
 
 
-// First-Class Function Factory 
-function factory(x) {
-    return function(arr) {
-        return arr.map(num => num * x);
-    }
-}
+// // First-Class Function Factory 
+// function factory(x) {
+//     return function(arr) {
+//         return arr.map(num => num * x);
+//     }
+// }
 
-const fives = factory(5);
-const myArray = [1, 2, 3];
-console.log(fives(myArray));
+// const fives = factory(5);
+// const myArray = [1, 2, 3];
+// console.log(fives(myArray));
+
+
+
+
+// Number Pairs
+function getLargerNumbers(a, b) {
+    return a.map((num, i) => num > b[i] ? num : b[i]);
+}
+console.log(getLargerNumbers([13, 64, 15, 17, 88], [23, 14, 53, 17, 80]))
 
 
 
